@@ -686,7 +686,7 @@ const grid = document.getElementById('issueGrid');
 issues.forEach(i=>{
   const a = document.createElement('a');
   a.className = 'issue-card corners reveal' + (i.dark ? ' dark-card':'');
-  a.href = SUBSTACK; a.target = "_blank"; a.rel = "noopener";
+  a.href = 'issue-' + i.no + '.html';
   a.dataset.search = (i.title + ' ' + i.teaser + ' ' + i.tags + ' issue ' + i.no + ' ' + i.date).toLowerCase().replace(/<[^>]*>/g,'');
   a.innerHTML = `<span class="cm"></span>
     <p class="eyebrow">Issue No. ${String(i.no).padStart(2,'0')} · ${i.date}</p>
