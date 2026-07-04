@@ -220,7 +220,7 @@ section{padding:100px 0}
   font-family:var(--serif);font-weight:700;font-size:22px;line-height:1.28;
   color:var(--wine);margin-bottom:12px;
 }
-.issue-card p{font-size:14.5px;opacity:.8;flex:1;margin-bottom:22px}
+.issue-card p{color:var(--ink);font-size:14.5px;opacity:.8;flex:1;margin-bottom:22px}
 
 /* dark-variant cards (e.g. homepage "find your way around") — solid, readable light text */
 .issue-card.on-dark{background:#1B1114;border-color:rgba(255,252,254,.14)}
