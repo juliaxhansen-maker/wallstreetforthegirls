@@ -81,6 +81,7 @@
 const terms = [
   {t:"Appraisal Arbitrage", d:"Buying shares in a company being taken private specifically to reject the deal price and ask a judge for more.", issue:11},
   {t:"Appraisal Rights", d:"A shareholder's legal right to refuse a deal price and ask a judge to independently decide what the shares were worth.", issue:11},
+  {t:"Backwardation", d:"When oil for delivery soon costs more than oil for delivery later. A classic signal that the market is worried about supply right now.", issue:12},
   {t:"Basis Point", d:"A finance unit where one basis point is 0.01%.", issue:10},
   {t:"Books and Records", d:"The internal company documents shareholders can legally demand to inspect. Delaware narrowed this in 2025.", issue:11},
   {t:"Bookrunner", d:"The lead bank that organises an IPO, gauges demand, sets the price, and decides who receives shares.", issue:4},
@@ -88,10 +89,12 @@ const terms = [
   {t:"Brent Crude", d:"The international benchmark price for oil, quoted in US dollars per barrel. Used to price most of the world's traded oil.", issue:5},
   {t:"Carry Trade", d:"Borrowing in a low-interest currency, such as the yen, and investing the money where it earns more, then keeping the difference.", issue:6},
   {t:"Carve-out", d:"When a large company sells off one of its divisions as a separate business, as Volkswagen did with Everllence.", issue:8},
+  {t:"Chokepoint", d:"A narrow waterway that a large share of global trade must pass through; when one is threatened, everything that moves through it gets riskier and more expensive.", issue:12},
   {t:"Class Action", d:"One lawsuit brought on behalf of an entire group of people harmed the same way, here all the shareholders cashed out in the deal.", issue:11},
   {t:"Confidential Filing", d:"A private submission to financial regulators allowing companies to prepare for a public listing without disclosing financial details publicly until they choose to.", issue:3},
   {t:"Conflict of Interest (in Litigation)", d:"When one party's two roles pull in opposite directions, such as a fund whose private case could benefit at the expense of the group it leads.", issue:11},
   {t:"Consensus Estimate", d:"The average of Wall Street analysts' forecasts for a company's results and the bar a company is measured against.", issue:10},
+  {t:"Contango", d:"When oil for later delivery costs more than oil for delivery soon. The more common shape, partly because storing oil costs money.", issue:12},
   {t:"Controlling Shareholder", d:"An owner with enough voting power to approve major decisions, sometimes an entire sale, on their own.", issue:11},
   {t:"Core Inflation", d:"Inflation with volatile food and energy prices stripped out, used to see the underlying trend.", issue:7},
   {t:"Currency Intervention", d:"When a government or central bank steps directly into the market to push the value of its own currency up or down.", issue:6},
@@ -117,6 +120,7 @@ const terms = [
   {t:"Fiduciary Duty", d:"The legal obligation of directors and controlling insiders to act in shareholders' best interests rather than their own.", issue:11},
   {t:"Foreign Exchange Reserves", d:"The foreign currencies and assets a country holds to pay for imports and stabilize its own currency in a crisis.", issue:9},
   {t:"Geopolitical Risk Premium", d:"The extra price markets add to an asset, like oil, because of conflict or political uncertainty. Falls when tensions cool.", issue:5},
+  {t:"Futures Contract", d:"An agreement to buy or sell something at a fixed price on a set future date.", issue:12},
   {t:"Gross Margin", d:"The share of revenue left after the direct cost of making a product. A core read on profitability.", issue:10},
   {t:"Guidance", d:"A company's own forecast for its future results.", issue:10},
   {t:"Hawkish", d:"When a central bank or its members prefer higher interest rates to control inflation, even if it slows growth.", issue:6},
@@ -157,6 +161,7 @@ const terms = [
   {t:"Services Inflation", d:"Price rises in services like rent, insurance, and travel rather than physical goods. Tends to be stickier than goods inflation.", issue:7},
   {t:"Sovereign Wealth Fund", d:"A state-owned fund that invests a country's surplus money around the world.", issue:9},
   {t:"Stagflation", d:"A combination of slow economic growth and rising inflation at the same time — cutting rates helps growth but worsens inflation, and vice versa.", issue:1},
+  {t:"Strait of Bab al-Mandab", d:"The narrow strait at the southern entrance to the Red Sea, and it became oil's detour route after Hormuz was disrupted.", issue:12},
   {t:"Statutory Interest (Appraisal)", d:"The interest Delaware adds to an appraisal award by default: 5% over the Federal Reserve discount rate, compounded quarterly, from deal close to payment.", issue:11},
   {t:"Supply Side Shock", d:"Prices rising because supply is disrupted, not because people are spending more. Interest rates can't fix a blocked shipping lane.", issue:1},
   {t:"Surged", d:"When an asset rises sharply and quickly in price, often catching anyone positioned the other way off guard.", issue:6},
@@ -187,6 +192,7 @@ const issueMeta = {
   9:{href:"issue-09.html", label:"Issue No. 09"},
   10:{href:"issue-10.html", label:"Issue No. 10"},
   11:{href:"issue-11.html", label:"Issue No. 11"},
+  12:{href:"issue-12.html", label:"Issue No. 12"},
 };
 
 terms.sort((a,b)=>a.t.localeCompare(b.t));
