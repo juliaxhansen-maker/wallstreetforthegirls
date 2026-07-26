@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: .12 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-  // ticker strip — duplicate content once for seamless loop
+  // ticker strip: duplicate content once for seamless loop
   const strip = document.getElementById('strip');
   if (strip) {
     strip.innerHTML = strip.innerHTML + strip.innerHTML;
