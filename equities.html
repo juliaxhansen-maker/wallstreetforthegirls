@@ -3,13 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Equities: Financial Syllabus | Wall Street for the Girls</title>
-<meta name="description" content="Ownership shares in public companies: individual stocks, indexes, earnings, and IPOs. Now with a deep dive on reading an earnings report like a professional.">
+<title>Equities — The Financial Syllabus — Wall Street for the Girls</title>
+<meta name="description" content="Ownership shares in public companies — individual stocks, indexes, earnings, and IPOs. Every Financial Syllabus deep dive filed under Equities.">
 <link rel="icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500;1,6..72,600&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<style>
+  .page-hero{padding-bottom:56px; border-bottom:none;}
+  .lesson-list{display:flex; flex-direction:column; gap:16px; margin-top:8px; margin-bottom:8px;}
+  .lesson-card{position:relative; background:#fff; border:1px solid var(--line); padding:26px 28px; text-decoration:none; display:block; transition:border-color .2s;}
+  .lesson-card::before,.lesson-card::after{content:""; position:absolute; width:14px; height:14px; border-color:var(--brand); border-style:solid;}
+  .lesson-card::before{top:10px; left:10px; border-width:1.5px 0 0 1.5px;}
+  .lesson-card::after{bottom:10px; right:10px; border-width:0 1.5px 1.5px 0;}
+  .lesson-date{font-size:10.5px; letter-spacing:.05em; text-transform:uppercase; color:var(--gray); margin-bottom:10px;}
+  .lesson-card h3{font-family:var(--serif); font-weight:600; font-size:18px; color:var(--ink); margin-bottom:8px;}
+  .lesson-card:hover h3{color:var(--brand);}
+  .lesson-card p{font-size:14px; color:var(--gray); margin-bottom:16px;}
+  .lesson-card .read{font-size:10.5px; letter-spacing:.2em; text-transform:uppercase; font-weight:600; color:var(--brand);}
+  .lesson-card .read::after{content:" →";}
+</style>
 </head>
 <body>
 
@@ -23,8 +37,14 @@
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html">Home</a></li>
       <li><a href="archive.html">Archive</a></li>
-      <li><a href="financial-syllabus.html" class="active">Financial Syllabus</a></li>
-      <li><a href="glossary.html">Glossary</a></li>
+      <li class="nav-dropdown">
+        <a href="financial-syllabus.html" class="active">Learn</a>
+        <ul class="dropdown-menu">
+          <li><a href="foundation.html">The Foundation</a></li>
+          <li><a href="financial-syllabus.html">Financial Syllabus</a></li>
+          <li><a href="glossary.html">Glossary</a></li>
+        </ul>
+      </li>
       <li><a href="about.html">About</a></li>
       <li><a class="nav-cta" href="https://wallstreetforthegirls.substack.com" target="_blank" rel="noopener">Subscribe</a></li>
     </ul>
@@ -33,102 +53,36 @@
 
 <main>
 <section class="page-hero">
-  <div class="wrap-narrow">
-    <a class="breadcrumb" href="financial-syllabus.html">← Back to the Financial Syllabus</a>
-    <p class="eyebrow">Pillar 02 of 05</p>
-    <h1>Equities</h1>
-    <p class="lede">Ownership shares in public companies: individual stocks, indexes, earnings, and IPOs.</p>
-  </div>
-</section>
-
-<section>
   <div class="wrap">
-    <div class="section-head reveal">
-      <p class="eyebrow">Every entry, newest first</p>
-      <h2>Every Equities entry.</h2>
-      <p>Newest first. More gets added here every time this pillar comes back up in an issue.</p>
-    </div>
-    <article class="dive-feature reveal" id="dive-13">
-      <div class="dive-copy" style="max-width:none">
-        <p class="eyebrow on-dark">From Issue No. 13 · Equities</p>
-        <h3>The Free Trial Is Over, and the Subscription Renewed Itself.</h3>
-        <div class="syllabus-box">
-      <div class="pillar-tabs">
-        <span>Fixed Income</span><span class="current">Equities</span><span>Foreign Exchange</span><span>Derivatives</span><span>Commodities & Alternatives</span>
-      </div>
-      <div class="syllabus-body">
-        <p>This week's focus is on equities. A tariff headline is one of the most common pieces of macroeconomic news you'll hear about, which is why it's worth understanding how one actually reaches a company you might be invested in. There are three things to check, and once you know them, you can apply this to any tariff headline you read, not just this one.</p>
-
-        <h4>1. Figure out who actually pays.</h4>
-        <p>Does this company bring physical goods across a border to sell them? If yes, they will pay the tariff fee at the port. If the answer is no because it makes things domestically or sells a service, then the company mainly does not pay the fee. That question splits the market into two categories before you have looked at anything else.</p>
-
-        <h4>2. Figure out where the costs are going.</h4>
-        <p>Once the company has to pay the tariff cost, they have to make a very important decision. Absorb the cost and take a smaller profit, which shows up in a number called gross margin. Or pass it on and let the consumer cover it. Or depend on the overseas supplier for a discount but know the chances of this happening are limited. Most companies tend to use a mix of the possible decisions, and that mix also tells you how much pricing power the company has. A company that people love, and that they'll pay a premium for without blinking, can raise its prices and barely lose a customer. A company people only tolerate can't get away with the same move, so it ends up absorbing more of the cost itself.</p>
-
-        <h4>3. Figure out how the market sorts the winners and losers.</h4>
-        <p>A tariff headline doesn't hit every company the same way. It hits the ones most exposed, typically the import-heavy businesses, hardest, while domestic and service companies barely feel it at all. Same headline, two completely different outcomes, and the difference comes down to the answer to check one.</p>
-
-        <p>Now let us make it concrete, because a tariff can stay abstract for some until you put numbers on it.</p>
-        <p>Imagine a company that imports 100 dollars of goods and prices them to keep a 40% gross margin. Under the old 10% tariff, once you add the tariff cost, the goods actually cost the company 110 dollars by the time they arrive. To hold a 40% gross margin, it needed a sale price of 183.33. Under the new 12.5% rate, that total cost rises to 112.50. If it keeps the price at 183.33, the margin slips from 40% to about 38.6%. If it wants the full 40% back, the price has to rise to 187.50, which is a little over 2% more.</p>
-
-        <div class="table-wrap" style="margin-top:22px">
-          <table class="asset-table">
-            <thead><tr><th></th><th>Under old 10% tariff</th><th>Under new 12.5% tariff</th></tr></thead>
-            <tbody>
-              <tr><td>Cost paid at the border</td><td>$10.00</td><td>$12.50</td></tr>
-              <tr><td>Total cost</td><td>$110.00</td><td>$112.50</td></tr>
-              <tr><td>If the sale price holds at $183.33</td><td>40% margin</td><td>38.6% margin</td></tr>
-              <tr><td>To hold 40% margin instead</td><td>$183.33 price</td><td>$187.50 price, up 2.3%</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p style="margin-top:20px"><strong>The main takeaway:</strong> A tariff headline is never one story that hits everyone the same. It's a tax on imported goods that only some companies pay, and the important thing is telling the exposed businesses apart from the ones barely impacted.</p>
-      </div>
-    </div>
-        <a class="btn btn-rose" style="margin-top:26px" href="issue-13.html">Read the full issue →</a>
-      </div>
-    </article>
-    <article class="dive-feature reveal" id="dive-10">
-      <div class="dive-copy" style="max-width:none">
-        <p class="eyebrow on-dark">From Issue No. 10 · Equities</p>
-        <h3>Nike's Numbers Got the Facetune Treatment This Week</h3>
-        <div class="syllabus-box">
-      <div class="pillar-tabs">
-        <span>Fixed Income</span><span class="current">Equities</span><span>Foreign Exchange</span><span>Derivatives</span><span>Commodities & Alternatives</span>
-      </div>
-      <div class="syllabus-body">
-        <p>Equities is this week's foundation topic, covering individual stocks, corporate earnings, and how the market judges them. Since the entire issue focuses on Nike's Q4 earnings it is the perfect week to learn how to read an earnings report the way an investor does. We are going to do it in three simple checks.</p>
-
-        <h4>Check 1: Beat or Miss, Against Expectations</h4>
-        <p>A stock reacts to results measured against the bar analysts set for it, not to the raw number. So the first thing to find is whether the company cleared that bar. Nike's adjusted 20 cents beat the 13 cents analysts expected, and its $10.97 billion of revenue beat the $10.86 billion forecast. On the scoreboard, that is an obvious beat on both lines.</p>
-
-        <h4>Check 2: The Quality of the Number</h4>
-        <p>Nike's reported profit was 72 cents per share, but 52 of those cents came from a one-off tariff refund of nearly $986 million. That same refund added roughly 900 basis points to gross margin, increasing the reported figure to 49.2% while the underlying margin barely moved and stayed close to 40%. If you remove the one-off the underlying profit falls back to 20 cents. This is known as the <em>quality of earnings</em>, which means how much of a profit comes from the actual business versus from one time boosts. High-quality earnings are durable. Low-quality earnings, like these, inflate the numbers.</p>
-
-        <h4>Check 3: The Forward View and the Underlying Trend</h4>
-        <p>Markets care more about tomorrow than yesterday, so the last check is where things are heading. Here the picture is genuinely mixed. China sales fell 12% and Converse revenue fell around 32%. But underneath, the running business grew double digits for a fifth straight quarter. There is a real recovery in here. It is just not a finished one.</p>
-
-        <p>Now for a worked example, using a number that comes up in almost every investing conversation, the price-to-earnings ratio, or P/E. It's the share price divided by earnings per share, usually the last 12 months of actual profit. Analysts often use next year's expected profit instead, which is exactly what UBS did here. Either way, it tells you how many dollars investors are paying for each dollar of profit.</p>
-        <p>Even after falling roughly 43% to around $41, Nike is not obviously cheap by this measure. Analysts at UBS pointed out it still trades at roughly 27 times next year's expected earnings. Paying 27 times earnings isn't exactly a steal. The market is basically assuming the company's turnaround is already a done deal. It just goes to show that a stock can sink and still be overpriced if people are still expecting too much from it.</p>
-
-        <div class="fx-grid" style="margin-top:22px">
-          <div>
-            <h4 style="margin-top:0">The Maths Behind the P/E Ratio</h4>
-            <p>$41 share price ÷ $1.52 next year's expected EPS = <strong>~27x forward P/E</strong></p>
-          </div>
-          <div>
-            <div class="fx-key"><strong>If 27x looked cheap:</strong> The stock fell 43% this year. A low P/E here would say the market has already priced in the bad news.</div>
-            <div class="fx-key" style="margin-top:10px"><strong>What 27x actually says:</strong> Still a premium multiple. The market is paying up for a turnaround that hasn't shown up in the numbers yet.</div>
-          </div>
-        </div>
-        <p style="margin-top:20px"><strong>The main takeaway:</strong> A headline "beat" tells you almost nothing on its own. The real skill is finding the one-offs and then checking the underlying number against expectations and the road ahead.</p>
-      </div>
-    </div>
-        <a class="btn btn-rose" style="margin-top:26px" href="issue-10.html">Read the full issue →</a>
-      </div>
-    </article>
+    <a class="breadcrumb" href="financial-syllabus.html">&larr; All pillars</a>
+    <p class="eyebrow">Pillar &middot; 3 lessons &middot; newest first</p>
+    <h1>Equities.</h1>
+    <p class="lede">Ownership shares in public companies including individual stocks, indexes, earnings, and IPOs.</p>
   </div>
 </section>
+
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="lesson-list">
+
+      <a class="lesson-card reveal" href="financial-syllabus-equities-13.html#syllabus">
+        <p class="lesson-date">From Issue No. 13 &middot; July 26, 2026</p>
+        <h3>Reading a tariff into a stock price</h3>
+        <p>Who pays it, where the cost goes, and how the market sorts the winners from the losers — worked through with real margin math.</p>
+        <span class="read">Read this lesson</span>
+      </a>
+
+      <a class="lesson-card reveal" href="financial-syllabus-equities-10.html#syllabus">
+        <p class="lesson-date">From Issue No. 10 &middot; July 5, 2026</p>
+        <h3>Corporate Earnings</h3>
+        <p>What does it mean when a company beats its earnings estimates?</p>
+        <span class="read">Read this lesson</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
 </main>
 
 <footer class="site-footer">
@@ -139,7 +93,9 @@
         <span>Wall Street for the Girls</span>
       </a>
       <ul class="footer-links">
+        <li><a href="start-here.html">Start Here</a></li>
         <li><a href="archive.html">Archive</a></li>
+        <li><a href="foundation.html">Foundation</a></li>
         <li><a href="financial-syllabus.html">Financial Syllabus</a></li>
         <li><a href="glossary.html">Glossary</a></li>
         <li><a href="about.html">About</a></li>
@@ -147,7 +103,7 @@
       </ul>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Wall Street for the Girls</span>
+      <span>&copy; 2026 Wall Street for the Girls</span>
       <em>Educational purposes only: reflects personal analysis, not financial advice.</em>
     </div>
   </div>

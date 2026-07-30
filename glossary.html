@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Glossary: Wall Street for the Girls</title>
-<meta name="description" content="Every finance term defined across every issue of Wall Street for the Girls: searchable, A to Z.">
+<title>The Glossary: Wall Street for the Girls</title>
+<meta name="description" content="Every vocabulary term explained across every issue, compiled in one place — search it, filter it by letter, or click through to read it in context.">
 <link rel="icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,9 +22,16 @@
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html">Home</a></li>
+      <li><a href="start-here.html">Start Here</a></li>
       <li><a href="archive.html">Archive</a></li>
-      <li><a href="financial-syllabus.html">Financial Syllabus</a></li>
-      <li><a href="glossary.html" class="active">Glossary</a></li>
+      <li class="nav-dropdown">
+        <a href="financial-syllabus.html" class="active">Learn ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="foundation.html">The Foundation</a></li>
+          <li><a href="financial-syllabus.html">Financial Syllabus</a></li>
+          <li><a href="glossary.html">Glossary</a></li>
+        </ul>
+      </li>
       <li><a href="about.html">About</a></li>
       <li><a class="nav-cta" href="https://wallstreetforthegirls.substack.com" target="_blank" rel="noopener">Subscribe</a></li>
     </ul>
@@ -36,22 +43,965 @@
   <div class="wrap">
     <p class="eyebrow">Every term, every issue</p>
     <h1>The Glossary.</h1>
-    <p class="lede">New to markets? Start here. Every vocabulary term explained across every issue, compiled in one place: search it, filter it by letter, or click through to read it in context.</p>
+    <p class="lede">If a word ever stopped you mid-sentence, it's probably here. Every term from every issue, searchable and sorted from A to Z.</p>
   </div>
 </section>
 
-<section>
+<section class="archive-section">
   <div class="wrap">
     <div class="archive-tools reveal in">
       <label class="search">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
         <input id="glossarySearch" type="text" placeholder="Search a term… e.g. 'carry trade', 'IPO', 'yield'">
       </label>
-      <span class="count-note" id="glossaryCount"></span>
+      <span class="count-note" id="glossaryCount">All terms</span>
     </div>
-    <div class="letter-bar" id="letterBar"></div>
-    <dl class="term-list" id="termList"></dl>
-    <div class="no-results" id="glossaryEmpty"><em>No terms match that search.</em> Try a different word.</div>
+
+    <div class="letter-bar" id="letterBar">
+      <button type="button" class="active" data-letter="all">All</button>
+      <button type="button" data-letter="a">A</button>
+      <button type="button" data-letter="b">B</button>
+      <button type="button" data-letter="c">C</button>
+      <button type="button" data-letter="d">D</button>
+      <button type="button" data-letter="e">E</button>
+      <button type="button" data-letter="f">F</button>
+      <button type="button" data-letter="g">G</button>
+      <button type="button" data-letter="h">H</button>
+      <button type="button" data-letter="i">I</button>
+      <button type="button" data-letter="j" disabled>J</button>
+      <button type="button" data-letter="k" disabled>K</button>
+      <button type="button" data-letter="l">L</button>
+      <button type="button" data-letter="m">M</button>
+      <button type="button" data-letter="n" disabled>N</button>
+      <button type="button" data-letter="o">O</button>
+      <button type="button" data-letter="p">P</button>
+      <button type="button" data-letter="q">Q</button>
+      <button type="button" data-letter="r">R</button>
+      <button type="button" data-letter="s">S</button>
+      <button type="button" data-letter="t">T</button>
+      <button type="button" data-letter="u">U</button>
+      <button type="button" data-letter="v">V</button>
+      <button type="button" data-letter="w">W</button>
+      <button type="button" data-letter="x" disabled>X</button>
+      <button type="button" data-letter="y">Y</button>
+      <button type="button" data-letter="z" disabled>Z</button>
+    </div>
+
+    <div class="term-list" id="termList">
+
+      <div class="term" id="appraisal-arbitrage" data-letter="a" data-search="appraisal arbitrage buying shares taken private reject deal price judge issue 11">
+        <dl>
+          <dt>Appraisal arbitrage</dt>
+          <dd>Buying shares in a company being taken private specifically to reject the deal price and ask a judge for more.</dd>
+        </dl>
+        <a class="term-source" href="issue-11.html">Issue No. 11 →</a>
+      </div>
+
+      <div class="term" id="appraisal-rights" data-letter="a" data-search="appraisal rights shareholder legal right refuse deal price judge worth issue 11">
+        <dl>
+          <dt>Appraisal rights</dt>
+          <dd>A shareholder's legal right to refuse a deal price and ask a judge to independently decide what the shares were worth.</dd>
+        </dl>
+        <a class="term-source" href="issue-11.html">Issue No. 11 →</a>
+      </div>
+
+      <div class="term" id="backwardation" data-letter="b" data-search="backwardation oil delivery soon costs more later supply signal issue 12">
+        <dl>
+          <dt>Backwardation</dt>
+          <dd>When oil for delivery soon costs more than oil for delivery later — a classic signal the market is worried about supply right now.</dd>
+        </dl>
+        <a class="term-source" href="issue-12.html">Issue No. 12 →</a>
+      </div>
+
+      <div class="term" id="basis-point" data-letter="b" data-search="basis point finance unit one issue 10">
+        <dl>
+          <dt>Basis point</dt>
+          <dd>A finance unit where one basis point is 0.01%.</dd>
+        </dl>
+        <a class="term-source" href="issue-10.html">Issue No. 10 →</a>
+      </div>
+
+      <div class="term" id="book-value" data-letter="b" data-search="book value asset recorded worth company's accounts differ enormously buyer issue 8">
+        <dl>
+          <dt>Book value</dt>
+          <dd>What an asset is recorded as being worth in a company's accounts. It can differ enormously from what a buyer will actually pay.</dd>
+        </dl>
+        <a class="term-source" href="issue-8.html">Issue No. 8 →</a>
+      </div>
+
+      <div class="term" id="bookrunner" data-letter="b" data-search="bookrunner lead bank organises ipo gauges demand sets price decides issue 4">
+        <dl>
+          <dt>Bookrunner</dt>
+          <dd>The lead bank that organises an IPO, gauges demand, sets the price, and decides who receives shares. Goldman Sachs played this role for SpaceX.</dd>
+        </dl>
+        <a class="term-source" href="issue-4.html">Issue No. 4 →</a>
+      </div>
+
+      <div class="term" id="books-and-records" data-letter="b" data-search="books records internal company documents shareholders legally demand inspect delaware issue 11">
+        <dl>
+          <dt>Books and records</dt>
+          <dd>The internal company documents shareholders can legally demand to inspect. Delaware narrowed this in 2025.</dd>
+        </dl>
+        <a class="term-source" href="issue-11.html">Issue No. 11 →</a>
+      </div>
+
+      <div class="term" id="brent-crude" data-letter="b" data-search="brent crude international benchmark price oil quoted dollars per barrel issue 5">
+        <dl>
+          <dt>Brent crude</dt>
+          <dd>The international benchmark price for oil, quoted in US dollars per barrel. It is used to price most of the world's traded oil.</dd>
+        </dl>
+        <a class="term-source" href="issue-5.html">Issue No. 5 →</a>
+      </div>
+
+      <div class="term" id="carry-trade" data-letter="c" data-search="carry trade borrowing low-interest currency such yen investing money earns issue 6">
+        <dl>
+          <dt>Carry trade</dt>
+          <dd>Borrowing in a low-interest currency, such as the yen, and investing the money where it earns more, then keeping the difference.</dd>
+        </dl>
+        <a class="term-source" href="issue-6.html">Issue No. 6 →</a>
+      </div>
+
+      <div class="term" id="carve-out" data-letter="c" data-search="carve-out large company sells one divisions separate business volkswagen everllence issue 8">
+        <dl>
+          <dt>Carve-out</dt>
+          <dd>When a large company sells off one of its divisions as a separate business, as Volkswagen is doing with Everllence.</dd>
+        </dl>
+        <a class="term-source" href="issue-8.html">Issue No. 8 →</a>
+      </div>
+
+      <div class="term" id="chokepoint" data-letter="c" data-search="chokepoint narrow waterway large share global trade pass through one issue 12">
+        <dl>
+          <dt>Chokepoint</dt>
+          <dd>A narrow waterway that a large share of global trade must pass through; when one is threatened, everything that moves through it gets riskier and more expensive.</dd>
+        </dl>
+        <a class="term-source" href="issue-12.html">Issue No. 12 →</a>
+      </div>
+
+      <div class="term" id="class-action" data-letter="c" data-search="class action one lawsuit brought behalf entire group people harmed issue 11">
+        <dl>
+          <dt>Class action</dt>
+          <dd>One lawsuit brought on behalf of an entire group of people harmed the same way, here all the shareholders cashed out in the deal.</dd>
+        </dl>
+        <a class="term-source" href="issue-11.html">Issue No. 11 →</a>
+      </div>
+
+      <div class="term" id="confidential-filing" data-letter="c" data-search="confidential filing private submission financial regulators allowing companies prepare public issue 3">
+        <dl>
+          <dt>Confidential filing</dt>
+          <dd>A private submission to financial regulators allowing companies to prepare for a public listing without disclosing financial details publicly until they choose to. It gives flexibility on timing.</dd>
+        </dl>
+        <a class="term-source" href="issue-3.html">Issue No. 3 →</a>
+      </div>
+
+      <div class="term" id="conflict-of-interest-in-litigation" data-letter="c" data-search="conflict interest litigation one party's two roles pull opposite directions issue 11">
+        <dl>
+          <dt>Conflict of interest (in litigation)</dt>
+          <dd>When one party's two roles pull in opposite directions, such as a fund whose private case could benefit at the expense of the group it leads.</dd>
+        </dl>
+        <a class="term-source" href="issue-11.html">Issue No. 11 →</a>
+      </div>
+
+      <div class="term" id="consensus-estimate" data-letter="c" data-search="consensus estimate average wall street analysts forecasts company's results bar issue 10">
+        <dl>
+          <dt>Consensus estimate</dt>
+          <dd>The average of Wall Street analysts' forecasts for a company's results and the bar a company is measured against.</dd>
+        </dl>
+        <a class="term-source" href="issue-10.html">Issue No. 10 →</a>
+      </div>
+
+      <div class="term" id="consumer-discretionary" data-letter="c" data-search="consumer discretionary wants not needs sensitive higher prices issue 13">
+        <dl>
+          <dt>Consumer discretionary</dt>
+          <dd>The part of the economy selling wants rather than needs. Most sensitive to higher prices because consumers can simply choose not to buy.</dd>
+        </dl>
+        <a class="term-source" href="issue-13.html">Issue No. 13 →</a>
+      </div>
+
+      <div class="term" id="contango" data-letter="c" data-search="contango opposite oil later delivery costs soon common issue 12">
+        <dl>
+          <dt>Contango</dt>
+          <dd>The opposite: when oil for later delivery costs more than oil for delivery soon. The more common shape, partly because storing oil costs money.</dd>
+        </dl>
+        <a class="term-source" href="issue-12.html">Issue No. 12 →</a>
+      </div>
+
+      <div class="term" id="controlling-shareholder" data-letter="c" data-search="controlling shareholder owner enough voting power approve major decisions sometimes issue 11">
+        <dl>
+          <dt>Controlling shareholder</dt>
+          <dd>An owner with enough voting power to approve major decisions, sometimes an entire sale, on their own.</dd>
+        </dl>
+        <a class="term-source" href="issue-11.html">Issue No. 11 →</a>
+      </div>
+
+      <div class="term" id="core-inflation" data-letter="c" data-search="core inflation volatile food energy prices stripped used see issue 7">
+        <dl>
+          <dt>Core inflation</dt>
+          <dd>Inflation with volatile food and energy prices stripped out, used to see the underlying trend.</dd>
+        </dl>
+        <a class="term-source" href="issue-7.html">Issue No. 7 →</a>
+      </div>
+
+      <div class="term" id="cost-pass-through" data-letter="c" data-search="cost pass-through tariff absorb profit customer higher price issue 13">
+        <dl>
+          <dt>Cost pass-through</dt>
+          <dd>What a company does with a new cost like a tariff — either absorbing it into smaller profit or passing it to customers as a higher price.</dd>
+        </dl>
+        <a class="term-source" href="issue-13.html">Issue No. 13 →</a>
+      </div>
+
+      <div class="term" id="currency-intervention" data-letter="c" data-search="currency intervention government central bank steps directly market push value issue 6">
+        <dl>
+          <dt>Currency intervention</dt>
+          <dd>When a government or central bank steps directly into the market to push the value of its own currency up or down.</dd>
+        </dl>
+        <a class="term-source" href="issue-6.html">Issue No. 6 →</a>
+      </div>
+
+      <div class="term" id="currency-neutral-constant-currency" data-letter="c" data-search="currency-neutral constant currency like measuring business actually grew pretending exchange issue 10">
+        <dl>
+          <dt>Currency-neutral (constant currency)</dt>
+          <dd>It's like measuring how much a business actually grew, pretending exchange rates didn't change at all.</dd>
+        </dl>
+        <a class="term-source" href="issue-10.html">Issue No. 10 →</a>
+      </div>
+
+      <div class="term" id="data-dependent" data-letter="d" data-search="data-dependent deciding meeting based latest figures rather pre-committing path issue 7">
+        <dl>
+          <dt>Data-dependent</dt>
+          <dd>Deciding each meeting based on the latest figures rather than pre-committing to a path.</dd>
+        </dl>
+        <a class="term-source" href="issue-7.html">Issue No. 7 →</a>
+      </div>
+
+      <div class="term" id="de-anchoring-of-inflation-expectations" data-letter="d" data-search="de-anchoring inflation expectations people stop believing return target start issue 7">
+        <dl>
+          <dt>De-anchoring of inflation expectations</dt>
+          <dd>When people stop believing inflation will return to target and start expecting it to stay high, which can become self-fulfilling.</dd>
+        </dl>
+        <a class="term-source" href="issue-7.html">Issue No. 7 →</a>
+      </div>
+
+      <div class="term" id="decentralized-exchange-dex" data-letter="d" data-search="decentralized exchange dex trading platform runs blockchain company charge operates issue 2">
+        <dl>
+          <dt>Decentralized exchange (DEX)</dt>
+          <dd>A trading platform that runs on a blockchain with no company in charge. It operates through code, around the clock, for anyone with an internet connection.</dd>
+        </dl>
+        <a class="term-source" href="issue-2.html">Issue No. 2 →</a>
+      </div>
+
+      <div class="term" id="delaware-court-of-chancery" data-letter="d" data-search="delaware court chancery specialist judges juries major corporate disputes issue 11">
+        <dl>
+          <dt>Delaware Court of Chancery</dt>
+          <dd>The specialist US court, with judges and no juries, where most major corporate disputes are decided, because most large US companies are legally incorporated in Delaware.</dd>
+        </dl>
+        <a class="term-source" href="issue-11.html">Issue No. 11 →</a>
+      </div>
+
+      <div class="term" id="discount-rate" data-letter="d" data-search="discount rate interest used calculate future earnings worth today's issue 3">
+        <dl>
+          <dt>Discount rate</dt>
+          <dd>The interest rate used to calculate what future earnings are worth in today's money. When rates are high, future profits are worth less today, which puts extra pressure on companies valued on distant potential rather than current earnings.</dd>
+        </dl>
+        <a class="term-source" href="issue-3.html">Issue No. 3 →</a>
+      </div>
+
+      <div class="term" id="discovery" data-letter="d" data-search="discovery stage lawsuit side demand other's internal documents evidence issue 11">
+        <dl>
+          <dt>Discovery</dt>
+          <dd>The stage of a lawsuit where each side can demand the other's internal documents and evidence.</dd>
+        </dl>
+        <a class="term-source" href="issue-11.html">Issue No. 11 →</a>
+      </div>
+
+      <div class="term" id="discretionary-spending" data-letter="d" data-search="discretionary spending money people spend wants rather needs issue 10">
+        <dl>
+          <dt>Discretionary spending</dt>
+          <dd>The money people spend on wants rather than needs.</dd>
+        </dl>
+        <a class="term-source" href="issue-10.html">Issue No. 10 →</a>
+      </div>
+
+      <div class="term" id="diversification" data-letter="d" data-search="diversification spreading money across assets never overly dependent single one issue 9">
+        <dl>
+          <dt>Diversification</dt>
+          <dd>Spreading your money across more assets so you are never overly dependent on any single one.</dd>
+        </dl>
+        <a class="term-source" href="issue-9.html">Issue No. 9 →</a>
+      </div>
+
+      <div class="term" id="dovish" data-letter="d" data-search="dovish central bank members prefer keep interest rates low money issue 6">
+        <dl>
+          <dt>Dovish</dt>
+          <dd>When a central bank or its members prefer to keep interest rates low and money cheap to support growth. A dovish board member is less likely to vote for rate rises.</dd>
+        </dl>
+        <a class="term-source" href="issue-6.html">Issue No. 6 →</a>
+      </div>
+
+      <div class="term" id="dry-powder" data-letter="d" data-search="dry powder money private equity firm raised investors spent large issue 8">
+        <dl>
+          <dt>Dry powder</dt>
+          <dd>The money a private equity firm has raised from investors but not yet spent. A large stockpile lets a firm move quickly on big deals.</dd>
+        </dl>
+        <a class="term-source" href="issue-8.html">Issue No. 8 →</a>
+      </div>
+
+      <div class="term" id="earnings-per-share-eps" data-letter="e" data-search="earnings per share eps company's profit divided number shares per-share issue 10">
+        <dl>
+          <dt>Earnings per share (EPS)</dt>
+          <dd>A company's profit divided by its number of shares. A per-share slice of the profit.</dd>
+        </dl>
+        <a class="term-source" href="issue-10.html">Issue No. 10 →</a>
+      </div>
+
+      <div class="term" id="earnings-surprise-beat-miss" data-letter="e" data-search="earnings surprise beat/miss gap between reported results consensus estimate above issue 10">
+        <dl>
+          <dt>Earnings surprise (beat/miss)</dt>
+          <dd>The gap between reported results and the consensus estimate. Above the bar is a "beat," below it a "miss".</dd>
+        </dl>
+        <a class="term-source" href="issue-10.html">Issue No. 10 →</a>
+      </div>
+
+      <div class="term" id="effective-tariff-rate" data-letter="e" data-search="effective tariff rate average blended imports issue 13">
+        <dl>
+          <dt>Effective tariff rate</dt>
+          <dd>The average tariff actually carried across everything the US imports, blended into one number, as opposed to any single headline rate.</dd>
+        </dl>
+        <a class="term-source" href="issue-13.html">Issue No. 13 →</a>
+      </div>
+
+      <div class="term" id="emerging-markets" data-letter="e" data-search="emerging markets economies fast developing countries offer higher growth established issue 9">
+        <dl>
+          <dt>Emerging markets</dt>
+          <dd>The economies of fast developing countries, which can offer higher growth than established ones but usually come with more risk.</dd>
+        </dl>
+        <a class="term-source" href="issue-9.html">Issue No. 9 →</a>
+      </div>
+
+      <div class="term" id="equity-in-a-deal" data-letter="e" data-search="equity deal buyer's cash put purchase opposed borrowed part issue 8">
+        <dl>
+          <dt>Equity (in a deal)</dt>
+          <dd>The buyer's own cash put into a purchase, as opposed to the borrowed part.</dd>
+        </dl>
+        <a class="term-source" href="issue-8.html">Issue No. 8 →</a>
+      </div>
+
+      <div class="term" id="excess-structural-capacity" data-letter="e" data-search="excess structural capacity industry oversupply subsidized factories export cheaply issue 13">
+        <dl>
+          <dt>Excess structural capacity</dt>
+          <dd>When an industry can produce much more than what is demanded, usually because governments have subsidized the building of factories.</dd>
+        </dl>
+        <a class="term-source" href="issue-13.html">Issue No. 13 →</a>
+      </div>
+
+      <div class="term" id="exit" data-letter="e" data-search="exit moment private equity firm sells company owns hopefully paid issue 8">
+        <dl>
+          <dt>Exit</dt>
+          <dd>The moment a private equity firm sells a company it owns, hopefully for more than it paid. It is when the firm collects its return.</dd>
+        </dl>
+        <a class="term-source" href="issue-8.html">Issue No. 8 →</a>
+      </div>
+
+      <div class="term" id="exorbitant-privilege" data-letter="e" data-search="exorbitant privilege unique advantage gets issuing world's main reserve currency issue 9">
+        <dl>
+          <dt>Exorbitant privilege</dt>
+          <dd>The unique advantage the US gets from issuing the world's main reserve currency. Since the world always needs dollars, it can borrow more cheaply and easily than other countries.</dd>
+        </dl>
+        <a class="term-source" href="issue-9.html">Issue No. 9 →</a>
+      </div>
+
+      <div class="term" id="expense-ratio" data-letter="e" data-search="expense ratio annual fee etf charges taken automatically small percentage issue 2">
+        <dl>
+          <dt>Expense ratio</dt>
+          <dd>The annual fee an ETF charges you, taken automatically as a small percentage of what you've invested. Lower is better, but context matters for newer products.</dd>
+        </dl>
+        <a class="term-source" href="issue-2.html">Issue No. 2 →</a>
+      </div>
+
+      <div class="term" id="extended-after-hours-trading" data-letter="e" data-search="extended after-hours trading happens outside normal market hours often issue 10">
+        <dl>
+          <dt>Extended (after-hours) trading</dt>
+          <dd>Trading that happens outside normal market hours, often right after an earnings release.</dd>
+        </dl>
+        <a class="term-source" href="issue-10.html">Issue No. 10 →</a>
+      </div>
+
+      <div class="term" id="fair-value" data-letter="f" data-search="fair value judge-determined worth shares appraisal case come above below issue 11">
+        <dl>
+          <dt>Fair value</dt>
+          <dd>The judge-determined worth of shares in an appraisal case. It can come out above, at, or below the deal price.</dd>
+        </dl>
+        <a class="term-source" href="issue-11.html">Issue No. 11 →</a>
+      </div>
+
+      <div class="term" id="fiduciary-duty" data-letter="f" data-search="fiduciary duty legal obligation directors controlling insiders act shareholders best issue 11">
+        <dl>
+          <dt>Fiduciary duty</dt>
+          <dd>The legal obligation of directors and controlling insiders to act in shareholders' best interests rather than their own.</dd>
+        </dl>
+        <a class="term-source" href="issue-11.html">Issue No. 11 →</a>
+      </div>
+
+      <div class="term" id="foreign-exchange-reserves" data-letter="f" data-search="foreign exchange reserves currencies assets country holds pay imports issue 9">
+        <dl>
+          <dt>Foreign exchange reserves</dt>
+          <dd>The foreign currencies and assets a country holds to pay for imports and stabilize its own currency in a crisis.</dd>
+        </dl>
+        <a class="term-source" href="issue-9.html">Issue No. 9 →</a>
+      </div>
+
+      <div class="term" id="futures-contract" data-letter="f" data-search="futures contract agreement buy sell something fixed price set future issue 12">
+        <dl>
+          <dt>Futures contract</dt>
+          <dd>An agreement to buy or sell something at a fixed price on a set future date.</dd>
+        </dl>
+        <a class="term-source" href="issue-12.html">Issue No. 12 →</a>
+      </div>
+
+      <div class="term" id="geopolitical-risk-premium" data-letter="g" data-search="geopolitical risk premium extra price markets add asset like oil issue 5">
+        <dl>
+          <dt>Geopolitical risk premium</dt>
+          <dd>The extra price markets add to an asset, like oil, because of conflict or political uncertainty. It falls when tensions cool and rises when they flare.</dd>
+        </dl>
+        <a class="term-source" href="issue-5.html">Issue No. 5 →</a>
+      </div>
+
+      <div class="term" id="gross-margin" data-letter="g" data-search="gross margin share revenue left after direct cost making product issue 10">
+        <dl>
+          <dt>Gross margin</dt>
+          <dd>The share of revenue left after the direct cost of making a product. A core read on profitability.</dd>
+        </dl>
+        <a class="term-source" href="issue-10.html">Issue No. 10 →</a>
+      </div>
+
+      <div class="term" id="guidance" data-letter="g" data-search="guidance company's forecast future results issue 10">
+        <dl>
+          <dt>Guidance</dt>
+          <dd>A company's own forecast for its future results.</dd>
+        </dl>
+        <a class="term-source" href="issue-10.html">Issue No. 10 →</a>
+      </div>
+
+      <div class="term" id="hawkish" data-letter="h" data-search="hawkish opposite dovish central bank members prefer higher interest rates issue 6">
+        <dl>
+          <dt>Hawkish</dt>
+          <dd>The opposite of dovish. When a central bank or its members prefer higher interest rates to control inflation, even if it slows growth. A hawkish stance means rates are more likely to rise.</dd>
+        </dl>
+        <a class="term-source" href="issue-6.html">Issue No. 6 →</a>
+      </div>
+
+      <div class="term" id="higher-for-longer" data-letter="h" data-search="higher longer idea central banks keep interest rates elevated extended issue 8">
+        <dl>
+          <dt>Higher for longer</dt>
+          <dd>The idea that central banks will keep interest rates elevated for an extended period rather than cutting them soon.</dd>
+        </dl>
+        <a class="term-source" href="issue-8.html">Issue No. 8 →</a>
+      </div>
+
+      <div class="term" id="iea-international-energy-agency" data-letter="i" data-search="iea international energy agency intergovernmental body tracks forecasts global issue 5">
+        <dl>
+          <dt>IEA (International Energy Agency)</dt>
+          <dd>An intergovernmental body that tracks and forecasts global energy markets. Think of it as the energy world's equivalent of the OECD.</dd>
+        </dl>
+        <a class="term-source" href="issue-5.html">Issue No. 5 →</a>
+      </div>
+
+      <div class="term" id="import-duty" data-letter="i" data-search="import duty another name tariff issue 13">
+        <dl>
+          <dt>Import duty</dt>
+          <dd>Another name for a tariff.</dd>
+        </dl>
+        <a class="term-source" href="issue-13.html">Issue No. 13 →</a>
+      </div>
+
+      <div class="term" id="index-inclusion" data-letter="i" data-search="index inclusion company joins major like s&amp;p 500 passive issue 3">
+        <dl>
+          <dt>Index inclusion</dt>
+          <dd>When a company joins a major index like the S&amp;P 500, passive funds automatically buy its shares regardless of any individual investor's view on the company.</dd>
+        </dl>
+        <a class="term-source" href="issue-3.html">Issue No. 3 →</a>
+      </div>
+
+      <div class="term" id="inflationary" data-letter="i" data-search="inflationary something pushes general level prices tariff because raises issue 13">
+        <dl>
+          <dt>Inflationary</dt>
+          <dd>Something that pushes the general level of prices up. A tariff is inflationary because it raises the cost of imported goods.</dd>
+        </dl>
+        <a class="term-source" href="issue-13.html">Issue No. 13 →</a>
+      </div>
+
+      <div class="term" id="interest-rate-differential-the-rate-gap" data-letter="i" data-search="interest rate differential gap difference between two countries issue 6">
+        <dl>
+          <dt>Interest rate differential (the rate gap)</dt>
+          <dd>The difference between two countries' interest rates. It is one of the main forces driving where global money flows.</dd>
+        </dl>
+        <a class="term-source" href="issue-6.html">Issue No. 6 →</a>
+      </div>
+
+      <div class="term" id="ipo-initial-public-offering" data-letter="i" data-search="ipo initial public offering private company sells shares first issue 3">
+        <dl>
+          <dt>IPO (Initial Public Offering)</dt>
+          <dd>When a private company sells shares to the public for the first time.</dd>
+        </dl>
+        <a class="term-source" href="issue-3.html">Issue No. 3 →</a>
+      </div>
+
+      <div class="term" id="lead-plaintiff" data-letter="l" data-search="lead plaintiff investor chosen steer class action picks lawyers sets issue 11">
+        <dl>
+          <dt>Lead plaintiff</dt>
+          <dd>The investor chosen to steer a class action. Picks the lawyers, sets strategy, and can agree settlements that, once approved by the court, bind everyone in the class.</dd>
+        </dl>
+        <a class="term-source" href="issue-11.html">Issue No. 11 →</a>
+      </div>
+
+      <div class="term" id="leverage" data-letter="l" data-search="leverage using borrowed money make bigger purchase cash alone allow issue 8">
+        <dl>
+          <dt>Leverage</dt>
+          <dd>Using borrowed money to make a bigger purchase than your own cash alone would allow. It magnifies both the potential gain and the potential loss.</dd>
+        </dl>
+        <a class="term-source" href="issue-8.html">Issue No. 8 →</a>
+      </div>
+
+      <div class="term" id="leveraged-buyout-lbo" data-letter="l" data-search="leveraged buyout lbo buying company using mostly borrowed money issue 8">
+        <dl>
+          <dt>Leveraged buyout (LBO)</dt>
+          <dd>Buying a company using mostly borrowed money, with the company itself acting as security for the loan.</dd>
+        </dl>
+        <a class="term-source" href="issue-8.html">Issue No. 8 →</a>
+      </div>
+
+      <div class="term" id="leveraged-loan" data-letter="l" data-search="leveraged loan company taking lot debt such buyout because issue 8">
+        <dl>
+          <dt>Leveraged loan</dt>
+          <dd>A loan to a company taking on a lot of debt, such as in a buyout. Because the borrower is riskier, it pays a higher interest rate.</dd>
+        </dl>
+        <a class="term-source" href="issue-8.html">Issue No. 8 →</a>
+      </div>
+
+      <div class="term" id="market-capitalization" data-letter="m" data-search="market capitalization total value company found multiplying share price number issue 4">
+        <dl>
+          <dt>Market capitalization</dt>
+          <dd>The total value of a company, found by multiplying its share price by the number of shares in existence. SpaceX's sits near $2.1 trillion.</dd>
+        </dl>
+        <a class="term-source" href="issue-4.html">Issue No. 4 →</a>
+      </div>
+
+      <div class="term" id="market-repricing" data-letter="m" data-search="market repricing new information causes asset values drop quickly across issue 1">
+        <dl>
+          <dt>Market repricing</dt>
+          <dd>When new information causes asset values to drop quickly across the board — stocks fall and borrowing gets more expensive.</dd>
+        </dl>
+        <a class="term-source" href="issue-1.html">Issue No. 1 →</a>
+      </div>
+
+      <div class="term" id="maturity-or-tenor" data-letter="m" data-search="maturity tenor specific length time until bond expires borrower pay issue 7">
+        <dl>
+          <dt>Maturity (or tenor)</dt>
+          <dd>The specific length of time until a bond expires and the borrower has to pay back the original loan amount in full.</dd>
+        </dl>
+        <a class="term-source" href="issue-7.html">Issue No. 7 →</a>
+      </div>
+
+      <div class="term" id="medium-term-target" data-letter="m" data-search="medium-term target inflation goal ecb aims reach couple years necessarily issue 7">
+        <dl>
+          <dt>Medium-term target</dt>
+          <dd>The 2% inflation goal the ECB aims to reach over a couple of years, not necessarily every single month.</dd>
+        </dl>
+        <a class="term-source" href="issue-7.html">Issue No. 7 →</a>
+      </div>
+
+      <div class="term" id="merger-arbitrage" data-letter="m" data-search="merger arbitrage buying shares after deal announced profit small gap issue 11">
+        <dl>
+          <dt>Merger arbitrage</dt>
+          <dd>Buying shares after a deal is announced to profit from the small gap between the market price and the deal price.</dd>
+        </dl>
+        <a class="term-source" href="issue-11.html">Issue No. 11 →</a>
+      </div>
+
+      <div class="term" id="mou-memorandum-of-understanding" data-letter="m" data-search="mou memorandum understanding preliminary non-binding agreement sets framework possible deal issue 5">
+        <dl>
+          <dt>MoU (Memorandum of Understanding)</dt>
+          <dd>A preliminary, non-binding agreement that sets out the framework for a possible deal. It is not final and not yet legally locked in.</dd>
+        </dl>
+        <a class="term-source" href="issue-5.html">Issue No. 5 →</a>
+      </div>
+
+      <div class="term" id="multipolar-monetary-system" data-letter="m" data-search="multipolar monetary system world single currency dominates several share role issue 9">
+        <dl>
+          <dt>Multipolar monetary system</dt>
+          <dd>A world where no single currency dominates, and several share the role the dollar plays alone today.</dd>
+        </dl>
+        <a class="term-source" href="issue-9.html">Issue No. 9 →</a>
+      </div>
+
+      <div class="term" id="omfif" data-letter="o" data-search="omfif official monetary financial institutions forum london based institution works issue 9">
+        <dl>
+          <dt>OMFIF</dt>
+          <dd>The Official Monetary and Financial Institutions Forum, a London based institution that works directly with the world's central banks and public funds and publishes an annual survey of their intentions.</dd>
+        </dl>
+        <a class="term-source" href="issue-9.html">Issue No. 9 →</a>
+      </div>
+
+      <div class="term" id="one-off" data-letter="o" data-search="one-off gain cost repeat like tax refund legal settlement issue 10">
+        <dl>
+          <dt>One-off</dt>
+          <dd>A gain or cost that will not repeat, like a tax refund or a legal settlement.</dd>
+        </dl>
+        <a class="term-source" href="issue-10.html">Issue No. 10 →</a>
+      </div>
+
+      <div class="term" id="perpetual-futures" data-letter="p" data-search="perpetual futures contract lets bet price going expiry date common issue 2">
+        <dl>
+          <dt>Perpetual futures</dt>
+          <dd>A contract that lets you bet on where a price is going with no expiry date. Common in crypto and used on Hyperliquid to trade oil and other assets 24/7.</dd>
+        </dl>
+        <a class="term-source" href="issue-2.html">Issue No. 2 →</a>
+      </div>
+
+      <div class="term" id="premium-in-a-deal" data-letter="p" data-search="premium deal amount buyer pays above going market price convince issue 11">
+        <dl>
+          <dt>Premium (in a deal)</dt>
+          <dd>The amount a buyer pays above the going market price to convince shareholders to sell.</dd>
+        </dl>
+        <a class="term-source" href="issue-11.html">Issue No. 11 →</a>
+      </div>
+
+      <div class="term" id="price-discovery" data-letter="p" data-search="price discovery process public markets determine real value company through issue 3">
+        <dl>
+          <dt>Price discovery</dt>
+          <dd>The process by which public markets determine the real value of a company through actual buying and selling.</dd>
+        </dl>
+        <a class="term-source" href="issue-3.html">Issue No. 3 →</a>
+      </div>
+
+      <div class="term" id="price-to-earnings-p-e-ratio" data-letter="p" data-search="price-to-earnings p/e ratio share price divided earnings per dollars issue 10">
+        <dl>
+          <dt>Price-to-earnings (P/E) ratio</dt>
+          <dd>A share price divided by earnings per share. How many dollars investors pay for each dollar of annual profit.</dd>
+        </dl>
+        <a class="term-source" href="issue-10.html">Issue No. 10 →</a>
+      </div>
+
+      <div class="term" id="private-equity" data-letter="p" data-search="private equity investors buy companies listed stock market work make issue 8">
+        <dl>
+          <dt>Private equity</dt>
+          <dd>Investors who buy companies not listed on the stock market, work to make them more valuable, and sell them on later for a profit.</dd>
+        </dl>
+        <a class="term-source" href="issue-8.html">Issue No. 8 →</a>
+      </div>
+
+      <div class="term" id="private-markets" data-letter="p" data-search="private markets part investing happens public stock exchange such buying issue 8">
+        <dl>
+          <dt>Private markets</dt>
+          <dd>The part of investing that happens off the public stock exchange, such as buying whole companies or large stakes in them.</dd>
+        </dl>
+        <a class="term-source" href="issue-8.html">Issue No. 8 →</a>
+      </div>
+
+      <div class="term" id="purchasing-managers-index-pmi" data-letter="p" data-search="purchasing managers index pmi monthly survey business used early issue 7">
+        <dl>
+          <dt>Purchasing managers' index (PMI)</dt>
+          <dd>A monthly survey of business managers used as an early read on economic activity.</dd>
+        </dl>
+        <a class="term-source" href="issue-7.html">Issue No. 7 →</a>
+      </div>
+
+      <div class="term" id="quality-of-earnings" data-letter="q" data-search="quality earnings profit comes actual business versus one-off boosts high issue 10">
+        <dl>
+          <dt>Quality of earnings</dt>
+          <dd>How much of a profit comes from the actual business versus one-off boosts. High quality is durable and low quality flatters.</dd>
+        </dl>
+        <a class="term-source" href="issue-10.html">Issue No. 10 →</a>
+      </div>
+
+      <div class="term" id="reflationary-stance" data-letter="r" data-search="reflationary stance keeping money cheap stimulus flowing push growth inflation issue 6">
+        <dl>
+          <dt>Reflationary stance</dt>
+          <dd>keeping money cheap and stimulus flowing to push growth and inflation up, even if it leaves the currency soft.</dd>
+        </dl>
+        <a class="term-source" href="issue-6.html">Issue No. 6 →</a>
+      </div>
+
+      <div class="term" id="reported-vs-adjusted-earnings" data-letter="r" data-search="reported adjusted earnings include everything underlying issue 10">
+        <dl>
+          <dt>Reported vs adjusted earnings</dt>
+          <dd>Reported earnings include everything. Adjusted, or underlying, earnings remove the one-off items.</dd>
+        </dl>
+        <a class="term-source" href="issue-10.html">Issue No. 10 →</a>
+      </div>
+
+      <div class="term" id="reserve-currency" data-letter="r" data-search="reserve currency governments central banks hold large amounts settle issue 9">
+        <dl>
+          <dt>Reserve currency</dt>
+          <dd>A currency that governments and central banks hold in large amounts to settle international trade and store national wealth.</dd>
+        </dl>
+        <a class="term-source" href="issue-9.html">Issue No. 9 →</a>
+      </div>
+
+      <div class="term" id="retail-vs-institutional-investors" data-letter="r" data-search="retail institutional investors everyday individuals large issue 4">
+        <dl>
+          <dt>Retail vs institutional investors</dt>
+          <dd>Retail investors are everyday individuals. Institutional investors are large funds. The two often receive very different allocations in a hot IPO.</dd>
+        </dl>
+        <a class="term-source" href="issue-4.html">Issue No. 4 →</a>
+      </div>
+
+      <div class="term" id="retaliation-trade" data-letter="r" data-search="retaliation trade country hit tariffs responds taxing country's exports return issue 13">
+        <dl>
+          <dt>Retaliation (Trade)</dt>
+          <dd>When a country hit by tariffs responds by taxing the other country's exports in return, which can widen a trade dispute.</dd>
+        </dl>
+        <a class="term-source" href="issue-13.html">Issue No. 13 →</a>
+      </div>
+
+      <div class="term" id="revenue-multiple" data-letter="r" data-search="revenue multiple way measuring expensive company relative money brings higher issue 3">
+        <dl>
+          <dt>Revenue multiple</dt>
+          <dd>A way of measuring how expensive a company is relative to how much money it brings in. The higher the multiple, the more faith the market is placing in future growth.</dd>
+        </dl>
+        <a class="term-source" href="issue-3.html">Issue No. 3 →</a>
+      </div>
+
+      <div class="term" id="revenue-vs-profit" data-letter="r" data-search="revenue profit total money coming remains after costs issue 3">
+        <dl>
+          <dt>Revenue vs profit</dt>
+          <dd>Revenue is the total money coming in. Profit is what remains after all costs are paid. A company can have very high revenue and still lose money, which is the case for all three companies here.</dd>
+        </dl>
+        <a class="term-source" href="issue-3.html">Issue No. 3 →</a>
+      </div>
+
+      <div class="term" id="risk-off" data-letter="r" data-search="risk-off investors get nervous move safe assets like gold government issue 1">
+        <dl>
+          <dt>Risk-off</dt>
+          <dd>When investors get nervous and move into safe assets like gold and government bonds, and out of stocks and emerging markets.</dd>
+        </dl>
+        <a class="term-source" href="issue-1.html">Issue No. 1 →</a>
+      </div>
+
+      <div class="term" id="second-round-effects" data-letter="s" data-search="second-round effects initial price shock like energy feeds wages prices issue 7">
+        <dl>
+          <dt>Second-round effects</dt>
+          <dd>When an initial price shock, like energy, feeds into wages and other prices, so inflation keeps going even after the original cause fades.</dd>
+        </dl>
+        <a class="term-source" href="issue-7.html">Issue No. 7 →</a>
+      </div>
+
+      <div class="term" id="section-122" data-letter="s" data-search="section 122 trade act 1974 emergency tariff 150 days congress issue 13">
+        <dl>
+          <dt>Section 122 (Trade Act of 1974)</dt>
+          <dd>A hard-stop emergency tariff tool. A maximum of 150 days, extendable only by an Act of Congress.</dd>
+        </dl>
+        <a class="term-source" href="issue-13.html">Issue No. 13 →</a>
+      </div>
+
+      <div class="term" id="section-301" data-letter="s" data-search="section 301 trade act 1974 four year renew indefinitely no cap issue 13">
+        <dl>
+          <dt>Section 301 (Trade Act of 1974)</dt>
+          <dd>A longstanding tariff authority that runs on a four-year cycle and can be renewed on request more or less indefinitely, with no cap on the rate.</dd>
+        </dl>
+        <a class="term-source" href="issue-13.html">Issue No. 13 →</a>
+      </div>
+
+      <div class="term" id="selling-price-expectations" data-letter="s" data-search="selling-price expectations surveys whether businesses plan raise prices soon forward-looking issue 7">
+        <dl>
+          <dt>Selling-price expectations</dt>
+          <dd>Surveys of whether businesses plan to raise their prices soon. A forward-looking inflation signal.</dd>
+        </dl>
+        <a class="term-source" href="issue-7.html">Issue No. 7 →</a>
+      </div>
+
+      <div class="term" id="services-inflation" data-letter="s" data-search="services inflation price rises like rent insurance travel rather issue 7">
+        <dl>
+          <dt>Services inflation</dt>
+          <dd>Price rises in services like rent, insurance, and travel rather than physical goods. Tends to be stickier than goods inflation.</dd>
+        </dl>
+        <a class="term-source" href="issue-7.html">Issue No. 7 →</a>
+      </div>
+
+      <div class="term" id="sovereign-wealth-fund" data-letter="s" data-search="sovereign wealth fund state-owned investment invests country's surplus money issue 8">
+        <dl>
+          <dt>Sovereign wealth fund</dt>
+          <dd>A state-owned investment fund that invests a country's surplus money around the world.</dd>
+        </dl>
+        <a class="term-source" href="issue-8.html">Issue No. 8 →</a>
+      </div>
+
+      <div class="term" id="stagflation" data-letter="s" data-search="stagflation combination slow economic growth rising inflation time cutting rates issue 1">
+        <dl>
+          <dt>Stagflation</dt>
+          <dd>A combination of slow economic growth and rising inflation at the same time — cutting rates helps growth but worsens inflation, and vice versa.</dd>
+        </dl>
+        <a class="term-source" href="issue-1.html">Issue No. 1 →</a>
+      </div>
+
+      <div class="term" id="statutory-interest-appraisal" data-letter="s" data-search="statutory interest appraisal delaware adds award default federal issue 11">
+        <dl>
+          <dt>Statutory interest (appraisal)</dt>
+          <dd>The interest Delaware adds to an appraisal award by default: 5% over the Federal Reserve discount rate, compounded quarterly, from deal close to payment.</dd>
+        </dl>
+        <a class="term-source" href="issue-11.html">Issue No. 11 →</a>
+      </div>
+
+      <div class="term" id="strait-of-bab-al-mandab" data-letter="s" data-search="strait bab al-mandab narrow southern entrance red sea became issue 12">
+        <dl>
+          <dt>Strait of Bab al-Mandab</dt>
+          <dd>The narrow strait at the southern entrance to the Red Sea and it became oil's detour route after Hormuz was disrupted.</dd>
+        </dl>
+        <a class="term-source" href="issue-12.html">Issue No. 12 →</a>
+      </div>
+
+      <div class="term" id="supply-side-shock" data-letter="s" data-search="supply side shock prices rising because disrupted people issue 1">
+        <dl>
+          <dt>Supply side shock</dt>
+          <dd>Prices rising because supply is disrupted, not because people are spending more. Interest rates can't fix a blocked shipping lane.</dd>
+        </dl>
+        <a class="term-source" href="issue-1.html">Issue No. 1 →</a>
+      </div>
+
+      <div class="term" id="surged" data-letter="s" data-search="surged asset rises sharply quickly price context yen mean issue 6">
+        <dl>
+          <dt>Surged</dt>
+          <dd>When an asset rises sharply and quickly in price. In this context, if the yen surged it would mean the currency jumped higher rapidly, catching anyone on the wrong side of the carry trade off guard.</dd>
+        </dl>
+        <a class="term-source" href="issue-6.html">Issue No. 6 →</a>
+      </div>
+
+      <div class="term" id="tailwind" data-letter="t" data-search="tailwind something works favour helps push result positive direction finance issue 6">
+        <dl>
+          <dt>Tailwind</dt>
+          <dd>Something that works in your favour and helps push a result in a positive direction. In finance, a tailwind is any factor that supports the performance of an asset, currency, or economy. The opposite is a headwind.</dd>
+        </dl>
+        <a class="term-source" href="issue-6.html">Issue No. 6 →</a>
+      </div>
+
+      <div class="term" id="take-private-going-private" data-letter="t" data-search="take-private going private buyer purchases shares listed company removes stock issue 11">
+        <dl>
+          <dt>Take-private (going private)</dt>
+          <dd>A buyer purchases all the shares of a listed company and removes it from the stock exchange entirely.</dd>
+        </dl>
+        <a class="term-source" href="issue-11.html">Issue No. 11 →</a>
+      </div>
+
+      <div class="term" id="tariff" data-letter="t" data-search="tariff tax imported goods importer not exporting country issue 13">
+        <dl>
+          <dt>Tariff</dt>
+          <dd>A tax a country charges on goods coming in from abroad. Paid by the company importing them, not by the exporting country.</dd>
+        </dl>
+        <a class="term-source" href="issue-13.html">Issue No. 13 →</a>
+      </div>
+
+      <div class="term" id="tariff-incidence" data-letter="t" data-search="tariff incidence worse off importer customer foreign supplier issue 13">
+        <dl>
+          <dt>Tariff incidence</dt>
+          <dd>Who actually ends up worse off once a tariff is paid, which can be the importing company, its customers, or the foreign supplier.</dd>
+        </dl>
+        <a class="term-source" href="issue-13.html">Issue No. 13 →</a>
+      </div>
+
+      <div class="term" id="tender-offer" data-letter="t" data-search="tender offer company allows employees early investors sell shares private issue 3">
+        <dl>
+          <dt>Tender offer</dt>
+          <dd>When a company allows employees or early investors to sell their shares to private buyers before a public listing. It provides liquidity without requiring an IPO first.</dd>
+        </dl>
+        <a class="term-source" href="issue-3.html">Issue No. 3 →</a>
+      </div>
+
+      <div class="term" id="token-buyback" data-letter="t" data-search="token buyback crypto platform uses revenue purchase retire tokens logic issue 2">
+        <dl>
+          <dt>Token buyback</dt>
+          <dd>When a crypto platform uses its own revenue to purchase and retire its tokens. The same logic as a company buying back its own shares to return value to holders.</dd>
+        </dl>
+        <a class="term-source" href="issue-2.html">Issue No. 2 →</a>
+      </div>
+
+      <div class="term" id="top-up-tariffs" data-letter="t" data-search="top-up tariffs additional duties layered lift overall level issue 13">
+        <dl>
+          <dt>Top-up tariffs</dt>
+          <dd>Additional duties layered on top of existing ones to lift the overall tariff level back to a previous point.</dd>
+        </dl>
+        <a class="term-source" href="issue-13.html">Issue No. 13 →</a>
+      </div>
+
+      <div class="term" id="usmca" data-letter="u" data-search="usmca united states mexico canada agreement regional trade deal exempt issue 13">
+        <dl>
+          <dt>USMCA</dt>
+          <dd>The United States-Mexico-Canada Agreement, a regional trade deal. Goods it covers are largely exempt from these new tariffs.</dd>
+        </dl>
+        <a class="term-source" href="issue-13.html">Issue No. 13 →</a>
+      </div>
+
+      <div class="term" id="valuation" data-letter="v" data-search="valuation estimated total value company private markets set funding rounds issue 3">
+        <dl>
+          <dt>Valuation</dt>
+          <dd>The estimated total value of a company. In private markets this is set in funding rounds by a small group of investors. In public markets it is set in real time by actual buying and selling.</dd>
+        </dl>
+        <a class="term-source" href="issue-3.html">Issue No. 3 →</a>
+      </div>
+
+      <div class="term" id="voting-rights-vs-economic-stake" data-letter="v" data-search="voting rights economic stake decide controls company's decisions issue 8">
+        <dl>
+          <dt>Voting rights vs economic stake</dt>
+          <dd>Voting rights decide who controls a company's decisions. An economic stake is how much of its profits and value you own.</dd>
+        </dl>
+        <a class="term-source" href="issue-8.html">Issue No. 8 →</a>
+      </div>
+
+      <div class="term" id="wholesale-vs-direct-to-consumer" data-letter="w" data-search="wholesale direct-to-consumer selling through retailers versus straight shoppers issue 10">
+        <dl>
+          <dt>Wholesale vs direct-to-consumer</dt>
+          <dd>Selling through other retailers (wholesale) versus selling straight to shoppers via own stores and apps (direct).</dd>
+        </dl>
+        <a class="term-source" href="issue-10.html">Issue No. 10 →</a>
+      </div>
+
+      <div class="term" id="written-consent" data-letter="w" data-search="written consent approving corporate decision paper using existing voting power issue 11">
+        <dl>
+          <dt>Written consent</dt>
+          <dd>Approving a corporate decision on paper using existing voting power, without holding a shareholder meeting or vote.</dd>
+        </dl>
+        <a class="term-source" href="issue-11.html">Issue No. 11 →</a>
+      </div>
+
+      <div class="term" id="wti-west-texas-intermediate" data-letter="w" data-search="wti west texas intermediate benchmark oil price usually trades slightly issue 5">
+        <dl>
+          <dt>WTI (West Texas Intermediate)</dt>
+          <dd>The US benchmark oil price and usually trades slightly below Brent and moves with it.</dd>
+        </dl>
+        <a class="term-source" href="issue-5.html">Issue No. 5 →</a>
+      </div>
+
+      <div class="term" id="yield-curve" data-letter="y" data-search="yield curve financial chart plots interest rates bonds credit quality issue 7">
+        <dl>
+          <dt>Yield curve</dt>
+          <dd>A financial chart that plots the interest rates of bonds with the same credit quality across different lengths of time, spanning from short-term borrowing to long-term debt.</dd>
+        </dl>
+        <a class="term-source" href="issue-7.html">Issue No. 7 →</a>
+      </div>
+
+      <div class="term" id="yield-curve-flattening" data-letter="y" data-search="yield curve flattening short long-term interest rates move closer together issue 1">
+        <dl>
+          <dt>Yield curve flattening</dt>
+          <dd>When short and long-term interest rates move closer together, usually a sign markets expect slow growth ahead.</dd>
+        </dl>
+        <a class="term-source" href="issue-1.html">Issue No. 1 →</a>
+      </div>
+
+      <div class="term" id="yield-differential" data-letter="y" data-search="yield differential gap between two countries bond yields key number issue 6">
+        <dl>
+          <dt>Yield differential</dt>
+          <dd>The gap between two countries' bond yields, and the key number behind the yen's weakness this week.</dd>
+        </dl>
+        <a class="term-source" href="issue-6.html">Issue No. 6 →</a>
+      </div>
+
+      <div class="term" id="yield-on-government-bond" data-letter="y" data-search="yield government bond return investor earns lending tends fall issue 5">
+        <dl>
+          <dt>Yield on government bond</dt>
+          <dd>The return an investor earns for lending to the government, and it tends to fall when inflation worries cool.</dd>
+        </dl>
+        <a class="term-source" href="issue-5.html">Issue No. 5 →</a>
+      </div>
+
+    <div class="no-results" id="glossaryEmpty"><em>No terms match that search.</em> Try a different word or letter.</div>
   </div>
 </section>
 </main>
@@ -64,7 +1014,9 @@
         <span>Wall Street for the Girls</span>
       </a>
       <ul class="footer-links">
+        <li><a href="start-here.html">Start Here</a></li>
         <li><a href="archive.html">Archive</a></li>
+        <li><a href="foundation.html">Foundation</a></li>
         <li><a href="financial-syllabus.html">Financial Syllabus</a></li>
         <li><a href="glossary.html">Glossary</a></li>
         <li><a href="about.html">About</a></li>
@@ -72,7 +1024,7 @@
       </ul>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Wall Street for the Girls</span>
+      <span>&copy; 2026 Wall Street for the Girls</span>
       <em>Educational purposes only: reflects personal analysis, not financial advice.</em>
     </div>
   </div>
@@ -80,185 +1032,41 @@
 
 <script src="main.js"></script>
 <script>
-const terms = [
-  {t:"Appraisal Arbitrage", d:"Buying shares in a company being taken private specifically to reject the deal price and ask a judge for more.", issue:11},
-  {t:"Appraisal Rights", d:"A shareholder's legal right to refuse a deal price and ask a judge to independently decide what the shares were worth.", issue:11},
-  {t:"Backwardation", d:"When oil for delivery soon costs more than oil for delivery later. A classic signal that the market is worried about supply right now.", issue:12},
-  {t:"Basis Point", d:"A finance unit where one basis point is 0.01%.", issue:10},
-  {t:"Books and Records", d:"The internal company documents shareholders can legally demand to inspect. Delaware narrowed this in 2025.", issue:11},
-  {t:"Bookrunner", d:"The lead bank that organises an IPO, gauges demand, sets the price, and decides who receives shares.", issue:4},
-  {t:"Book Value", d:"What an asset is recorded as being worth in a company's accounts. It can differ enormously from what a buyer will actually pay.", issue:8},
-  {t:"Brent Crude", d:"The international benchmark price for oil, quoted in US dollars per barrel. Used to price most of the world's traded oil.", issue:5},
-  {t:"Carry Trade", d:"Borrowing in a low-interest currency, such as the yen, and investing the money where it earns more, then keeping the difference.", issue:6},
-  {t:"Carve-out", d:"When a large company sells off one of its divisions as a separate business, as Volkswagen did with Everllence.", issue:8},
-  {t:"Chokepoint", d:"A narrow waterway that a large share of global trade must pass through; when one is threatened, everything that moves through it gets riskier and more expensive.", issue:12},
-  {t:"Class Action", d:"One lawsuit brought on behalf of an entire group of people harmed the same way, here all the shareholders cashed out in the deal.", issue:11},
-  {t:"Confidential Filing", d:"A private submission to financial regulators allowing companies to prepare for a public listing without disclosing financial details publicly until they choose to.", issue:3},
-  {t:"Conflict of Interest (in Litigation)", d:"When one party's two roles pull in opposite directions, such as a fund whose private case could benefit at the expense of the group it leads.", issue:11},
-  {t:"Consensus Estimate", d:"The average of Wall Street analysts' forecasts for a company's results and the bar a company is measured against.", issue:10},
-  {t:"Consumer Discretionary", d:"The part of the economy selling wants rather than need. Most sensitive to higher prices because consumers can simply choose not to buy.", issue:13},
-  {t:"Contango", d:"When oil for later delivery costs more than oil for delivery soon. The more common shape, partly because storing oil costs money.", issue:12},
-  {t:"Controlling Shareholder", d:"An owner with enough voting power to approve major decisions, sometimes an entire sale, on their own.", issue:11},
-  {t:"Core Inflation", d:"Inflation with volatile food and energy prices stripped out, used to see the underlying trend.", issue:7},
-  {t:"Cost Pass-Through", d:"What a company does with a new cost like a tariff, either absorbing it into smaller profit or passing it to customers as a higher price.", issue:13},
-  {t:"Currency Intervention", d:"When a government or central bank steps directly into the market to push the value of its own currency up or down.", issue:6},
-  {t:"Currency-neutral (Constant Currency)", d:"It's like measuring how much a business actually grew, pretending exchange rates didn't change at all.", issue:10},
-  {t:"De-anchoring of Inflation Expectations", d:"When people stop believing inflation will return to target and start expecting it to stay high, which can become self-fulfilling.", issue:7},
-  {t:"Decentralized Exchange (DEX)", d:"A trading platform that runs on a blockchain with no company in charge. Operates through code, around the clock.", issue:2},
-  {t:"Delaware Court of Chancery", d:"The specialist US court, with judges and no juries, where most major corporate disputes are decided, because most large US companies are legally incorporated in Delaware.", issue:11},
-  {t:"Discovery", d:"The stage of a lawsuit where each side can demand the other's internal documents and evidence.", issue:11},
-  {t:"Discount Rate", d:"The interest rate used to calculate what future earnings are worth in today's money. Higher rates make distant profits worth less today.", issue:3},
-  {t:"Discretionary Spending", d:"The money people spend on wants rather than needs.", issue:10},
-  {t:"Diversification", d:"Spreading your money across more assets so you are never overly dependent on any single one.", issue:9},
-  {t:"Dovish", d:"When a central bank or its members prefer to keep interest rates low and money cheap to support growth.", issue:6},
-  {t:"Dry Powder", d:"The money a private equity firm has raised from investors but not yet spent. A large stockpile lets a firm move quickly on big deals.", issue:8},
-  {t:"Earnings Per Share (EPS)", d:"A company's profit divided by its number of shares. A per-share slice of the profit.", issue:10},
-  {t:"Earnings Surprise (Beat/Miss)", d:"The gap between reported results and the consensus estimate. Above the bar is a \"beat,\" below it a \"miss.\"", issue:10},
-  {t:"Effective Tariff Rate", d:"The average tariff actually carried across everything the US imports, blended into one number, as opposed to any single headline rate.", issue:13},
-  {t:"Emerging Markets", d:"The economies of fast developing countries, which can offer higher growth than established ones but usually come with more risk.", issue:9},
-  {t:"Equity (in a deal)", d:"The buyer's own cash put into a purchase, as opposed to the borrowed part.", issue:8},
-  {t:"Excess Structural Capacity", d:"When an industry can produce much more than what is demanded, usually because governments have subsidized the building of factories. The surplus gets exported cheaply, which competitors argue unfairly prices out their own producers.", issue:13},
-  {t:"Exit", d:"The moment a private equity firm sells a company it owns, hopefully for more than it paid. When the firm collects its return.", issue:8},
-  {t:"Exorbitant Privilege", d:"The unique advantage the US gets from issuing the world's main reserve currency: it can borrow more cheaply and easily than anyone else.", issue:9},
-  {t:"Expense Ratio", d:"The annual fee an ETF charges you, taken automatically as a small percentage of what you've invested. Lower is generally better.", issue:2},
-  {t:"Extended (After-hours) Trading", d:"Trading that happens outside normal market hours, often right after an earnings release.", issue:10},
-  {t:"Fair Value", d:"The judge-determined worth of shares in an appraisal case. It can come out above, at, or below the deal price.", issue:11},
-  {t:"Fiduciary Duty", d:"The legal obligation of directors and controlling insiders to act in shareholders' best interests rather than their own.", issue:11},
-  {t:"Foreign Exchange Reserves", d:"The foreign currencies and assets a country holds to pay for imports and stabilize its own currency in a crisis.", issue:9},
-  {t:"Geopolitical Risk Premium", d:"The extra price markets add to an asset, like oil, because of conflict or political uncertainty. Falls when tensions cool.", issue:5},
-  {t:"Futures Contract", d:"An agreement to buy or sell something at a fixed price on a set future date.", issue:12},
-  {t:"Gross Margin", d:"The share of revenue left after the direct cost of making a product. A core read on profitability.", issue:10},
-  {t:"Guidance", d:"A company's own forecast for its future results.", issue:10},
-  {t:"Hawkish", d:"When a central bank or its members prefer higher interest rates to control inflation, even if it slows growth.", issue:6},
-  {t:"Higher for Longer", d:"The idea that central banks will keep interest rates elevated for an extended period rather than cutting them soon.", issue:8},
-  {t:"IEA (International Energy Agency)", d:"An intergovernmental body that tracks and forecasts global energy markets: think of it as the energy world's OECD.", issue:5},
-  {t:"Import Duty", d:"Another name for a tariff.", issue:13},
-  {t:"Index Inclusion", d:"When a company joins a major index like the S&P 500, passive funds automatically buy its shares regardless of any individual investor's view.", issue:3},
-  {t:"Inflationary", d:"Something that pushes the general level of prices up. A tariff is inflationary because it raises the cost of imported goods.", issue:13},
-  {t:"Interest Rate Differential (the Rate Gap)", d:"The difference between two countries' interest rates. One of the main forces driving where global money flows.", issue:6},
-  {t:"IPO (Initial Public Offering)", d:"When a private company sells shares to the public for the first time: the moment anyone with a brokerage account can buy in.", issue:3},
-  {t:"Lead Plaintiff", d:"The investor chosen to steer a class action. Picks the lawyers, sets strategy, and can agree settlements that, once approved by the court, bind everyone in the class.", issue:11},
-  {t:"Leverage", d:"Using borrowed money to make a bigger purchase than your own cash alone would allow. Magnifies both gains and losses.", issue:8},
-  {t:"Leveraged Buyout (LBO)", d:"Buying a company using mostly borrowed money, with the company itself acting as security for the loan.", issue:8},
-  {t:"Leveraged Loan", d:"A loan to a company taking on a lot of debt, such as in a buyout. Because the borrower is riskier, it pays a higher interest rate.", issue:8},
-  {t:"Market Capitalization", d:"The total value of a company, found by multiplying its share price by the number of shares in existence.", issue:4},
-  {t:"Market Repricing", d:"When new information causes asset values to drop quickly across the board: stocks fall and borrowing gets more expensive.", issue:1},
-  {t:"Maturity (or Tenor)", d:"The specific length of time until a bond expires and the borrower has to pay back the original loan amount in full.", issue:7},
-  {t:"Medium-term Target", d:"The 2% inflation goal the ECB aims to reach over a couple of years, not necessarily every single month.", issue:7},
-  {t:"Merger Arbitrage", d:"Buying shares after a deal is announced to profit from the small gap between the market price and the deal price.", issue:11},
-  {t:"MoU (Memorandum of Understanding)", d:"A preliminary, non-binding agreement that sets out the framework for a possible permanent deal.", issue:5},
-  {t:"Multipolar Monetary System", d:"A world where no single currency dominates, and several share the role the dollar plays alone today.", issue:9},
-  {t:"OMFIF", d:"The Official Monetary and Financial Institutions Forum: a London-based institution that works directly with the world's central banks and publishes an annual survey of their intentions.", issue:9},
-  {t:"One-off", d:"A gain or cost that will not repeat, like a tax refund or a legal settlement.", issue:10},
-  {t:"Perpetual Futures", d:"A contract that lets you bet on where a price is going with no expiry date. Common in crypto.", issue:2},
-  {t:"Premium (in a Deal)", d:"The amount a buyer pays above the going market price to convince shareholders to sell.", issue:11},
-  {t:"Price-to-Earnings (P/E) Ratio", d:"A share price divided by earnings per share. How many dollars investors pay for each dollar of annual profit.", issue:10},
-  {t:"Private Equity", d:"Investors who buy companies not listed on the stock market, work to make them more valuable, and sell them on later for a profit.", issue:8},
-  {t:"Private Markets", d:"The part of investing that happens off the public stock exchange, such as buying whole companies or large stakes in them.", issue:8},
-  {t:"Purchasing Managers' Index (PMI)", d:"A monthly survey of business managers used as an early read on economic activity.", issue:7},
-  {t:"Quality of Earnings", d:"How much of a profit comes from the actual business versus one-off boosts. High quality is durable and low quality flatters.", issue:10},
-  {t:"Reflationary Stance", d:"Keeping money cheap and stimulus flowing to push growth and inflation up, even if it leaves the currency soft.", issue:6},
-  {t:"Reported vs. Adjusted Earnings", d:"Reported earnings include everything. Adjusted, or underlying, earnings remove the one-off items.", issue:10},
-  {t:"Reserve Currency", d:"A currency that governments and central banks hold in large amounts to settle international trade and store national wealth.", issue:9},
-  {t:"Retail vs. Institutional Investors", d:"Retail investors are everyday individuals. Institutional investors are large funds. The two often receive very different allocations in a hot IPO.", issue:4},
-  {t:"Retaliation (Trade)", d:"When a country hit by tariffs responds by taxing the other country's exports in return, which can widen a trade dispute.", issue:13},
-  {t:"Revenue Multiple", d:"A way of measuring how expensive a company is relative to how much money it brings in. The higher the multiple, the more faith the market places in future growth.", issue:3},
-  {t:"Revenue vs. Profit", d:"Revenue is the total money coming in. Profit is what remains after all costs are paid. A company can have high revenue and still lose money.", issue:3},
-  {t:"Risk-off", d:"When investors get nervous and move into safe assets like gold and government bonds, and out of stocks and emerging markets.", issue:1},
-  {t:"Second-round Effects", d:"When an initial price shock, like energy, feeds into wages and other prices, so inflation keeps going even after the original cause fades.", issue:7},
-  {t:"Section 122 (Trade Act of 1974)", d:"A hard-stop emergency tariff tool. A maximum of 150 days, extendable only by an Act of Congress.", issue:13},
-  {t:"Section 301 (Trade Act of 1974)", d:"A longstanding tariff authority that runs on a four-year cycle and can be renewed on request more or less indefinitely, with no cap on the rate.", issue:13},
-  {t:"Selling-price Expectations", d:"Surveys of whether businesses plan to raise their prices soon. A forward-looking inflation signal.", issue:7},
-  {t:"Services Inflation", d:"Price rises in services like rent, insurance, and travel rather than physical goods. Tends to be stickier than goods inflation.", issue:7},
-  {t:"Sovereign Wealth Fund", d:"A state-owned fund that invests a country's surplus money around the world.", issue:9},
-  {t:"Stagflation", d:"A combination of slow economic growth and rising inflation at the same time: cutting rates helps growth but worsens inflation, and vice versa.", issue:1},
-  {t:"Strait of Bab al-Mandab", d:"The narrow strait at the southern entrance to the Red Sea, and it became oil's detour route after Hormuz was disrupted.", issue:12},
-  {t:"Statutory Interest (Appraisal)", d:"The interest Delaware adds to an appraisal award by default: 5% over the Federal Reserve discount rate, compounded quarterly, from deal close to payment.", issue:11},
-  {t:"Supply Side Shock", d:"Prices rising because supply is disrupted, not because people are spending more. Interest rates can't fix a blocked shipping lane.", issue:1},
-  {t:"Surged", d:"When an asset rises sharply and quickly in price, often catching anyone positioned the other way off guard.", issue:6},
-  {t:"Tailwind", d:"Something that works in your favour and helps push a result in a positive direction. The opposite of a headwind.", issue:6},
-  {t:"Take-private (Going Private)", d:"A buyer purchases all the shares of a listed company and removes it from the stock exchange entirely.", issue:11},
-  {t:"Tariff", d:"A tax a country charges on goods coming in from abroad. Paid by the company importing them, not by the exporting country.", issue:13},
-  {t:"Tariff Incidence", d:"Who actually ends up worse off once a tariff is paid, which can be the importing company, its customers, or the foreign supplier.", issue:13},
-  {t:"Tender Offer", d:"When a company allows employees or early investors to sell their shares to private buyers before a public listing.", issue:3},
-  {t:"Token Buyback", d:"When a crypto platform uses its own revenue to purchase and retire its tokens: the same logic as a company buying back its own shares.", issue:2},
-  {t:"Top-Up Tariffs", d:"Additional duties layered on top of existing ones to lift the overall tariff level back to a previous point.", issue:13},
-  {t:"USMCA", d:"The United States-Mexico-Canada Agreement, a regional trade deal. Goods it covers are largely exempt from these new tariffs.", issue:13},
-  {t:"Valuation", d:"The estimated total value of a company. In private markets this is set by a small group of investors; in public markets, in real time by buying and selling.", issue:3},
-  {t:"Voting Rights vs. Economic Stake", d:"Voting rights decide who controls a company's decisions. An economic stake is how much of its profits and value you actually own.", issue:8},
-  {t:"Wholesale vs. Direct-to-Consumer", d:"Selling through other retailers (wholesale) versus selling straight to shoppers via own stores and apps (direct).", issue:10},
-  {t:"Written Consent", d:"Approving a corporate decision on paper using existing voting power, without holding a shareholder meeting or vote.", issue:11},
-  {t:"WTI (West Texas Intermediate)", d:"The US benchmark oil price. Usually trades slightly below Brent and moves with it.", issue:5},
-  {t:"Yield", d:"The income an investment pays you, expressed as a percentage of its price. For bonds, it's the clearest single number for what you're actually earning.", issue:5},
-  {t:"Yield Curve", d:"A chart that plots the interest rate of bonds with the same credit quality across different lengths of time, from short-term to long-term.", issue:7},
-  {t:"Yield Curve Flattening", d:"When short- and long-term interest rates move closer together, usually a sign markets expect slow growth ahead.", issue:1},
-  {t:"Yield Differential", d:"The gap between two countries' bond yields: the key number behind moves like the yen's recent weakness.", issue:6},
-];
+  const termList = document.getElementById('termList');
+  const glossarySearch = document.getElementById('glossarySearch');
+  const glossaryCount = document.getElementById('glossaryCount');
+  const glossaryEmpty = document.getElementById('glossaryEmpty');
+  const letterBar = document.getElementById('letterBar');
+  const terms = termList.querySelectorAll('.term');
+  let activeLetter = 'all';
 
-const issueMeta = {
-  1:{href:"issue-01.html", label:"Issue No. 01"},
-  2:{href:"issue-02.html", label:"Issue No. 02"},
-  3:{href:"issue-03.html", label:"Issue No. 03"},
-  4:{href:"issue-04.html", label:"Issue No. 04"},
-  5:{href:"issue-05.html", label:"Issue No. 05"},
-  6:{href:"issue-06.html", label:"Issue No. 06"},
-  7:{href:"issue-07.html", label:"Issue No. 07"},
-  8:{href:"issue-08.html", label:"Issue No. 08"},
-  9:{href:"issue-09.html", label:"Issue No. 09"},
-  10:{href:"issue-10.html", label:"Issue No. 10"},
-  11:{href:"issue-11.html", label:"Issue No. 11"},
-  12:{href:"issue-12.html", label:"Issue No. 12"},
-  13:{href:"issue-13.html", label:"Issue No. 13"},
-};
+  function filterGlossary(){
+    const q = glossarySearch.value.trim().toLowerCase();
+    let shown = 0;
+    terms.forEach(t=>{
+      const letterOk = activeLetter === 'all' || t.dataset.letter === activeLetter;
+      const searchOk = !q || t.dataset.search.includes(q);
+      const hit = letterOk && searchOk;
+      t.style.display = hit ? '' : 'none';
+      if(hit) shown++;
+    });
+    glossaryCount.textContent = shown + ' of ' + terms.length + ' terms';
+    glossaryEmpty.style.display = shown ? 'none' : 'block';
+  }
 
-terms.sort((a,b)=>a.t.localeCompare(b.t));
-const termList = document.getElementById('termList');
-terms.forEach(x=>{
-  const div = document.createElement('div');
-  div.className = 'term';
-  div.dataset.letter = x.t[0].toUpperCase();
-  div.dataset.search = (x.t + ' ' + x.d).toLowerCase();
-  const meta = issueMeta[x.issue];
-  div.innerHTML = `<dt>${x.t}</dt><dd>${x.d}</dd><a class="term-source" href="${meta.href}">${meta.label} →</a>`;
-  termList.appendChild(div);
-});
+  glossarySearch.addEventListener('input', filterGlossary);
 
-const letterBar = document.getElementById('letterBar');
-const present = new Set(terms.map(x=>x.t[0].toUpperCase()));
-let activeLetter = null;
-const allBtn = document.createElement('button');
-allBtn.textContent = 'All'; allBtn.className = 'active';
-allBtn.onclick = ()=>{activeLetter=null; syncLetters(); filterGlossary();};
-letterBar.appendChild(allBtn);
-for(let i=65;i<=90;i++){
-  const L = String.fromCharCode(i);
-  const b = document.createElement('button');
-  b.textContent = L;
-  if(!present.has(L)) b.disabled = true;
-  else b.onclick = ()=>{activeLetter = (activeLetter===L?null:L); syncLetters(); filterGlossary();};
-  letterBar.appendChild(b);
-}
-function syncLetters(){
-  letterBar.querySelectorAll('button').forEach(b=>{
-    b.classList.toggle('active', (activeLetter===null && b===allBtn) || b.textContent===activeLetter);
+  letterBar.querySelectorAll('button').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      if(btn.disabled) return;
+      letterBar.querySelectorAll('button').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      activeLetter = btn.dataset.letter;
+      filterGlossary();
+    });
   });
-}
-const glossarySearch = document.getElementById('glossarySearch');
-const glossaryEmpty = document.getElementById('glossaryEmpty');
-const glossaryCount = document.getElementById('glossaryCount');
-function filterGlossary(){
-  const q = glossarySearch.value.trim().toLowerCase();
-  let shown = 0;
-  termList.querySelectorAll('.term').forEach(t=>{
-    const hit = (!q || t.dataset.search.includes(q)) && (!activeLetter || t.dataset.letter===activeLetter);
-    t.style.display = hit ? '' : 'none';
-    if(hit) shown++;
-  });
-  glossaryEmpty.style.display = shown ? 'none' : 'block';
-  glossaryCount.textContent = shown + ' of ' + terms.length + ' terms';
-}
-glossarySearch.addEventListener('input', ()=>{activeLetter=null; syncLetters(); filterGlossary();});
-filterGlossary();
+
+  filterGlossary();
 </script>
 </body>
 </html>
