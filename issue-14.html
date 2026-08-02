@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Issue No. 14: Nobody Wanted It Until the Right Person Wore It — Wall Street for the Girls</title>
+<meta name="description" content="For months, everyone said the yen would keep falling. Then Washington quietly joined Japan's defense of it. How a country actually buys back its own currency, and what it means for your money.">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500;1,6..72,600&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#faf7f1; --ink:#22201d; --burgundy:#7d1f42; --muted:#5c574e;
+    --hint:#a39c8c; --line:#ddd7cb; --line-soft:#ece7dc; --body:#3a3733;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--cream); color:var(--ink); font-family:'Inter',sans-serif;}
+  a{color:inherit;}
+  .wrap{max-width:1160px; margin:0 auto; padding:0 28px;}
+
+  .folio-line{border-bottom:0.5px solid var(--line); font-size:11px; letter-spacing:0.03em; color:var(--hint); padding:10px 0;}
+  .folio-line .wrap{display:flex; justify-content:flex-start;}
+
+  .site-header{border-bottom:0.5px solid var(--line); position:relative;}
+  .nav{display:flex; justify-content:space-between; align-items:center; padding-top:16px; padding-bottom:16px;}
+  .nav-brand{display:flex; align-items:center; gap:8px; text-decoration:none; color:var(--ink); font-family:'Newsreader',serif; font-weight:600; font-size:16px;}
+  .nav-brand img{height:28px; width:28px; border-radius:50%;}
+  .nav-brand em{font-style:italic; color:var(--burgundy);}
+  .nav-links{list-style:none; display:flex; gap:24px; margin:0; padding:0; align-items:center;}
+  .nav-links a{text-decoration:none; color:var(--muted); font-size:12px; letter-spacing:0.04em;}
+  .nav-links a.active{color:var(--burgundy); border-bottom:1.5px solid var(--burgundy); padding-bottom:2px;}
+  .nav-links a.nav-cta{background:var(--ink); color:var(--cream); padding:9px 18px; border-radius:2px;}
+  .nav-dropdown{position:relative;}
+  .dropdown-menu{
+    display:none; position:absolute; top:100%; left:50%; transform:translateX(-50%);
+    margin-top:14px; padding:10px 0; min-width:210px; list-style:none;
+    background:var(--cream); border:0.5px solid var(--line);
+  }
+  .nav-dropdown:hover .dropdown-menu,
+  .nav-dropdown:focus-within .dropdown-menu{display:block;}
+  .dropdown-menu li{padding:0;}
+  .dropdown-menu a{
+    display:block; padding:10px 20px; font-size:11.5px; letter-spacing:.08em;
+    color:var(--ink); text-decoration:none; white-space:nowrap;
+  }
+  .dropdown-menu a:hover{color:var(--burgundy); background:#faf1f4;}
+  .nav-toggle{display:none; background:none; border:none; cursor:pointer; padding:8px;}
+  .nav-toggle span{display:block; width:22px; height:2px; background:var(--burgundy); margin:5px 0; transition:.3s;}
+
+  .issue-page{padding:48px 0 80px;}
+  .issue-layout{display:grid; grid-template-columns:minmax(0,2fr) minmax(0,1fr); gap:32px; align-items:start; justify-content:start;}
+
+  .issue-dateline{font-size:11.5px; letter-spacing:0.03em; color:var(--burgundy); margin:0 0 10px;}
+  .issue-main h1{font-family:'Newsreader',serif; font-weight:600; font-size:30px; line-height:1.3; margin:0 0 20px;}
+  .issue-main p{font-size:14px; line-height:1.75; color:var(--body); margin:0 0 16px; text-align:justify; hyphens:auto;}
+
+  .eb{font-size:10.5px; letter-spacing:0.08em; color:var(--burgundy); text-transform:uppercase; margin:28px 0 8px;}
+  .rail-title{font-weight:700; font-size:12px;}
+  .section-label{font-family:'Newsreader',serif; font-size:17px; font-weight:600; margin:30px 0 12px; color:var(--burgundy);}
+  .term-link{color:var(--burgundy); text-decoration:none; border-bottom:1.5px dotted var(--burgundy);}
+
+  .issue-copy{max-width:100%;}
+  .signal-noise{display:grid; grid-template-columns:1fr 1fr; gap:0; margin:28px 0 16px; padding-top:24px; border-top:0.5px solid var(--line);}
+  .signal-noise .eb{margin-top:0;}
+  .signal-noise p:last-child{margin-bottom:0;}
+  .signal-noise > div:first-child{padding-right:28px;}
+  .signal-noise > div:last-child{padding-left:28px; border-left:0.5px solid var(--line);}
+
+  .key-question{margin:32px 0 0; padding-top:18px; border-top:1px solid var(--ink);}
+  .key-question .key-question-text{font-family:'Newsreader',serif; font-style:italic; font-weight:700; font-size:20px; color:#7d1f42; line-height:1.6; margin:0 0 14px; text-align:center;}
+
+  p.connects-chain{margin:26px 0; padding:20px 24px; border-top:1px solid var(--ink); border-bottom:1px solid var(--ink); font-family:'Newsreader',serif; font-style:italic; font-size:15px; line-height:1.85; color:var(--body); text-align:center;}
+
+  .references-section{grid-column:1 / -1; border-top:0.5px solid var(--line); padding:36px 0 4px;}
+  .references-section .section-label{margin:0 0 14px;}
+  .references-list{list-style:none; margin:0; padding:0; max-width:100%;}
+  .references-list li{font-size:11.5px; line-height:1.7; color:var(--muted); margin-bottom:14px; text-align:justify; hyphens:auto;}
+  .references-list li a{color:var(--burgundy); text-decoration:none; word-break:break-all;}
+  .references-list li a:hover{text-decoration:underline;}
+
+  .issue-rail{border-left:0.5px solid var(--line); padding-left:28px; align-self:start;}
+  .rail-block{border-bottom:0.5px solid var(--line-soft); padding-bottom:20px; margin-bottom:20px;}
+  .rail-block:last-child{border-bottom:none; margin-bottom:0;}
+
+  .rail-stat{margin-bottom:22px;}
+  .rail-stat:last-child{margin-bottom:0;}
+  .rail-label{display:block; font-size:9.5px; letter-spacing:0.08em; color:var(--hint); margin-bottom:5px;}
+  .rail-value{display:block; font-family:'Newsreader',serif; font-style:italic; font-weight:500; font-size:14.5px; color:var(--ink); line-height:1.4;}
+
+  .rail-table{width:100%; border-collapse:collapse; font-size:12px;}
+  .rail-table td{padding:7px 0; border-bottom:0.5px solid var(--line-soft); color:var(--body);}
+  .rail-table tr:last-child td{border-bottom:none;}
+  .rail-table td.dir{text-align:right; color:var(--muted); white-space:nowrap;}
+  .rail-table td.dir.down, .rail-table td.dir.up{color:var(--burgundy);}
+
+  .rail-teaser-text{font-size:12px; color:var(--muted); line-height:1.6; margin:0 0 10px;}
+  .rail-link{font-size:10.5px; color:var(--burgundy); text-decoration:none;}
+  .rail-link:hover{text-decoration:underline;}
+
+  .rail-block-featured{background:#faf1f4; border-radius:8px; padding:16px 18px 18px; border-bottom:none;}
+  .rail-block-featured .eb{margin-top:0; margin-bottom:8px;}
+  .rail-link-btn{display:inline-block; font-size:10px; letter-spacing:0.05em; color:var(--burgundy); border:0.5px solid var(--burgundy); border-radius:2px; padding:7px 12px; text-decoration:none;}
+  .rail-link-btn:hover{background:var(--burgundy); color:var(--cream);}
+
+  .rail-term{font-family:'Newsreader',serif; font-size:14px; font-weight:600; margin:0 0 5px;}
+  .rail-def{font-size:11.5px; color:var(--muted); line-height:1.6; margin:0;}
+
+  .term-grid{display:grid; grid-template-columns:1fr 1fr; gap:8px; margin:10px 0 14px;}
+  .term-box{background:#fff; border:0.5px solid var(--line); border-radius:6px; padding:10px 12px;}
+  .term-box span{font-family:'Newsreader',serif; font-size:11.5px; font-weight:400; color:var(--ink);}
+
+  .site-footer{border-top:0.5px solid var(--line); padding:44px 0 30px;}
+  .footer-top{display:flex; justify-content:space-between; align-items:center; margin-bottom:22px; flex-wrap:wrap; gap:16px;}
+  .footer-brand{display:flex; align-items:center; gap:8px; text-decoration:none; color:var(--ink); font-weight:600; font-family:'Newsreader',serif; font-size:14px;}
+  .footer-brand img{height:24px; width:24px; border-radius:50%;}
+  .footer-links{list-style:none; display:flex; gap:18px; margin:0; padding:0; flex-wrap:wrap;}
+  .footer-links a{color:var(--muted); text-decoration:none; font-size:12px;}
+  .footer-bottom{display:flex; justify-content:space-between; font-size:11px; color:var(--hint); border-top:0.5px solid var(--line); padding-top:16px; flex-wrap:wrap; gap:8px;}
+
+  a:focus-visible, .nav-cta:focus-visible{outline:2px solid var(--burgundy); outline-offset:2px;}
+
+  @media (max-width:600px){
+    .signal-noise{grid-template-columns:1fr;}
+    .signal-noise > div:first-child{padding-right:0;}
+    .signal-noise > div:last-child{padding-left:0; border-left:none; margin-top:20px;}
+  }
+
+  @media (max-width:960px){
+    .nav-links{
+      display:none; position:absolute; top:100%; left:0; right:0;
+      background:var(--cream); flex-direction:column; padding:24px; gap:20px;
+      border-bottom:0.5px solid var(--line); align-items:flex-start;
+    }
+    .nav-links.open{display:flex;}
+    .nav-toggle{display:block;}
+    .dropdown-menu{position:static; display:block; transform:none; border:none; margin-top:6px; padding:0 0 0 14px; background:none;}
+  }
+
+  @media (max-width:860px){
+    .issue-layout{grid-template-columns:1fr;}
+    .issue-rail{border-left:none; padding-left:0; border-top:0.5px solid var(--line); padding-top:28px; margin-top:8px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="nav-brand" href="index.html">
+      <img src="logo.png" alt="WSG logo">
+      <span>Wall Street <em>for the Girls</em></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="archive.html">Archive</a></li>
+      <li class="nav-dropdown">
+        <a href="financial-syllabus.html">Learn</a>
+        <ul class="dropdown-menu">
+          <li><a href="foundation.html">The Foundation</a></li>
+          <li><a href="financial-syllabus.html">Financial Syllabus</a></li>
+          <li><a href="glossary.html">Glossary</a></li>
+        </ul>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a class="nav-cta" href="https://wallstreetforthegirls.substack.com" target="_blank" rel="noopener">Subscribe</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<section class="issue-page">
+  <div class="wrap issue-layout">
+
+    <article class="issue-main">
+      <p class="issue-dateline">&mdash; August 2, 2026 &middot; Issue No. 14</p>
+      <h1>Nobody wanted it until the right person wore it.</h1>
+
+      <div class="issue-copy">
+      <p style="font-style:italic; font-size:16px; color:#3a3733; margin-bottom:10px;">Here&rsquo;s what you need to know this week, and why it matters.</p>
+      <p>I&rsquo;m sure some of us have experienced this before. You found a top in a small boutique nobody else shops at. It wasn&rsquo;t exactly what was trendy at the time, but the second you saw it, you loved it, and you were right to. You bought it and wore it with confidence. You felt like the cool girl.</p>
+
+      <p>Then came the looks. Nothing cruel. Nothing you could name out loud. Just a small pause before someone speaks. A friend saying, &ldquo;Oh, that is&hellip; very you,&rdquo; which never quite feels like a compliment, or someone else asking, kindly, whether it might be a bit much.</p>
+
+      <p>But that isn&rsquo;t the part we remember. You weren&rsquo;t wrong about the top. You just couldn&rsquo;t get anyone else to see it.</p>
+
+      <p>Once, someone did say they liked it, and for a day it felt like things might turn. Then the weeks went by, and nothing changed.</p>
+
+      <p>Then she wore it too.</p>
+
+      <p>Not just wore it. She went back to the same shop, bought two more, and told everyone where to find it. By lunchtime the shop had sold out. Nothing about the top changed. Not the cut, not the color, not the label. What changed is that your word stopped being the only money behind the claim. The room was never really doubting the top. It was doubting whether you, alone, could make it stick.</p>
+
+      <p>This week, the currency market ran the same judgment on a currency. The thing everyone had spent months subtly judging was the Japanese yen.</p>
+
+      <p>A currency price can sometimes confuse people, so it&rsquo;s worth being clear on what it means. When we say the yen is trading at 158 to the dollar, we mean it takes 158 yen to buy one US dollar. You&rsquo;ll usually see it written as USD/JPY 158. When that number falls, the yen has gotten stronger, because you need fewer of them to buy the same dollar. It feels backwards the first time but after a while it never does.</p>
+
+      <p>All year, that number has been climbing, which means the yen has been getting weaker. In late July it reached 163.99, a near 40-year low, and has been trading near 164 in recent weeks. This is the weakest the currency has been since 1986.</p>
+
+      <p>You might be wondering why.</p>
+
+      <p>Well, it isn&rsquo;t really about Japan doing anything wrong. It&rsquo;s just that money isn&rsquo;t loyal. It moves toward wherever it&rsquo;s paid more, and right now America pays more. The Federal Reserve, the institution that sets America&rsquo;s main rate and looks after its currency, is holding that rate at 3.50 to 3.75%. The Bank of Japan, doing the same job for Japan, is holding its own at 1%.</p>
+
+      <p>That gap is why money keeps walking through it. Investors sell yen and buy dollars to get those better paying American assets, and every one of those trades nudges the yen a little further down. And the gap doesn&rsquo;t need to widen for the pressure to continue, it only needs to stay open.</p>
+
+      <p>Japan has spent the year arguing that this has gone too far.</p>
+
+      <p>Back in spring, Finance Minister Satsuki Katayama said decisive action was imminent. Japan&rsquo;s top currency diplomat, Atsushi Mimura, took things further by saying &ldquo;This is our final evacuation warning to markets.&rdquo; That&rsquo;s called verbal intervention, trying to move a currency with warnings alone, before spending a yen.</p>
+
+      <p>But it didn&rsquo;t hold. Across April and May, Japan spent 11.7 trillion yen, around $72.52 billion, buying its own currency, the largest monthly amount on record. That&rsquo;s <a class="term-link" href="glossary.html#currency-intervention">currency intervention</a>, a government trading in the market to move the exchange rate on purpose. Usually it&rsquo;s buying or selling its own money and occasionally, as we&rsquo;ll see, it&rsquo;s someone else&rsquo;s.</p>
+
+      <p>The yen strengthened. Then it drifted back. By late July it was at 163.99 anyway.</p>
+
+      <p>Then last week, on Thursday, after repeated warnings that Japan would intervene without notice, the yen jumped more than 3% to as strong as 157.8, its biggest one day gain against the dollar in almost two years. A market source in South Korea said Seoul was selling dollars in coordination, and central bank data suggested Japan may have sold as much as $58.97 billion. By Friday afternoon, the dollar was back up around 158.9.</p>
+
+      <p>But Friday brought something that hadn&rsquo;t happened before. The US Treasury, led by Secretary Scott Bessent, had bought yen, according to the Financial Times report.</p>
+
+      <p>Not Japan buying yen. America buying yen.</p>
+
+      <p>It&rsquo;s the first time in more than a decade Washington has stepped into the yen market alongside Tokyo. The Federal Reserve Bank of New York carried out the trade on Treasury&rsquo;s behalf, selling euros to buy yen through Goldman Sachs and Morgan Stanley. No amount has been disclosed. Earlier that day, Treasury had told a number of banks it might intervene and that they should stand ready.</p>
+
+      <p>Tokyo was reportedly in the market Friday too, intervening again during New York hours, according to the Nikkei. Friday wasn&rsquo;t America acting instead of Japan. It was America acting alongside it. The dollar fell to about 157.6 yen just before 5pm New York time, from about 158.9 around 4:14pm.</p>
+
+      <p>Thursday was the bigger move by far. But what Friday had that Thursday didn&rsquo;t was a second government, and not just any second government. Korea showing up on Thursday wasn&rsquo;t nothing, but Korea and Japan are both in Asia and both were selling dollars. Friday brought the country on the other side of the trade.</p>
+
+      <p>The dollar and the yen are two sides of the same trade, so when Washington moves to lift the yen, it&rsquo;s moving a rate it&rsquo;s also half of. It didn&rsquo;t need to sell dollars outright for that to be true. The New York Fed routed the trade through euros, selling euros to buy yen instead of touching the dollar directly. But the dollar still ended the day weaker against the yen, which is the only thing the room was actually watching. Kyodo News reported Saturday that Japan and the US may unveil a joint policy on the yen&rsquo;s weakness as early as next week. The Treasury hasn&rsquo;t confirmed it.</p>
+
+      <p>Nothing about the yen&rsquo;s underlying problem changed on Friday. The rate gap that&rsquo;s been pulling money out of Japan all year sat exactly where it was on Thursday. Intervention doesn&rsquo;t close a gap like that. It just makes betting against the currency more expensive to hold, for as long as the buyer keeps showing up.</p>
+
+      <p>Japan spent a year being right about the yen, alone, and watched it fall anyway. On Friday, for the first time in a decade, it wasn&rsquo;t alone, and the yen moved. Not because the argument got any better. Because the room finally had two people making it instead of one.</p>
+
+      <p>That&rsquo;s the story. Everything from here is the how: how a government actually buys its own currency, where the money comes from, and why there&rsquo;s a limit on how long anyone can keep showing up, even Washington.</p>
+
+      <div class="signal-noise">
+        <div>
+          <p class="eb">&#10022; The signal</p>
+          <p>For the first time in more than a decade the US has entered the yen market. Kyodo News reported on Saturday that Japan and the US may unveil a policy on the yen&rsquo;s weakness as early as next week, aimed at warning off speculative bets.</p>
+          <p>Japan has carried this defence largely by itself, spending a record 11.7 trillion yen across April and May and watching the currency reach a near 40 year low. Japan&rsquo;s reserves fell by $77,107 million in May alone, and the finance ministry has publicly reassured markets that it still has tools available, including possible access to a Federal Reserve facility.</p>
+          <p>The Bank of Japan&rsquo;s decision to hold rates at 1% was also expected. What mattered was the vote itself, 8 to 1, with Hajime Takata pushing for a hike to 1.25% and warning that core inflation will run clearly above 2%.</p>
+        </div>
+        <div>
+          <p class="eb">&#10022; The noise</p>
+          <p>Thursday was the bigger single day move for the yen, and Japan was reportedly buying again on Friday, so the two days should not be read as a clean comparison.</p>
+        </div>
+      </div>
+
+      <h2 class="section-label">What&rsquo;s moving in markets</h2>
+      <p style="font-style:italic; color:var(--muted);"><b>Note:</b> This week&rsquo;s article covers the intervention itself and publishes only the yen&rsquo;s move. The policy rates and reserve figures below are published data from the institutions themselves, dated where they appear. Everything beyond those is informed context built around the article&rsquo;s direction of travel, not live figures from the source.</p>
+      <p>The <b>yen</b> moved to about 157.6 to the dollar late on Friday from about 158.9 earlier that afternoon, after reaching 163.99 in late July. What matters is not the size of the move but its cause. This is a price being held up by governments rather than found by buyers and sellers, and the two behave differently.</p>
+      <p>The <b>Federal Reserve</b> held its target range at 3.50%&ndash;3.75% on 29 July, but the vote passed 9 to 3. That is the magnet, and the argument inside the Fed is about making it stronger, not weaker. The <b>Bank of Japan</b> raised its rate to 1% in June, its highest in around three decades, and held it there in July. It is a real change after years near 0. It is also still far beneath what American money earns, which is why the pull continues.</p>
+      <p><b>Reserves</b> are the resource everyone is watching. Japan held $1,305,874 million at the end of May, after a fall of $77,107 million in that single month, and reserves fell again in June to about $1.287 trillion. This is the number that determines how long Japan can independently defend its currency.</p>
+      <p>Japan imports almost all of its <b>energy</b> and pays for it in dollars, so every rise in global energy prices means more yen sold to buy the dollars needed to settle the bill. It is a quiet, constant, downward push that no intervention can address.</p>
+
+      <h2 class="section-label">Currency &amp; interest rate</h2>
+      <div class="signal-noise">
+        <div>
+          <p class="eb">Where currencies stand beyond the yen</p>
+          <p><b>USD:</b> Pulled two ways at once. High American interest rates, and an argument inside the Fed for higher ones still, support it. But a US government buying another country&rsquo;s currency is acting to push the dollar down against that currency. Those two forces do not usually appear in the same week.</p>
+          <p><b>EUR:</b> The supporting character this week. When the New York Fed bought yen on the Treasury&rsquo;s behalf, it paid in euros rather than dollars, routing the trade through Goldman Sachs and Morgan Stanley. The Treasury&rsquo;s fund holds foreign currencies alongside dollars, so it had euros to spend. Nothing in the reporting explains why euros rather than something else. What it does tell you is that the operation was funded from a finite pool of currency the Treasury already held, not from dollars created for the purpose. That is the same constraint Japan is working under.</p>
+          <p><b>Key FX signal to watch:</b> Not a price. Whether the joint US and Japan policy Kyodo News expects actually arrives, and whether it carries a commitment or only a warning. A statement backed by something is a different creature from a statement that is only a statement.</p>
+        </div>
+        <div>
+          <p class="eb">The rate gap picture, across three horizons</p>
+          <p><b>Short-term (days to weeks):</b> Anyone betting the yen will keep falling must now price the possibility that the buyer on the other side of their trade is the US Treasury. That makes the bet more expensive to hold without changing a single reason for making it. Thursday&rsquo;s move, more than 3% in a day and the biggest in almost two years is reallocation but so is the fact that it faded by the next afternoon.</p>
+          <p><b>Medium-term (over months):</b> Current US rates are higher than Japanese. Last week the Fed decided to hold and Chair Kevin Warsh gave little guidance on what comes next. If American rates rise while Japan holds, the pull on the yen gets stronger, not weaker. This is the horizon on which intervention either buys time for something else to change or simply buys time.</p>
+          <p><b>Long-term (a year and beyond):</b> Either U.S. rates go down or Japanese rates go up to close the current gap. Japanese rates have moved from near zero to 1% which is a significant shift after decades of a country where money earned nothing.</p>
+          <p><b>Key rates signal to watch:</b> The September Fed meeting. A rise would widen the very gap that caused all of this and it is one of the few events that is capable of undoing what Friday brought.</p>
+        </div>
+      </div>
+
+      <h2 class="section-label">How it all connects</h2>
+      <p class="connects-chain">US rates stay high while Japanese rates stay low &rarr; money flows out of the yen and into the dollar &rarr; Japan warns, then spends a record 11.7 trillion yen &rarr; the effect fades &rarr; the yen reaches 163.99 anyway, a near forty year low &rarr; Washington reportedly joins &rarr; the market must now price two governments instead of one</p>
+      <p>What makes this week genuinely different is that nothing about the underlying situation improved. There was no better economic news out of Japan, no change in what Japanese assets pay, no shift in what any investor earns. Every reason the yen was falling on Thursday was still in place on Friday afternoon.</p>
+      <p>What changed was the composition of the room.</p>
+      <p>Markets, like corridors, are partly a social phenomenon. A price is not only a calculation, it is also a collective opinion about what other people will do next, and opinions can be moved by who holds them as much as by what they contain. That is why the same action can read as desperation from one participant and as resolve from another. When Japan bought yen and warned and bought again, the market saw a country running down its reserves to defend a level it could not hold alone. When Washington arrived, the market saw something else.</p>
+      <p>The reason it is so hard to fix permanently is that intervention and the problem operate on different things. Intervention changes who is buying today. The rate gap changes where money wants to live, every hour, for as long as it stays open. One is an event, the other is a climate. A government can surprise a market repeatedly and it can make betting against it genuinely expensive. However, it cannot make Japanese assets pay what American assets pay. That is a decision for two central banks, not two treasuries. Which is why the important date in this story is not any intervention at all. It is September, when both central banks meet.</p>
+
+      <h2 class="section-label">Why this matters to you</h2>
+      <p style="font-style:italic;"><b>The broader market picture</b></p>
+      <p>Markets are in a cautious, policy-watching mood rather than a fearful one. There was no crisis this week and nothing collapsed. What happened instead is that a price which had been drifting in one direction for months was interrupted by governments, and that is a different kind of event from an ordinary market move. When a price is set by millions of buyers and sellers, it carries information about what people believe. When it is being held up deliberately, it carries information about what governments are willing to spend. Both are real prices. They are just not the same kind of fact and knowing which one you are looking at is a genuinely useful skill.</p>
+      <p style="font-style:italic;"><b>If you are building your financial literacy</b></p>
+      <p>The most useful thing to take from this week is that a currency has no price of its own. It only has a price against something else, which means the number can fall while the thing itself is getting stronger. Once that clicks, half the confusion in currency headlines disappears, because you stop reading &ldquo;the yen fell to 158&rdquo; as a statement about Japan and start reading it as a statement about two countries at once.</p>
+      <p>And if this week touches your work or your money more directly, here is where it actually shows up.</p>
+      <p style="font-style:italic;"><b>If this connects to your work or portfolio</b></p>
+      <ul style="font-size:14px; line-height:1.75; color:var(--body); padding-left:20px; margin:0 0 16px;">
+        <li style="margin-bottom:12px;">If you are an <b>importer</b>, meaning your costs depend on goods bought abroad, the currency your contracts are actually priced in decides whether this reaches you at all. A firmer yen raises the cost of anything sourced from Japan and invoiced in yen. What this week does not tell you is anything about the dollar in general. It moved against the yen, which is not the same as moving against your currency. And this move came from official action rather than ordinary market flow, which makes it a different thing to plan around. The question is not where the rate sits today. It is whether the governments behind it keep going.</li>
+        <li style="margin-bottom:12px;">If you are an <b>exporter</b>, meaning you earn by selling abroad, anything you are owed in yen is worth more than it was a week ago, and how much that matters depends on how much is invoiced in yen rather than dollars or euros. Japanese exporters sit on the other side of it, losing the advantage a weak currency had been giving them. But the detail worth remembering is the rate improved because two governments made it improve. The interest rate gap underneath it has not moved at all.</li>
+        <li style="margin-bottom:12px;">If you are a <b>borrower</b>, the relevant fact is that 3 of the Fed&rsquo;s 12 rate setters voted last week to raise rates rather than hold. This suggests that higher-for-longer looks less like a phase to wait out than it did a month ago. Whether that impacts you depends on which rate your debt is actually priced off, because dollar borrowing costs and your own central bank&rsquo;s path are two different things.</li>
+        <li>If you are an <b>investor</b>, currency exposure is the thing most portfolios carry without anyone choosing it. A carry trade is one of the most common ways that exposure arrives without being noticed. It usually shows up in a single line in a fund&rsquo;s description saying whether it is currency hedged, which is a detail almost nobody reads. The question worth sitting with is not what to do about it, but whether you actually know how much of what you own assumes the yen stays where it is.</li>
+      </ul>
+
+      <div class="key-question">
+        <p class="key-question-text">&ldquo;A government can hold a price up for a while. It can&rsquo;t hold it up forever without fixing what&rsquo;s underneath. Where in your life are you paying to delay a problem instead of solving it?&rdquo;</p>
+        <p>Friday bought time. It did not close the rate gap that caused all of this, and time is not the same thing as a solution. Most of us are running the same trade somewhere in our own lives, paying, in one form or another, to delay a decision that money alone was never going to make for us.</p>
+      </div>
+      </div>
+    </article>
+
+    <aside class="issue-rail">
+
+      <div class="rail-block">
+        <p class="eb rail-title" style="margin-top:0;">Today&rsquo;s session</p>
+        <div class="rail-stat">
+          <span class="rail-label">Risk mood</span>
+          <span class="rail-value">Neutral but cautious</span>
+        </div>
+        <div class="rail-stat">
+          <span class="rail-label">Focus</span>
+          <span class="rail-value">FX &amp; Rates</span>
+        </div>
+        <div class="rail-stat">
+          <span class="rail-label">Theme</span>
+          <span class="rail-value">Washington reportedly joins Japan&rsquo;s yen defence</span>
+        </div>
+      </div>
+
+      <div class="rail-block">
+        <p class="eb" style="margin-top:0;">Asset direction</p>
+        <table class="rail-table">
+          <tr><td>Japanese yen</td><td class="dir up">&uarr;</td></tr>
+          <tr><td>US policy rate</td><td class="dir">&harr; 3.50&ndash;3.75%</td></tr>
+          <tr><td>Japan policy rate</td><td class="dir">&harr; 1%</td></tr>
+          <tr><td>Japan&rsquo;s reserves</td><td class="dir down">&darr; $1.31T</td></tr>
+          <tr><td>Energy</td><td class="dir">&harr; elevated</td></tr>
+        </table>
+      </div>
+
+      <div class="rail-block rail-block-featured">
+        <p class="eb" style="margin-top:0;">This issue&rsquo;s foundation</p>
+        <p class="rail-teaser-text">Before we dive in, here&rsquo;s the one thing to know this week.</p>
+        <a class="rail-link-btn" href="foundation-14.html">Read &rarr;</a>
+      </div>
+
+      <div class="rail-block rail-block-featured">
+        <p class="eb" style="margin-top:0;">This issue&rsquo;s syllabus &middot; Foreign Exchange</p>
+        <p class="rail-teaser-text">This week&rsquo;s focus is foreign exchange.</p>
+        <a class="rail-link-btn" href="financial-syllabus-foreign-exchange-issue-14.html">Read &rarr;</a>
+      </div>
+
+      <div class="rail-block">
+        <p class="eb" style="margin-top:0;">Key term</p>
+        <p class="rail-term" id="currency-intervention">Currency intervention</p>
+        <p class="rail-def">When a government or central bank trades in the currency market to move an exchange rate deliberately. Usually its own currency, but in coordinated operations, sometimes another country&rsquo;s.</p>
+      </div>
+
+       <p class="eb" style="margin-top:22px;">Terms in this issue</p>
+        <div class="term-grid">
+          <div class="term-box"><span>Currency intervention</span></div>
+          <div class="term-box"><span>Verbal intervention</span></div>
+          <div class="term-box"><span>Coordinated intervention</span></div>
+          <div class="term-box"><span>Target range</span></div>
+          <div class="term-box"><span>Bond yield</span></div>
+          <div class="term-box"><span>Foreign exchange reserves</span></div>
+          <div class="term-box"><span>Securities and deposits</span></div>
+          <div class="term-box"><span>US treasuries</span></div>
+          <div class="term-box"><span>Exchange Stabilization Fund</span></div>
+          <div class="term-box"><span>Fiscal agent</span></div>
+          <div class="term-box"><span>FIMA repo facility</span></div>
+          <div class="term-box"><span>Repo</span></div>
+          <div class="term-box"><span>Special drawing rights</span></div>
+        </div>
+        <a class="rail-link" href="glossary.html">See full glossary &rarr;</a>
+
+    </aside>
+
+    <div class="references-section">
+      <h2 class="section-label">Additional references</h2>
+      <ul class="references-list">
+        <li>Ar&aacute;mburo, F., &amp; Lawder, D. (2026, August 1). US Treasury intervenes to support yen after Japan steps in, FT reports. <em>Reuters.</em> <a href="https://www.reuters.com/world/asia-pacific/us-treasury-undertakes-intervention-yen-market-ft-reports-2026-08-01/" target="_blank" rel="noopener">https://www.reuters.com/world/asia-pacific/us-treasury-undertakes-intervention-yen-market-ft-reports-2026-08-01/</a></li>
+        <li>Bank of Japan. (2026, July 31). Statement on monetary policy. <a href="https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260731a.pdf" target="_blank" rel="noopener">https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260731a.pdf</a></li>
+        <li>Westbrook, T., Sugiyama, S., &amp; Swift, R. (2026, July 31). History of Japan&rsquo;s intervention in currency markets. <em>Reuters.</em> Retrieved August 1, 2026, from <a href="https://www.reuters.com/world/asia-pacific/history-japans-intervention-currency-markets-2026-07-31/" target="_blank" rel="noopener">https://www.reuters.com/world/asia-pacific/history-japans-intervention-currency-markets-2026-07-31/</a></li>
+        <li>Board of Governors of the Federal Reserve System. (2026, July 29). Federal Reserve issues FOMC statement. <a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm" target="_blank" rel="noopener">https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm</a></li>
+        <li>Bank of Japan. (2026, June 16). Change in the guideline for money market operations. <a href="https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260616a.pdf" target="_blank" rel="noopener">https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260616a.pdf</a></li>
+        <li>Ministry of Finance, Japan. (2026, June 5). International reserves/foreign currency liquidity (as of the end of May 2026). Retrieved August 2, 2026, from <a href="https://www.mof.go.jp/english/policy/international_policy/reference/official_reserve_assets/e0805.html" target="_blank" rel="noopener">https://www.mof.go.jp/english/policy/international_policy/reference/official_reserve_assets/e0805.html</a></li>
+        <li>U.S. Department of the Treasury. (n.d.). Exchange Stabilization Fund. Retrieved August 2, 2026, from <a href="https://home.treasury.gov/policy-issues/international/exchange-stabilization-fund" target="_blank" rel="noopener">https://home.treasury.gov/policy-issues/international/exchange-stabilization-fund</a></li>
+        <li>U.S. Department of the Treasury. (n.d.). Relations with the Federal Reserve. Retrieved August 2, 2026, from <a href="https://home.treasury.gov/policy-issues/international/exchange-stabilization-fund/relations-with-the-federal-reserve" target="_blank" rel="noopener">https://home.treasury.gov/policy-issues/international/exchange-stabilization-fund/relations-with-the-federal-reserve</a></li>
+        <li>Congressional Research Service. (2026, April 24). Treasury&rsquo;s Exchange Stabilization Fund (IF13200). <a href="https://www.congress.gov/crs-product/IF13200" target="_blank" rel="noopener">https://www.congress.gov/crs-product/IF13200</a></li>
+        <li>Lim, H. J. (2026, July 31). BOJ holds rates at 1%, warns of core inflation exceeding 2% target. <em>CNBC.</em> <a href="https://www.cnbc.com/2026/07/31/boj-rates-yen-intervention-inflation-japan.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/07/31/boj-rates-yen-intervention-inflation-japan.html</a></li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <a class="footer-brand" href="index.html">
+        <img src="logo.png" alt="WSG logo">
+        <span>Wall Street for the Girls</span>
+      </a>
+      <ul class="footer-links">
+        <li><a href="start-here.html">Start Here</a></li>
+        <li><a href="archive.html">Archive</a></li>
+        <li><a href="foundation.html">Foundation</a></li>
+        <li><a href="financial-syllabus.html">Financial Syllabus</a></li>
+        <li><a href="glossary.html">Glossary</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="https://wallstreetforthegirls.substack.com" target="_blank" rel="noopener">Substack</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Wall Street for the Girls</span>
+      <em>Educational purposes only: reflects personal analysis, not financial advice.</em>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

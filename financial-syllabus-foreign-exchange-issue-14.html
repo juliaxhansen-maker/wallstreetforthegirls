@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>This Issue's Syllabus: Foreign Exchange — Issue No. 14 — Wall Street for the Girls</title>
+<meta name="description" content="From Issue No. 14's Finance Syllabus: the four questions behind any currency intervention, worked through with Japan's real reserves and a bond math example.">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500;1,6..72,600&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+
+  .page-hero{padding-bottom:0; border-bottom:none;}
+  .page-hero p.lede{text-align:justify; hyphens:auto; max-width:none;}
+  .lesson-wrap{max-width:100%; margin:0; padding-top:30px; padding-bottom:20px;} 
+  .lesson-num{font-family:var(--serif); font-size:16px; color:var(--brand); margin-right:12px; font-weight:800;}
+  .lesson-block{display:flex; gap:0; align-items:flex-start; font-size:15.5px; line-height:1.85; color:var(--ink); margin-bottom:10px;}
+  .lesson-block p{margin:0 0 12px; text-align:justify; hyphens:auto;}
+  .lesson-block p:last-child{margin-bottom:0;}
+  .lesson-flow{font-size:15.5px; line-height:1.85; color:var(--ink); margin-bottom:32px; text-align:justify; hyphens:auto;}
+  .lesson-flow p:last-child{margin-bottom:0;}
+  .lesson-flow:first-child{border-top:2px solid #7D1F42; padding-top:20px; margin-top:5px;}
+  .lesson-step-label{font-family:var(--serif); font-weight:600; font-size:16px; color:var(--brand); margin-bottom:4px; display:block;}
+  .lesson-table-eyebrow{font-size:15px; letter-spacing:.16em; text-transform:uppercase; font-weight:600; color:var(--brand); margin:36px 0 14px;}
+  table.lesson-table{width:100%; border-collapse:collapse; font-size:13.5px; margin-bottom:36px;}
+  table.lesson-table th{text-align:left; padding:10px 8px; border-bottom:1.5px solid var(--ink); color:var(--gray); font-weight:600; font-size:11px; letter-spacing:.04em; text-transform:uppercase;}
+  table.lesson-table td{padding:10px 8px; border-bottom:.5px solid var(--line); color:var(--ink);}
+  table.lesson-table td.hi{color:var(--brand); font-weight:600;}
+  .lesson-quote{font-family:var(--serif); font-size:22px; color:var(--brand); line-height:1.55; text-align:center; margin:24px auto; padding:0 12px; max-width:100%;}
+  .lesson-footer-link{text-align:center; font-size:13px; color:var(--gray); padding-top:24px; border-top:.5px solid var(--line);}
+  .lesson-footer-link a{color:var(--brand); text-decoration:none; font-weight:600;}
+  .lesson-footer-link a:hover{text-decoration:underline;}
+  @media (max-width:640px){.lesson-block{flex-direction:column;} .lesson-num{margin-bottom:4px;}}
+
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="nav-brand" href="index.html">
+      <img src="logo.png" alt="WSG logo">
+      <span>Wall Street <em>for the Girls</em></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="archive.html">Archive</a></li>
+      <li class="nav-dropdown">
+        <a href="financial-syllabus.html" class="active">Learn</a>
+        <ul class="dropdown-menu">
+          <li><a href="foundation.html">The Foundation</a></li>
+          <li><a href="financial-syllabus.html">Financial Syllabus</a></li>
+          <li><a href="glossary.html">Glossary</a></li>
+        </ul>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a class="nav-cta" href="https://wallstreetforthegirls.substack.com" target="_blank" rel="noopener">Subscribe</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<section class="page-hero">
+  <div class="wrap">
+    <a class="breadcrumb" href="foreign-exchange.html">&larr; Foreign Exchange</a>
+    <p class="eyebrow">This issue&rsquo;s syllabus &middot; Issue No. 14 &middot; August 2, 2026</p>
+    <h1>Foreign Exchange.</h1>
+    <p class="lede">This week&rsquo;s focus is foreign exchange. There are four questions to ask about any currency intervention, and once you know them, you can apply this to any currency defence you read about, not just this one.</p>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="lesson-wrap">
+
+    <div class="lesson-flow">
+      <p>This week&rsquo;s focus is foreign exchange, and we are going to follow the money during an intervention. Every headline about a currency being defended skips the same four questions: who authorises it, where the money actually comes from, who does the trading, and what that money is actually made of once you look closely. When you compare the answers for the US and Japan, you will see they stop matching.</p>
+      <p>So when a government buys a currency, whose money is it actually spending?</p>
+    </div>    <div class="lesson-block"><span class="lesson-num">1.</span><div>
+       <span class="lesson-step-label">Somebody has to authorise it.</span>
+      <p>In the US, the Treasury Secretary is the country&rsquo;s chief international monetary policy official, and exchange market intervention policy sits with him. The Federal Reserve has its own separate legal authority to operate in foreign exchange, and the two have coordinated closely since 1962, but the reported operation on Friday was carried out on the Treasury&rsquo;s behalf.</p>
+    </div></div>
+    <div class="lesson-block"><span class="lesson-num">2.</span><div>
+      <span class="lesson-step-label">Where the money actually comes from.</span>
+      <p>The Treasury does not fund this out of general government spending. It uses the Exchange Stabilization Fund, an emergency reserve fund created by Congress in 1934 that holds dollars, foreign currencies, and an international reserve asset issued by the IMF. Every operation of the fund requires the explicit authorisation of the Treasury Secretary, with the approval of the President. What it does not require is Congress. A fund set up 92 years ago can still be used by the executive branch without a vote.</p>
+      <p>Which is exactly why Friday looked the way it did. No vote, no hearing, no announcement in advance. Just a Friday afternoon, two banks, and a confirmation that arrived in a newspaper rather than a press release.</p>
+    </div></div>
+    <div class="lesson-block"><span class="lesson-num">3.</span><div>
+      <span class="lesson-step-label">Someone else does the trading.</span>
+      <p>The Treasury decides, but it does not execute. The Federal Reserve Bank of New York carries out the operation, acting as fiscal agent of the US and as the operating arm of the Federal Reserve System. A fiscal agent is simply an institution that carries out transactions on somebody else&rsquo;s behalf.</p>
+      <p>Then the New York Fed goes to the market through commercial banks, which on Friday meant Goldman Sachs and Morgan Stanley. The chain runs like this. The Secretary authorises with the President&rsquo;s approval, the fund pays, the New York Fed executes, the banks buy. Four steps and only the last one is visible on a screen.</p>
+    </div></div>
+    <div class="lesson-block"><span class="lesson-num">4.</span><div>
+      <span class="lesson-step-label">What the money is actually made of.</span>
+      <p>The same logic applies to Japan. Japan needs dollars to buy yen. At the end of May it held $1.31 trillion of reserves. Here is what it&rsquo;s actually made of.</p>
+    </div></div>
+
+    <span class="lesson-table-eyebrow">What Japan actually held</span>
+
+    <table class="lesson-table">
+      <tr><th></th><th>End of May 2026</th></tr>
+      <tr><td>Securities</td><td>$931,678 million</td></tr>
+      <tr><td>Deposits</td><td>$162,235 million</td></tr>
+      <tr><td>Gold</td><td>$123,646 million</td></tr>
+      <tr><td>Special drawing rights</td><td>$60,894 million</td></tr>
+      <tr><td>IMF reserve position</td><td>$11,512 million</td></tr>
+      <tr><td>Other reserve assets</td><td>$15,909 million</td></tr>
+      <tr><td>Total</td><td class="hi">$1,305,874 million</td></tr>
+    </table>
+    <p style="font-size:11.5px; color:var(--gray); margin:-24px 0 32px;"><em>Source: Ministry of Finance, Japan, International Reserves/Foreign Currency Liquidity, as of the end of May 2026.</em></p>
+
+    <div class="lesson-flow">
+      <p>The deposits line is the part that is already money. Everything else is an asset that has to be turned into money first, and by far the biggest block is securities which the ministry&rsquo;s own breakdown shows are entirely issued outside Japan.</p>
+      <p>So when Japan wants to defend the yen at scale, it does not simply reach into a vault. It has to sell foreign government debt to raise the dollars. Reuters tells us exactly which debt that is. The Federal Reserve facility Japan pointed to lets Tokyo raise dollars without having to sell its US government debt outright. Those holdings have a name you will see constantly once you notice it. They are US Treasuries.</p>
+      <p>To put this into perspective, let&rsquo;s take a bond that pays a fixed $4 every year. If it costs $100, the buyer earns 4%. That is the yield. Now suppose Japan sells enough of them that buyers will only pay $97. The bond still pays $4, but $4 on $97 is 4.12%. Nothing about the bond changed. The price fell but the yield increased.</p>
+    </div>
+
+    <span class="lesson-table-eyebrow">Now make it concrete</span>
+
+    <table class="lesson-table">
+      <tr><th></th><th>Bond price</th><th>Annual payment</th><th>Yield</th></tr>
+      <tr><td>Before a large sale</td><td>$100</td><td>$4</td><td>4.00%</td></tr>
+      <tr><td>After a large sale</td><td>$97</td><td>$4</td><td class="hi">4.12%</td></tr>
+    </table>
+
+    <div class="lesson-flow">
+      <p>A rise of 0.12 percentage points may sound like nothing, but do it across hundreds of billions of dollars of debt, and it is not nothing at all. If Japan funds its own currency defence by selling Treasuries outright, that sale is exactly the kind of move that pushes yields up, and a higher yield is what has been pulling money out of the yen all year. The defence feeds the problem it is meant to solve.</p>
+      <p>Which is what makes the FIMA repo facility so interesting. It was introduced by the Federal Reserve in 2020, and it lets foreign monetary authorities borrow dollars against their holdings of US government debt instead of selling them. A repo is a short term loan where you hand over a bond as collateral and agree to buy it back shortly afterwards.</p>
+      <p>That is the loop FIMA breaks. Japan gets its dollars. The bonds never hit the market. Nothing pushes yields up, and the defence stops feeding the problem it exists to solve.</p>
+      <p>Which is exactly why the Ministry of Finance&rsquo;s mention of the facility was not routine reassurance about liquidity. It was Tokyo telling the market it can keep spending without triggering the mechanism that would defeat it.</p>
+    </div>
+
+    <p class="lesson-quote">The next time a country claims it&rsquo;s defending its currency, those are the four questions worth asking. Who authorised it. Where the money actually came from. Who executed the trade. And what that money is actually made of, because &ldquo;billions in reserves&rdquo; and &ldquo;billions Japan could spend today without moving a market against itself&rdquo; are not the same number.</p>
+
+    <div class="lesson-footer-link">
+      This lesson came from Issue No. 14 &middot; <a href="issue-14.html#syllabus">Read the full issue &rarr;</a>
+    </div>
+
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <a class="footer-brand" href="index.html">
+        <img src="logo.png" alt="WSG logo">
+        <span>Wall Street for the Girls</span>
+      </a>
+      <ul class="footer-links">
+        <li><a href="start-here.html">Start Here</a></li>
+        <li><a href="archive.html">Archive</a></li>
+        <li><a href="foundation.html">Foundation</a></li>
+        <li><a href="financial-syllabus.html">Financial Syllabus</a></li>
+        <li><a href="glossary.html">Glossary</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="https://wallstreetforthegirls.substack.com" target="_blank" rel="noopener">Substack</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Wall Street for the Girls</span>
+      <em>Educational purposes only: reflects personal analysis, not financial advice.</em>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
