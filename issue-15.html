@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Issue No. 15: Your Savings Account Just Got Less Interesting This Week — Wall Street for the Girls</title>
+<meta name="description" content="Gold just had its best week since January, but nothing about gold changed. A weak July jobs report reveals what's really pricing an asset that pays no interest at all.">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500;1,6..72,600&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#faf7f1; --ink:#22201d; --burgundy:#7d1f42; --muted:#5c574e;
+    --hint:#a39c8c; --line:#ddd7cb; --line-soft:#ece7dc; --body:#3a3733;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--cream); color:var(--ink); font-family:'Inter',sans-serif;}
+  a{color:inherit;}
+  .wrap{max-width:1160px; margin:0 auto; padding:0 28px;}
+
+  .folio-line{border-bottom:0.5px solid var(--line); font-size:11px; letter-spacing:0.03em; color:var(--hint); padding:10px 0;}
+  .folio-line .wrap{display:flex; justify-content:flex-start;}
+
+  .site-header{border-bottom:0.5px solid var(--line); position:relative;}
+  .nav{display:flex; justify-content:space-between; align-items:center; padding-top:16px; padding-bottom:16px;}
+  .nav-brand{display:flex; align-items:center; gap:8px; text-decoration:none; color:var(--ink); font-family:'Newsreader',serif; font-weight:600; font-size:16px;}
+  .nav-brand img{height:28px; width:28px; border-radius:50%;}
+  .nav-brand em{font-style:italic; color:var(--burgundy);}
+  .nav-links{list-style:none; display:flex; gap:24px; margin:0; padding:0; align-items:center;}
+  .nav-links a{text-decoration:none; color:var(--muted); font-size:12px; letter-spacing:0.04em;}
+  .nav-links a.active{color:var(--burgundy); border-bottom:1.5px solid var(--burgundy); padding-bottom:2px;}
+  .nav-links a.nav-cta{background:var(--ink); color:var(--cream); padding:9px 18px; border-radius:2px;}
+  .nav-dropdown{position:relative;}
+  .dropdown-menu{
+    display:none; position:absolute; top:100%; left:50%; transform:translateX(-50%);
+    margin-top:14px; padding:10px 0; min-width:210px; list-style:none;
+    background:var(--cream); border:0.5px solid var(--line);
+  }
+  .nav-dropdown:hover .dropdown-menu,
+  .nav-dropdown:focus-within .dropdown-menu{display:block;}
+  .dropdown-menu li{padding:0;}
+  .dropdown-menu a{
+    display:block; padding:10px 20px; font-size:11.5px; letter-spacing:.08em;
+    color:var(--ink); text-decoration:none; white-space:nowrap;
+  }
+  .dropdown-menu a:hover{color:var(--burgundy); background:#faf1f4;}
+  .nav-toggle{display:none; background:none; border:none; cursor:pointer; padding:8px;}
+  .nav-toggle span{display:block; width:22px; height:2px; background:var(--burgundy); margin:5px 0; transition:.3s;}
+
+  .issue-page{padding:48px 0 80px;}
+  .issue-layout{display:grid; grid-template-columns:minmax(0,2fr) minmax(0,1fr); gap:32px; align-items:start; justify-content:start;}
+
+  .issue-dateline{font-size:11.5px; letter-spacing:0.03em; color:var(--burgundy); margin:0 0 10px;}
+  .issue-main h1{font-family:'Newsreader',serif; font-weight:600; font-size:30px; line-height:1.3; margin:0 0 20px;}
+  .issue-main p{font-size:14px; line-height:1.75; color:var(--body); margin:0 0 16px; text-align:justify; hyphens:auto;}
+
+  .eb{font-size:10.5px; letter-spacing:0.08em; color:var(--burgundy); text-transform:uppercase; margin:28px 0 8px;}
+  .rail-title{font-weight:700; font-size:12px;}
+  .section-label{font-family:'Newsreader',serif; font-size:17px; font-weight:600; margin:30px 0 12px; color:var(--burgundy);}
+  .term-link{color:var(--burgundy); text-decoration:none; border-bottom:1.5px dotted var(--burgundy);}
+
+  .issue-copy{max-width:100%;}
+  .signal-noise{display:grid; grid-template-columns:1fr 1fr; gap:0; margin:28px 0 16px; padding-top:24px; border-top:0.5px solid var(--line);}
+  .signal-noise .eb{margin-top:0;}
+  .signal-noise p:last-child{margin-bottom:0;}
+  .signal-noise > div:first-child{padding-right:28px;}
+  .signal-noise > div:last-child{padding-left:28px; border-left:0.5px solid var(--line);}
+
+  .key-question{margin:32px 0 0; padding-top:18px; border-top:1px solid var(--ink);}
+  .key-question .key-question-text{font-family:'Newsreader',serif; font-style:italic; font-weight:700; font-size:20px; color:#7d1f42; line-height:1.6; margin:0 0 14px; text-align:center;}
+
+  p.connects-chain{margin:26px 0; padding:20px 24px; border-top:1px solid var(--ink); border-bottom:1px solid var(--ink); font-family:'Newsreader',serif; font-style:italic; font-size:15px; line-height:1.85; color:var(--body); text-align:center;}
+
+  .references-section{grid-column:1 / -1; border-top:0.5px solid var(--line); padding:36px 0 4px;}
+  .references-section .section-label{margin:0 0 14px;}
+  .references-list{list-style:none; margin:0; padding:0; max-width:100%;}
+  .references-list li{font-size:11.5px; line-height:1.7; color:var(--muted); margin-bottom:14px; text-align:justify; hyphens:auto;}
+  .references-list li a{color:var(--burgundy); text-decoration:none; word-break:break-all;}
+  .references-list li a:hover{text-decoration:underline;}
+
+  .issue-rail{border-left:0.5px solid var(--line); padding-left:28px; align-self:start;}
+  .rail-block{border-bottom:0.5px solid var(--line-soft); padding-bottom:20px; margin-bottom:20px;}
+  .rail-block:last-child{border-bottom:none; margin-bottom:0;}
+
+  .rail-stat{margin-bottom:22px;}
+  .rail-stat:last-child{margin-bottom:0;}
+  .rail-label{display:block; font-size:9.5px; letter-spacing:0.08em; color:var(--hint); margin-bottom:5px;}
+  .rail-value{display:block; font-family:'Newsreader',serif; font-style:italic; font-weight:500; font-size:14.5px; color:var(--ink); line-height:1.4;}
+
+  .rail-table{width:100%; border-collapse:collapse; font-size:12px;}
+  .rail-table td{padding:7px 0; border-bottom:0.5px solid var(--line-soft); color:var(--body);}
+  .rail-table tr:last-child td{border-bottom:none;}
+  .rail-table td.dir{text-align:right; color:var(--muted); white-space:nowrap;}
+  .rail-table td.dir.down, .rail-table td.dir.up{color:var(--burgundy);}
+
+  .rail-teaser-text{font-size:12px; color:var(--muted); line-height:1.6; margin:0 0 10px;}
+  .rail-link{font-size:10.5px; color:var(--burgundy); text-decoration:none;}
+  .rail-link:hover{text-decoration:underline;}
+
+  .rail-block-featured{background:#faf1f4; border-radius:8px; padding:16px 18px 18px; border-bottom:none;}
+  .rail-block-featured .eb{margin-top:0; margin-bottom:8px;}
+  .rail-link-btn{display:inline-block; font-size:10px; letter-spacing:0.05em; color:var(--burgundy); border:0.5px solid var(--burgundy); border-radius:2px; padding:7px 12px; text-decoration:none;}
+  .rail-link-btn:hover{background:var(--burgundy); color:var(--cream);}
+
+  .rail-term{font-family:'Newsreader',serif; font-size:14px; font-weight:600; margin:0 0 5px;}
+  .rail-def{font-size:11.5px; color:var(--muted); line-height:1.6; margin:0;}
+
+  .term-grid{display:grid; grid-template-columns:1fr 1fr; gap:8px; margin:10px 0 14px;}
+  .term-box{background:#fff; border:0.5px solid var(--line); border-radius:6px; padding:10px 12px;}
+  .term-box span{font-family:'Newsreader',serif; font-size:11.5px; font-weight:400; color:var(--ink);}
+
+  .site-footer{border-top:0.5px solid var(--line); padding:44px 0 30px;}
+  .footer-top{display:flex; justify-content:space-between; align-items:center; margin-bottom:22px; flex-wrap:wrap; gap:16px;}
+  .footer-brand{display:flex; align-items:center; gap:8px; text-decoration:none; color:var(--ink); font-weight:600; font-family:'Newsreader',serif; font-size:14px;}
+  .footer-brand img{height:24px; width:24px; border-radius:50%;}
+  .footer-links{list-style:none; display:flex; gap:18px; margin:0; padding:0; flex-wrap:wrap;}
+  .footer-links a{color:var(--muted); text-decoration:none; font-size:12px;}
+  .footer-bottom{display:flex; justify-content:space-between; font-size:11px; color:var(--hint); border-top:0.5px solid var(--line); padding-top:16px; flex-wrap:wrap; gap:8px;}
+
+  a:focus-visible, .nav-cta:focus-visible{outline:2px solid var(--burgundy); outline-offset:2px;}
+
+  @media (max-width:600px){
+    .signal-noise{grid-template-columns:1fr;}
+    .signal-noise > div:first-child{padding-right:0;}
+    .signal-noise > div:last-child{padding-left:0; border-left:none; margin-top:20px;}
+  }
+
+  @media (max-width:960px){
+    .nav-links{
+      display:none; position:absolute; top:100%; left:0; right:0;
+      background:var(--cream); flex-direction:column; padding:24px; gap:20px;
+      border-bottom:0.5px solid var(--line); align-items:flex-start;
+    }
+    .nav-links.open{display:flex;}
+    .nav-toggle{display:block;}
+    .dropdown-menu{position:static; display:block; transform:none; border:none; margin-top:6px; padding:0 0 0 14px; background:none;}
+  }
+
+  @media (max-width:860px){
+    .issue-layout{grid-template-columns:1fr;}
+    .issue-rail{border-left:none; padding-left:0; border-top:0.5px solid var(--line); padding-top:28px; margin-top:8px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="nav-brand" href="index.html">
+      <img src="logo.png" alt="WSG logo">
+      <span>Wall Street <em>for the Girls</em></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="archive.html">Archive</a></li>
+      <li class="nav-dropdown">
+        <a href="financial-syllabus.html">Learn</a>
+        <ul class="dropdown-menu">
+          <li><a href="foundation.html">The Foundation</a></li>
+          <li><a href="financial-syllabus.html">Financial Syllabus</a></li>
+          <li><a href="glossary.html">Glossary</a></li>
+        </ul>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a class="nav-cta" href="https://wallstreetforthegirls.substack.com" target="_blank" rel="noopener">Subscribe</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<section class="issue-page">
+  <div class="wrap issue-layout">
+
+    <article class="issue-main">
+      <p class="issue-dateline">&mdash; August 9, 2026 &middot; Issue No. 15</p>
+      <h1>Your savings account just got less interesting this week.</h1>
+
+      <div class="issue-copy">
+      <p style="font-style:italic; font-size:16px; color:#3a3733; margin-bottom:10px;">Here&rsquo;s what you need to know this week, and why it matters.</p>
+
+      <p>Remember when checking your savings account was actually exciting and satisfying?</p>
+
+      <p>We know that feeling. The rate on the account went up, and then it went up again, and the money sitting there was doing something. Some of us may have even moved savings into a better account for the first time in our lives. Some of us told a friend about it. Nobody really talks about their bank account, but that year we did.</p>
+
+      <p>Money that had done nothing for years suddenly started paying us to keep doing nothing. And without any of us deciding it, something about how we thought about that money changed too.</p>
+
+      <p>Doing nothing stopped being laziness and became a decision.</p>
+
+      <p>Every other thing we might have done with that money now had a number to beat. The apartment we were saving for, the trip, the festival tickets. All of it now had to be worth more than the interest we would give up by moving money out of that account.</p>
+
+      <p>That is the bar. When the account pays more, the bar goes up and everything else has to work harder to be worth it. But when the account pays less, the bar comes down and the same things start looking reasonable again.</p>
+
+      <p>If that feels familiar, it should be.</p>
+
+      <p>Back in Issue 6 we put two accounts side by side. One paying 4.45% and one paying 2.64%, and said money is not sentimental, it flows toward wherever it earns more. That issue was about a currency. This week it&rsquo;s about gold, and one of the two accounts is yours.</p>
+
+      <p>But the thing is, gold pays nothing.</p>
+
+      <p>No dividends, no interest, no coupons, nothing. It just sits in a vault, and, on a good day, it goes up. On a bad day, it goes down and charges you to keep it. So, the question with gold is never really whether gold is good. It is whether gold <em>beats</em> the interest you are giving up holding it instead of leaving your money somewhere that pays.</p>
+
+      <p>By late Friday morning in New York, gold was trading at $4,341.69 an ounce, up 2.4% on the day and heading for a weekly gain of more than 7%, its strongest week since January. Earlier in the session it reached its highest level since the middle of June. Gold futures, which are agreements to buy at a set price on a set future date, sat at $4,402.20. Silver, gold&rsquo;s more dramatic cousin, rose 3.4% to $63.54. Platinum and palladium showed up too, distant cousins rather than close ones, since both trade more like industrial metals than precious ones.</p>
+
+      <p>Most of the headlines this week left one thing out, though.</p>
+
+      <p>Gold's best week since January isn't what it looks like. This is just a strong week, not a comeback.</p>
+
+      <p>Back in late January, gold reached a record high of $5,594.82 an ounce. It is still more than a fifth below that. So, this isn&rsquo;t really a story of gold reaching all-time highs, however the "best week since January" framing might make it seem. It is a story about something that fell sharply, spent months going sideways above $4,000, and just had one strong week.</p>
+
+      <p>Both things are true at once and knowing that is the difference between reading a headline and understanding one.</p>
+
+      <p>So, what actually moved it?</p>
+
+      <p>Two separate things, three days apart, both pointing the same way.</p>
+
+      <p>The first happened on Wednesday, with gold jumping more than 4% in a single session, its biggest daily gain since February.</p>
+
+      <p>Two analysts at StoneX, a global brokerage that trades everything from futures to foreign exchange, provided two different explanations, one obvious and one less so. Bob Haberkorn, senior market strategist there, said gold finally broke through a price level it had been struggling to get past for months. That breakthrough was enough to bring hesitant buyers back into the market. Matt Simpson, senior analyst at the same firm, offered a different explanation. He pointed to hopes of peace in the Middle East, which pulled inflation expectations down and let gold move past the range it had been stuck in above $4,000.</p>
+
+      <p>Oil was falling and falling energy prices tend to pull the cost of almost everything else down with them, so the fear of inflation eased too.</p>
+
+      <p>Then came Thursday.</p>
+
+      <p>The Strait of Hormuz, the crucial waterway we keep bringing up, was suddenly back in the news. An Iranian parliamentary committee began reviewing a bill that would block U.S., Israeli, and other "hostile" ships from passing through it. Oil rose more than $3 a barrel on the news. Gold, the thing that goes up when the world gets frightening, couldn&rsquo;t be bothered to move. Just like when you're in a bubble bath, face mask on, glass of wine in one hand, and the world can wait.</p>
+
+      <p>Except the world wasn&rsquo;t waiting. A real threat showed up, but gold turned up the music and ignored it.</p>
+
+      <p>Jim Wyckoff, a market analyst at American Gold Exchange, a precious metals dealer, explained exactly why. If crude oil rallies again, meaning its price rises quickly, inflation gets worse. If inflation gets worse, interest rates are more likely to go up rather than down. Higher rates increase the bar gold has to clear. So the headline that should have helped gold worked against it instead because of what it implied about interest rates.</p>
+
+      <p>Which brings us to Friday, and to the number the market has been waiting for.</p>
+
+      <p>The US jobs report, also known as nonfarm payrolls, is a monthly count of how many jobs the U.S. economy added or lost, excluding farm work. It is one of the most closely watched numbers in global finance because jobs affect wages, wages affect spending, spending affects prices, and prices drive interest rates. Economists polled by Reuters had expected the US to add around 80,000 jobs in July.</p>
+
+      <p>But it lost 23,000 instead.</p>
+
+      <p>Before we go into full panic mode, there is also something else we should know. Private companies still added 30,000 jobs on net in July. The headline loss came from government, which removed 53,000 jobs, with local government education alone accounting for 50,000 of that. Additionally, retail and financial activates both lost jobs and health care was the one doing most of the lifting.</p>
+
+      <p>So, this wasn&rsquo;t the whole private collapsing. It just wasn&rsquo;t as strong as it looked either.</p>
+
+      <p>Every month, the Bureau of Labor Statistics goes back and corrects the two previous months as more complete records arrive from employers and as the seasonal adjustments are recalculated. This month those corrections were large. May was marked down by 66,000, from 129,000 to 63,000. June was marked down by 37,000, from a respectable 57,000 to just 20,000.</p>
+
+      <p>Those two months are 103,000 jobs weaker than we were told at the time. The average over the past twelve months has fallen to 34,000 jobs a month.</p>
+
+      <p>That repaints the entire picture. One bad month can just be a small bump on the road, but two being adjusted downward is more than just a small bump. The strength everyone had been describing all summer was never really there.</p>
+
+      <p>The unemployment rate improved, falling to 4.1% from 4.2%. This sounds like the good news in a bad report, but actually it&rsquo;s not. The number of people actually employed fell by 87,000. The rate improved because 264,000 people left the labor force, meaning they stopped working and stopped looking. The share of people working or looking for work is now 61.4%, the lowest in more than five years.</p>
+
+      <p>A rate can improve because more people found work, or because fewer people are counted as wanting it. This was the second kind.</p>
+
+      <p>The Federal Reserve, the institution that sets the main US interest rate, has been holding that rate at 3.50% to 3.75%, and the question all summer was whether it would go higher. The day before the jobs report, Alberto Musalem, President of the Federal Reserve Bank of St. Louis, said he had wanted the Fed to raise rates at its July meeting already, arguing that earlier gradual increases are "preferable, less disruptive, less costly" than later, more abrupt ones. He's not one of the officials who actually votes this year, but comments like his shape the mood around the decision.</p>
+
+      <p>Going into Friday morning, the CME FedWatch tool, which tracks what traders are betting the Fed will do next, put the chance of a rate rise in September at around 55%, down from 63% a week earlier. Within hours of the jobs report, a separate measure from LSEG had those odds at just under 44%, down from 57% before the release, and the probability of the Fed doing nothing at all overtook the probability of it moving. David Meger, director of metals trading at High Ridge Futures, summed up the logic plainly.</p>
+
+      <p>Weaker jobs data makes a rise at the next meeting less likely.</p>
+
+      <p>And that is the entire gold story this week. Nothing happened to gold. What happened is that the thing gold competes with, the interest your money earns for doing absolutely nothing, suddenly looked less likely to keep improving. The bar came down, and an asset that has to clear that bar every year became a little easier to justify holding.</p>
+
+      <p>That is why gold rose 2.4% on a report about U.S. employment.</p>
+
+      <p>In the sections ahead we are separating what genuinely changed this week from what only sounded like it did. Then we look at what a softening jobs market does to everything else you own, and finally we go properly into the mechanics of why an asset that pays you nothing is priced almost entirely by what everything else pays.</p>
+
+      <div class="signal-noise">
+        <div>
+          <p class="eb">&#10022; The signal</p>
+          <p>Friday's jobs report was new information. The US lost 23,000 jobs in July against a forecast of 80,000, and the two months before it were revised down by a combined 103,000. The market had to absorb it in real time. The odds of a September rate rise fell from around 55% to just under 44% within a few hours of the release. The other half of the signal came on Thursday. Iran's parliament began moving to restrict shipping through the Strait of Hormuz, oil jumped more than $3 a barrel, and gold didn't move. That's not what gold is supposed to do when the world gets frightening. It suggests that gold is no longer trading on fear alone. It's trading on what fear implies about interest rates, lower on Friday, higher on Thursday, and gold moved accordingly each time.</p>
+        </div>
+        <div>
+          <p class="eb">&#10022; The noise</p>
+          <p>Oil had been drifting lower for days on hopes of peace in the Middle East, a slow, gradual move rather than a surprise. Wednesday's technical breakout is part of that same story, a price level breaking after months of being watched, explains that day's move but tells you nothing new about where gold goes from here. UBS's forecast of $5,000 gold is a standing view about next year, not something the market just learned this week.</p>
+        </div>
+      </div>
+
+      <h2 class="section-label">What's moving in markets</h2>
+      <p style="font-style:italic; color:var(--muted);"><b>Note:</b> This week's main articles cover gold, the other precious metals and the direction of oil. The equity and Treasury figures below come from Reuters reporting on Friday's session, cited at the end. The paragraphs on are based on what would the expected outcome be based on main article, not what actually happened.</p>
+      <p><b>Gold</b>, <b>silver</b>, <b>platinum</b> and <b>palladium</b> all rose. Gold led at 2.4% to $4,341.69, its best week since January. Silver moved further, up 3.4% to $63.54. Platinum and palladium followed, up 1% to $1,745.87 and 0.4% to $1,376.90.</p>
+      <p><b>Oil</b> fell most of the week on peace hopes, then jumped more than $3 a barrel on Thursday's Hormuz news, a reminder that the same story cuts both ways depending on the day.</p>
+
+      <table class="lesson-table" style="width:100%; border-collapse:collapse; font-size:13px; margin:20px 0 28px;">
+        <tr>
+          <th style="text-align:left; padding:9px 8px; border-bottom:1.5px solid var(--ink); color:var(--muted); font-weight:600; font-size:10.5px; letter-spacing:.04em; text-transform:uppercase;">Asset</th>
+          <th style="text-align:left; padding:9px 8px; border-bottom:1.5px solid var(--ink); color:var(--muted); font-weight:600; font-size:10.5px; letter-spacing:.04em; text-transform:uppercase;">Direction</th>
+          <th style="text-align:left; padding:9px 8px; border-bottom:1.5px solid var(--ink); color:var(--muted); font-weight:600; font-size:10.5px; letter-spacing:.04em; text-transform:uppercase;">Why it matters</th>
+        </tr>
+        <tr>
+          <td style="padding:9px 8px; border-bottom:.5px solid var(--line);">Gold</td>
+          <td style="padding:9px 8px; border-bottom:.5px solid var(--line);">&uarr; 2.4% to $4,341.69</td>
+          <td style="padding:9px 8px; border-bottom:.5px solid var(--line);">Expectations of a US rate rise fell, lowering the bar an asset paying no interest has to clear</td>
+        </tr>
+        <tr>
+          <td style="padding:9px 8px; border-bottom:.5px solid var(--line);">Silver</td>
+          <td style="padding:9px 8px; border-bottom:.5px solid var(--line);">&uarr; 3.4% to $63.54</td>
+          <td style="padding:9px 8px; border-bottom:.5px solid var(--line);">Moves with gold more sharply, a signal of how strongly the rate story is being priced</td>
+        </tr>
+        <tr>
+          <td style="padding:9px 8px; border-bottom:.5px solid var(--line);">Platinum &amp; Palladium</td>
+          <td style="padding:9px 8px; border-bottom:.5px solid var(--line);">&uarr; $1,745.87 / $1,376.90</td>
+          <td style="padding:9px 8px; border-bottom:.5px solid var(--line);">Rose too, although both trade more on industrial demand than on interest rates</td>
+        </tr>
+        <tr>
+          <td style="padding:9px 8px;">Crude oil</td>
+          <td style="padding:9px 8px;">&darr; on the week &uarr; on Thursday</td>
+          <td style="padding:9px 8px;">Cheaper energy eased inflation fears al week until the Hormuz proposal briefly reversed that</td>
+        </tr>
+      </table>
+
+      <h2 class="section-label">Currency &amp; interest rate</h2>
+      <div class="signal-noise">
+        <div>
+          <p class="eb">Where currencies stand</p>
+          <p><b>USD:</b> Softer after the data. When the market expects a country's rates to rise less, its currency usually gets a little less attractive to hold, and Friday's report pulled those odds down. Not everyone agrees the softening should last. Musalem argued the day before for raising rates now rather than later, to avoid a bigger move if inflation worsens. One weak report doesn't settle that argument.</p>
+          <p><b>EUR/USD:</b> Stronger relative to the dollar, though for the dollar's reasons rather than the euro's own strength. A softer dollar lifts the pair on its own.</p>
+          <p><b>EM FX:</b> Stronger, relatively. Helped by both a softer dollar and most of the week's cheaper oil, though Thursday's spike took a little of that back.</p>
+          <p><b>Key FX signal to watch:</b> Whether the dollar's softness lasts beyond the week. It came from one data release rather than any change in policy and moves built on a single number tend to be the first to unwind.</p>
+        </div>
+        <div>
+          <p class="eb">The rate picture</p>
+          <p><b>Yield curve:</b> The 2Y fell six basis points on Friday and the 10Y fell four, so the gap between them widened from 44 to 46 basis points. Short rates answer directly to what the Fed is likely to do next. Long rates weigh growth and inflation over a decade, so one report moves them less.</p>
+          <p><b>Fed:</b> Holding at 3.50% to 3.75%, with officials divided all summer over whether to raise. Weaker jobs data makes the case for raising harder to argue, since a central bank is far less likely to slow an economy that is already cooling on its own.</p>
+          <p><b>ECB and BOE:</b> Neither sets US rates, but both live downstream of them. A softer dollar takes a little imported inflation pressure off Europe. Set against that, both central banks are still contending with inflation that has proven sticky at home, which a weak U.S. jobs report does nothing to solve.</p>
+          <p><b>Key rates signal to watch:</b> The September Federal Reserve meeting. The market has moved from expecting a rise to expecting a hold, on the strength of one report that will itself be revised twice.</p>
+        </div>
+      </div>
+
+      <h2 class="section-label">How it all connects</h2>
+      <p class="connects-chain">Cheaper oil pulled inflation fears down, and July payrolls fell 23,000 with the two prior months corrected down by 103,000 &rarr; odds of a September rate rise dropped to just under 44% &rarr; Treasury yields fell &rarr; cash is expected to pay less &rarr; the bar comes down &rarr; gold posts its best week since January</p>
+      <p>The thing that rose this week is not the thing that changed. Gold did not become more useful, scarcer or more in demand between Thursday and Friday. What changed is what gold is measured against. The Federal Reserve is being pulled in two directions with one tool. The risk of energy prices turning back up argues for higher rates. A jobs market that shed 23,000 positions in July, with the two prior months corrected down, argues for the opposite. Raising rates to fight prices would press harder on an already softening job market. Leaving them alone risks letting price rises settle in. And interest rates cannot make oil cheaper or put people back into work. That mismatch, a problem the one available tool cannot fully solve, is the environment gold tends to do well in.</p>
+
+      <h2 class="section-label">Why this matters to you</h2>
+      <p style="font-style:italic;"><b>The broader market picture</b></p>
+      <p>Markets mood was a reassessment. What shifted was the expected direction of interest rates, and interest rates are the price of money, touching the return on your savings, the cost of your borrowing, the value of everything in a pension, and the price of an ounce of metal none of us will ever hold.</p>
+      <p style="font-style:italic;"><b>If you are building your financial literacy</b></p>
+      <p>The useful takeaway is understanding your own opportunity cost. Gold rose because the alternative got less attractive, not because gold improved. The same question works on a savings rate, a salary offer, a rent, or a return in a fund. Nothing is good or bad on its own, only ever good or bad against the thing you gave up to have it.</p>
+      <p style="font-style:italic;"><b>If this connects to your work or portfolio</b></p>
+      <ul style="font-size:14px; line-height:1.75; color:var(--body); padding-left:20px; margin:0 0 16px;">
+        <li style="margin-bottom:12px;">If you are an <b>importer</b>, meaning your costs depend on goods bought abroad, this week helps at the margin. A softer dollar makes dollar priced goods cheaper in your own currency, though only against currencies that actually strengthened. The bigger variable was energy, and it moved in both directions inside five days. Worth knowing that this dollar move came from one data release rather than any change in policy.</li>
+        <li style="margin-bottom:12px;">If you are an <b>exporter</b>, meaning you earn by selling abroad, this week works against you slightly. Dollar receivables convert less favorably if the dollar's softness holds. The thing to understand is where that softness came from. A currency that moves on a single report is on less solid ground than one moving because a central bank actually did something.</li>
+        <li style="margin-bottom:12px;">If you are a <b>borrower</b>, nothing has changed yet. The expected path of rates fell this week and yields fell with it, but the rate itself did not move, so nothing has changed in what anyone pays today. That gap, between what markets expect and what has been decided, is exactly where the fixed versus floating question lives, and it is worth understanding which of the two your own debt is priced off.</li>
+        <li>If you are an <b>investor</b>, you are affected whether or not you own any gold. This week is a clean demonstration that assets are priced against each other rather than in isolation. Gold rose because cash is expected to pay less. Rate sensitive holdings anywhere in a portfolio move on the same logic. The question worth sitting with is how much of what you own is, underneath everything, a bet on the direction of interest rates without ever having been described that way.</li>
+      </ul>
+
+      <div class="key-question">
+        <p class="key-question-text">"When something in your life starts looking like a better idea, is it because it improved, or because everything you were comparing it to got worse?"</p>
+        <p>Gold did not move this week because anyone found a new use for it. It moved because the interest we would have earned by leaving our money somewhere else got less certain. The honest question is rarely whether a thing is good, but what we happen to be measuring it against this month, and whether we would still want it if the comparison changed back.</p>
+      </div>
+      </div>
+    </article>
+
+    <aside class="issue-rail">
+
+      <div class="rail-block">
+        <p class="eb rail-title" style="margin-top:0;">Today's session</p>
+        <div class="rail-stat">
+          <span class="rail-label">Risk mood</span>
+          <span class="rail-value">Neutral</span>
+        </div>
+        <div class="rail-stat">
+          <span class="rail-label">Focus</span>
+          <span class="rail-value">Commodities &amp; Rates</span>
+        </div>
+        <div class="rail-stat">
+          <span class="rail-label">Theme</span>
+          <span class="rail-value">US payrolls and gold</span>
+        </div>
+      </div>
+
+      <div class="rail-block">
+        <p class="eb" style="margin-top:0;">Asset direction</p>
+        <table class="rail-table">
+          <tr><td>Gold</td><td class="dir up">&uarr; $4,341.69</td></tr>
+          <tr><td>Silver</td><td class="dir up">&uarr; $63.54</td></tr>
+          <tr><td>US payrolls (July)</td><td class="dir down">&darr; -23,000</td></tr>
+          <tr><td>Fed policy rate</td><td class="dir">&harr; 3.50&ndash;3.75%</td></tr>
+          <tr><td>Sept rate-rise odds</td><td class="dir down">&darr; ~44%</td></tr>
+        </table>
+      </div>
+
+      <div class="rail-block rail-block-featured">
+        <p class="eb" style="margin-top:0;">This issue's foundation</p>
+        <p class="rail-teaser-text">Before we dive in, here's the one thing to know this week.</p>
+        <a class="rail-link-btn" href="foundation-15.html">Read &rarr;</a>
+      </div>
+
+      <div class="rail-block rail-block-featured">
+        <p class="eb" style="margin-top:0;">This issue's syllabus &middot; Commodities &amp; Alternatives</p>
+        <p class="rail-teaser-text">This week's focus is commodities, and specifically how a gold futures contract gets its price.</p>
+        <a class="rail-link-btn" href="financial-syllabus-commodities-alternatives-issue-15.html">Read &rarr;</a>
+      </div>
+
+      <div class="rail-block">
+        <p class="eb" style="margin-top:0;">Key term</p>
+        <p class="rail-term" id="opportunity-cost">Opportunity cost</p>
+        <p class="rail-def">What you give up by choosing one thing over another. Holding an asset that pays nothing means giving up the interest that money could have earned instead.</p>
+      </div>
+
+       <p class="eb" style="margin-top:22px;">Terms in this issue</p>
+        <div class="term-grid">
+          <div class="term-box"><span>Nonfarm payrolls</span></div>
+          <div class="term-box"><span>Revision</span></div>
+          <div class="term-box"><span>Seasonal adjustment</span></div>
+          <div class="term-box"><span>Labor force participation rate</span></div>
+          <div class="term-box"><span>CME FedWatch tool</span></div>
+          <div class="term-box"><span>Opportunity cost</span></div>
+          <div class="term-box"><span>Non-yielding asset</span></div>
+          <div class="term-box"><span>Spot price</span></div>
+          <div class="term-box"><span>Cost of carry</span></div>
+          <div class="term-box"><span>Annualize</span></div>
+          <div class="term-box"><span>Technical breakout</span></div>
+        </div>
+        <a class="rail-link" href="glossary.html">See full glossary &rarr;</a>
+
+    </aside>
+
+    <div class="references-section">
+      <h2 class="section-label">Additional references</h2>
+      <ul class="references-list">
+        <li>Board of Governors of the Federal Reserve System. (2026, July 29). Federal Reserve issues FOMC statement. <a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm" target="_blank" rel="noopener">https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm</a></li>
+        <li>Chavez-Dreyfuss, G. (2026, August 7). US rate futures cut chances of September rate hike after jobs data. <em>Reuters.</em> <a href="https://finance.yahoo.com/economy/policy/articles/us-rate-futures-cut-chances-124656547.html" target="_blank" rel="noopener">https://finance.yahoo.com/economy/policy/articles/us-rate-futures-cut-chances-124656547.html</a></li>
+        <li>CME Group. (n.d.). Gold futures contract specs. Retrieved August 8, 2026, from <a href="https://www.cmegroup.com/markets/metals/precious/gold.contractSpecs.html" target="_blank" rel="noopener">https://www.cmegroup.com/markets/metals/precious/gold.contractSpecs.html</a></li>
+        <li>Cox, J. (2026, August 7). U.S. economy unexpectedly lost 23,000 jobs in July. <em>CNBC.</em> <a href="https://www.cnbc.com/2026/08/07/jobs-report-july-2026.html" target="_blank" rel="noopener">https://www.cnbc.com/2026/08/07/jobs-report-july-2026.html</a></li>
+        <li>Federal Open Market Committee. (2026, January 27 to 28). Minutes of the Federal Open Market Committee. <a href="https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20260128.pdf" target="_blank" rel="noopener">https://www.federalreserve.gov/monetarypolicy/files/fomcminutes20260128.pdf</a></li>
+        <li>Federal Reserve Bank of St. Louis. (2020, January). Real-life examples of opportunity cost. <em>Open Vault.</em> <a href="https://www.stlouisfed.org/open-vault/2020/january/real-life-examples-opportunity-cost" target="_blank" rel="noopener">https://www.stlouisfed.org/open-vault/2020/january/real-life-examples-opportunity-cost</a></li>
+        <li>Mikolajczak, C., &amp; Chauhan, S. (2026, August 7). S&amp;P closes at record high as soft jobs report eases rate-hike concerns. <em>Reuters.</em> Retrieved August 8, 2026, from <a href="https://www.reuters.com/business/sp-500-dow-futures-muted-ahead-jobs-data-chips-software-stocks-rise-2026-08-07/" target="_blank" rel="noopener">https://www.reuters.com/business/sp-500-dow-futures-muted-ahead-jobs-data-chips-software-stocks-rise-2026-08-07/</a></li>
+        <li>Mitra, S., &amp; Anil, A. (2026, August 6). Gold pares gains to trade steady as oil rises on Iran proposal to bar 'hostile' vessels in Hormuz. <em>Reuters.</em> <a href="https://www.reuters.com/world/india/gold-touches-seven-week-high-strait-hormuz-reopening-hopes-2026-08-06/" target="_blank" rel="noopener">https://www.reuters.com/world/india/gold-touches-seven-week-high-strait-hormuz-reopening-hopes-2026-08-06/</a></li>
+        <li>Mutikani, L. (2026, August 7). US nonfarm payrolls fall in July; unemployment rate eases to 4.1%. <em>Reuters.</em> <a href="https://www.reuters.com/business/us-nonfarm-payrolls-fall-july-unemployment-rate-eases-41-2026-08-07/" target="_blank" rel="noopener">https://www.reuters.com/business/us-nonfarm-payrolls-fall-july-unemployment-rate-eases-41-2026-08-07/</a></li>
+        <li>Shivaprasad, A. (2026, August 7). Gold heads for best week since January, US jobs data in focus. <em>Reuters.</em> Retrieved August 8, 2026, from <a href="https://www.reuters.com/world/india/gold-heads-strongest-week-since-january-us-payrolls-data-focus-2026-08-07/" target="_blank" rel="noopener">https://www.reuters.com/world/india/gold-heads-strongest-week-since-january-us-payrolls-data-focus-2026-08-07/</a></li>
+        <li>Shivaprasad, A., &amp; Mitra, S. (2026, August 7). Gold to reach $5,000 in first half of 2027, UBS says. <em>Reuters.</em> <a href="https://www.reuters.com/markets/us/gold-reach-5000-first-half-2027-ubs-says-2026-08-07/" target="_blank" rel="noopener">https://www.reuters.com/markets/us/gold-reach-5000-first-half-2027-ubs-says-2026-08-07/</a></li>
+        <li>U.S. Bureau of Labor Statistics. (2026, August 7). The employment situation, July 2026. <a href="https://www.bls.gov/news.release/archives/empsit_08072026.htm" target="_blank" rel="noopener">https://www.bls.gov/news.release/archives/empsit_08072026.htm</a></li>
+        <li>U.S. Department of the Treasury. (2026). Daily Treasury par yield curve rates. <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026" target="_blank" rel="noopener">https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026</a></li>
+        <li>U.S. Energy Information Administration. (n.d.). World oil transit chokepoints. <a href="https://www.eia.gov/international/content/analysis/special_topics/World_Oil_Transit_Chokepoints/" target="_blank" rel="noopener">https://www.eia.gov/international/content/analysis/special_topics/World_Oil_Transit_Chokepoints/</a></li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <a class="footer-brand" href="index.html">
+        <img src="logo.png" alt="WSG logo">
+        <span>Wall Street for the Girls</span>
+      </a>
+      <ul class="footer-links">
+        <li><a href="start-here.html">Start Here</a></li>
+        <li><a href="archive.html">Archive</a></li>
+        <li><a href="foundation.html">Foundation</a></li>
+        <li><a href="financial-syllabus.html">Financial Syllabus</a></li>
+        <li><a href="glossary.html">Glossary</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="https://wallstreetforthegirls.substack.com" target="_blank" rel="noopener">Substack</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Wall Street for the Girls</span>
+      <em>Educational purposes only: reflects personal analysis, not financial advice.</em>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
