@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>This Issue's Foundation: Extra Credit Series: Fixed Income — Issue No. 16 — Wall Street for the Girls</title>
+<meta name="description" content="From Issue No. 16, the first Extra Credit Series issue: why a bond's price and its yield are mathematically forced to move in opposite directions, and how that seesaw builds into the entire yield curve.">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500;1,6..72,600&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+<style>
+
+  .page-hero{padding-bottom:0; border-bottom:none;}
+  .found-wrap{max-width:100%; margin:0; padding-top:30px; padding-bottom:20px;}
+  .found-wrap p{font-size:15.5px; line-height:1.85; color:var(--ink); margin-bottom:20px; text-align:justify; hyphens:auto;}
+  .found-quote{margin:32px 0; padding:24px 0; border-top:1px solid var(--ink); border-bottom:1px solid var(--ink); text-align:center;}
+  .found-quote p{font-family:var(--serif); font-style:italic; font-size:19px; color:var(--brand); line-height:1.55; margin:0; text-align:center;}
+  .found-keyterm{background:#fff; border:1px solid var(--line); padding:22px 24px; margin:32px 0;}
+  .found-keyterm .eb{font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; font-weight:600; color:var(--brand); margin-bottom:8px;}
+  .found-keyterm .term{font-family:var(--serif); font-size:17px; font-weight:600; color:var(--ink); margin-bottom:6px;}
+  .found-keyterm p{font-size:13.5px; color:var(--gray); margin:0; text-align:left;}
+  .found-footer-link{text-align:center; font-size:13px; color:var(--gray); padding-top:20px;}
+  .found-footer-link a{color:var(--brand); text-decoration:none; font-weight:600;}
+  .found-footer-link a:hover{text-decoration:underline;}
+
+  /* Extra Credit specific additions */
+  .ec-badge{display:inline-block; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; font-weight:700; color:var(--brand); border:1px solid var(--brand); padding:5px 12px; margin-bottom:14px;}
+  .found-note{background:color-mix(in srgb, var(--brand) 5%, #fff); border-left:3px solid var(--brand); padding:20px 24px; margin:8px 0 36px;}
+  .found-note p{font-size:14.5px; line-height:1.8; color:var(--ink); margin-bottom:14px; text-align:left; hyphens:auto;}
+  .found-note p:last-child{margin-bottom:0;}
+  .found-note p.hi{font-family:var(--serif); font-style:italic; font-size:16.5px; color:var(--brand); margin-bottom:16px;}
+  .found-subhead{font-family:var(--serif); font-weight:600; font-size:20px; color:var(--ink); margin:40px 0 16px; padding-top:24px; border-top:1px solid var(--line);}
+  .found-subhead:first-of-type{border-top:2px solid var(--brand); padding-top:26px;}
+  .found-list{margin:0 0 20px; padding-left:22px;}
+  .found-list li{font-size:15.5px; line-height:1.85; color:var(--ink); margin-bottom:10px; text-align:left;}
+  .found-formula{margin:28px 0; padding:26px; background:#fff; border:1px solid var(--line); text-align:center;}
+  .found-formula .eq{display:inline-flex; align-items:center; gap:14px; font-family:var(--serif); font-size:17px; color:var(--ink);}
+  .found-formula .frac{display:inline-flex; flex-direction:column; align-items:center; vertical-align:middle;}
+  .found-formula .frac span{padding:2px 10px; font-size:15px;}
+  .found-formula .frac .num{border-bottom:1.5px solid var(--ink);}
+  .found-diagram{margin:32px 0 12px; padding:28px 22px; background:color-mix(in srgb, var(--brand) 3%, #fff); border:1px solid var(--line);}
+  .found-diagram h4{font-family:var(--serif); font-size:17px; font-weight:600; color:var(--ink); margin-bottom:4px; text-align:center;}
+  .found-diagram .sub{font-size:12.5px; color:var(--gray); text-align:center; margin-bottom:22px;}
+  .seesaw-grid{display:flex; gap:14px; flex-wrap:wrap; justify-content:center;}
+  .seesaw-panel{flex:1 1 210px; max-width:250px; background:rgba(0,0,0,.03); border:1px solid var(--line); padding:16px 14px 20px; text-align:center;}
+  .seesaw-panel.mid{background:color-mix(in srgb, var(--brand) 7%, #fff); border:1.5px solid var(--brand);}
+  .seesaw-panel .rate-label{font-size:12.5px; letter-spacing:.04em; color:var(--gray); margin-bottom:10px;}
+  .seesaw-panel .coupon-note{font-size:10.5px; font-style:italic; color:var(--gray); margin:6px 0 12px;}
+  .seesaw-panel .price-num{font-family:var(--serif); font-weight:700; font-size:26px; margin-bottom:4px;}
+  .seesaw-panel .price-cap{font-size:11px; letter-spacing:.02em;}
+  .seesaw-panel.low .price-num, .seesaw-panel.low .price-cap{color:var(--brand);}
+  .seesaw-panel.mid .price-num{color:var(--ink);}
+  .seesaw-panel.mid .price-cap{color:var(--gray);}
+  .seesaw-panel.high .price-num, .seesaw-panel.high .price-cap{color:color-mix(in srgb, var(--brand) 55%, #e39aad);}
+  .found-diagram .cap{text-align:center; font-size:13px; font-style:italic; color:var(--gray); margin-top:20px;}
+  .found-signoise{display:flex; gap:16px; flex-wrap:wrap; margin:40px 0 32px; padding-top:24px; border-top:1px solid var(--line);}
+  .sn-block{flex:1 1 260px; padding:20px 22px; border:1px solid var(--line); background:#fff; border-left-width:4px;}
+  .sn-block.signal{border-left-color:var(--brand);}
+  .sn-block.noise{border-left-color:var(--gray);}
+  .sn-block .sn-label{font-size:11px; letter-spacing:.16em; text-transform:uppercase; font-weight:700; margin-bottom:12px;}
+  .sn-block.signal .sn-label{color:var(--brand);}
+  .sn-block.noise .sn-label{color:var(--gray);}
+  .sn-block p{font-size:14px; line-height:1.75; color:var(--ink); margin-bottom:12px; text-align:left; hyphens:auto;}
+  .sn-block p:last-child{margin-bottom:0;}
+
+  @media (max-width:640px){
+    .found-signoise{flex-direction:column;}
+    .seesaw-grid{flex-direction:column; align-items:stretch;}
+    .seesaw-panel{max-width:none;}
+  }
+
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="nav-brand" href="index.html">
+      <img src="logo.png" alt="WSG logo">
+      <span>Wall Street <em>for the Girls</em></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="archive.html">Archive</a></li>
+      <li class="nav-dropdown">
+        <a href="financial-syllabus.html" class="active">Learn</a>
+        <ul class="dropdown-menu">
+          <li><a href="foundation.html">The Foundation</a></li>
+          <li><a href="financial-syllabus.html">Financial Syllabus</a></li>
+          <li><a href="glossary.html">Glossary</a></li>
+        </ul>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a class="nav-cta" href="https://wallstreetforthegirls.substack.com" target="_blank" rel="noopener">Subscribe</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<section class="page-hero">
+  <div class="wrap">
+    <a class="breadcrumb" href="foundation.html">&larr; The Foundation</a>
+    <p class="eyebrow">This issue&rsquo;s foundation &middot; Issue No. 16 &middot; August 16, 2026</p>
+    <span class="ec-badge">Extra Credit Series &middot; Fixed Income &middot; Part 1 of 2</span>
+    <h1>Extra Credit Series: Fixed Income.</h1>
+    <p class="lede">This isn&rsquo;t the usual issue. This is the Extra Credit Series.</p>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="found-wrap" id="foundation">
+
+      <div class="found-note">
+        <p class="hi">Hi besties! Before we dive into the Extra Credit Series, let me first explain to you what it is.</p>
+        <p>For the next several Sundays, instead of breaking down a single story from the week, each issue is going to focus on one foundational concept that usually only gets a passing mention. I wanted to do this because a lot of what makes a headline confusing isn&rsquo;t the headline itself, it&rsquo;s not having the foundation underneath it to actually understand it. It&rsquo;s hard to understand why an inverted yield curve has everyone nervous when you don&rsquo;t even know the relationship between a bond&rsquo;s price and its yield in the first place.</p>
+        <p>So before we go back to breaking down whatever&rsquo;s happening in the markets each week, I wanted to make sure the core concepts behind each pillar of the Financial Syllabus are properly explained, once, in full.</p>
+        <p>Think of the next several weeks as a proper introduction to each pillar. Fixed Income, Commodities &amp; Alternatives, Foreign Exchange, Equities, and Derivatives will each get two issues, so you get a proper introduction to all five before we go back to the news.</p>
+        <p>And the Extra Credit Series isn&rsquo;t just a one-time thing either. Every once in a while, it&rsquo;ll show up again whenever a concept comes along that deserves more than just a brief explanation or a definition.</p>
+        <p>I hope you guys enjoy!</p>
+      </div>
+
+      <p>Imagine you signed a rental contract a year ago and the monthly rent was fixed at $1,800. You may not have realized it in the moment, but that was a strategic decision.</p>
+
+      <p>A year or two goes by and you&rsquo;re still paying $1,800. You start looking around to see what else is out there and if you could find anything better. And it turns out the unit down the hall, same layout, same building, is now renting for $2,400. Your contract hasn&rsquo;t changed one bit. Still $1,800, still the same terms on paper. But the value of that deal has changed completely.</p>
+
+      <p>If your complex allowed subletting, someone would pay you a premium just to take over your lease. Because locking in $1,800 a month in a $2,400 market is a genuinely good deal now. Your payment never moved but what changed is how much the market thinks that payment is worth.</p>
+
+      <p>But it can go the other way too.</p>
+
+      <p>If the market softens and units in your building start renting for $1,400. Your $1,800 contract, once a bargain, is now a burden. Nobody wants to take it off your hands. If anything, you&rsquo;d have to pay someone just to take it over.</p>
+
+      <p>Same contract. Same fixed $1,800. But a completely different value, because the world around that fixed number moved instead of the number itself.</p>
+
+      <div class="found-quote">
+        <p>&ldquo;Same contract. Same fixed $1,800. But a completely different value, because the world around that fixed number moved instead of the number itself.&rdquo;</p>
+      </div>
+
+      <p>That&rsquo;s basically the entire relationship between a bond&rsquo;s price and its yield, but let me actually explain it.</p>
+
+      <h2 class="found-subhead">Mechanics</h2>
+
+      <p>A bond is basically a loan, and the contract behind it is simpler than most people expect. You give a government or a company money today. In exchange, they promise two things.</p>
+
+      <ol class="found-list">
+        <li>A fixed interest payment on a set schedule, called the coupon, and</li>
+        <li>Your original money back at a set date in the future, called the face value, usually a clean number like $1,000</li>
+      </ol>
+
+      <p>That contract is locked the moment the bond is issued. And it doesn&rsquo;t gets renegotiated, no matter what happens in the economy afterward.</p>
+
+      <p>The coupon is permanent, but the yield is not. Yield is what you&rsquo;re actually earning on a bond given what you paid for it, and what you paid for it changes every single day the bond trades. Roughly speaking, yield is the coupon divided by the price.</p>
+
+      <div class="found-formula">
+        <span class="eq">Current Yield = <span class="frac"><span class="num">Annual Coupon</span><span class="den">Current Bond Price</span></span></span>
+      </div>
+
+      <p>But let&rsquo;s be honest just looking at a formula doesn&rsquo;t always make sense until you put some numbers to it, especially in finance.</p>
+
+      <p>Let&rsquo;s say you own a $1,000 bond paying a fixed 5% coupon ($50 annually). Now interest rates in the broader economy rise, and newly issued bonds start offering 7% instead of 5%. Nobody&rsquo;s going to pay full price for a bond yielding 5% when a brand new one yields 7% for the same money. So, the price of your bond falls and it keeps falling until that same fixed $50 payment becomes competitive with a 7% yield elsewhere. Nothing changed about the bond but the price dropped because the environment changed.</p>
+
+      <p>But what if rates fall to 3%?</p>
+
+      <p>Then suddenly your $50 a year bond looks amazing compared to what&rsquo;s newly available, and buyers start bidding its price up above $1,000 to get their hands on it. That rising price brings the yield back down toward the new, lower market rate. Same bond. Same fixed coupon.</p>
+
+      <div class="found-diagram">
+        <h4>Same $50 coupon, three different markets</h4>
+        <p class="sub">A $1,000 bond with a fixed 5% coupon &mdash; price bends to match the going market rate</p>
+        <div class="seesaw-grid">
+
+          <div class="seesaw-panel low">
+            <div class="rate-label">Market rate 7%</div>
+            <svg viewBox="0 0 260 190" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <line x1="65" y1="150" x2="195" y2="90" stroke="var(--ink)" stroke-width="5" stroke-linecap="round"/>
+              <polygon points="130,120 111,148 149,148" fill="var(--ink)"/>
+              <rect x="98" y="148" width="64" height="8" fill="var(--line)"/>
+              <circle cx="65" cy="150" r="21" fill="var(--brand)"/>
+              <text x="65" y="154" text-anchor="middle" font-size="11" fill="#fff" font-family="Inter, sans-serif">price</text>
+              <circle cx="195" cy="90" r="21" fill="color-mix(in srgb, var(--brand) 45%, #f2c9d5)"/>
+              <text x="195" y="94" text-anchor="middle" font-size="11" fill="#fff" font-family="Inter, sans-serif">rate</text>
+            </svg>
+            <div class="coupon-note">fixed $50 coupon</div>
+            <div class="price-num">$714</div>
+            <div class="price-cap">bond price falls</div>
+          </div>
+
+          <div class="seesaw-panel mid">
+            <div class="rate-label">Market rate 5%</div>
+            <svg viewBox="0 0 260 190" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <line x1="65" y1="120" x2="195" y2="120" stroke="var(--ink)" stroke-width="5" stroke-linecap="round"/>
+              <polygon points="130,90 111,118 149,118" fill="var(--ink)"/>
+              <rect x="98" y="118" width="64" height="8" fill="var(--line)"/>
+              <circle cx="65" cy="120" r="21" fill="var(--brand)"/>
+              <text x="65" y="124" text-anchor="middle" font-size="11" fill="#fff" font-family="Inter, sans-serif">price</text>
+              <circle cx="195" cy="120" r="21" fill="var(--brand)"/>
+              <text x="195" y="124" text-anchor="middle" font-size="11" fill="#fff" font-family="Inter, sans-serif">rate</text>
+            </svg>
+            <div class="coupon-note">fixed $50 coupon</div>
+            <div class="price-num">$1,000</div>
+            <div class="price-cap">par, issue price</div>
+          </div>
+
+          <div class="seesaw-panel high">
+            <div class="rate-label">Market rate 3%</div>
+            <svg viewBox="0 0 260 190" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <line x1="65" y1="90" x2="195" y2="150" stroke="var(--ink)" stroke-width="5" stroke-linecap="round"/>
+              <polygon points="130,120 111,148 149,148" fill="var(--ink)"/>
+              <rect x="98" y="148" width="64" height="8" fill="var(--line)"/>
+              <circle cx="65" cy="90" r="21" fill="color-mix(in srgb, var(--brand) 45%, #f2c9d5)"/>
+              <text x="65" y="94" text-anchor="middle" font-size="11" fill="#fff" font-family="Inter, sans-serif">price</text>
+              <circle cx="195" cy="150" r="21" fill="var(--brand)"/>
+              <text x="195" y="154" text-anchor="middle" font-size="11" fill="#fff" font-family="Inter, sans-serif">rate</text>
+            </svg>
+            <div class="coupon-note">fixed $50 coupon</div>
+            <div class="price-num">$1,667</div>
+            <div class="price-cap">bond price rises</div>
+          </div>
+
+        </div>
+        <p class="cap">Price and yield moving in exact opposite directions.</p>
+      </div>
+
+      <div class="found-signoise">
+        <div class="sn-block signal">
+          <div class="sn-label">Signal</div>
+          <p>Price and yield aren&rsquo;t two separate opinions about a bond floating around independently. They&rsquo;re mathematically forced to move opposite each other because the coupon is locked and the price is the only lever left to move.</p>
+          <p>That&rsquo;s the entire reason interest rate news moves bond markets at all.</p>
+          <p>When a central bank changes rates, existing bonds don&rsquo;t get new coupons. Their prices move instead, because price is the only thing that can.</p>
+          <p>Bonds of different lengths don&rsquo;t react by the same amount to the same rate change either. A bond maturing in two years barely budges compared to one maturing in thirty. That difference has a name and a mechanism behind it and that will be covered in the syllabus.</p>
+        </div>
+
+        <div class="sn-block noise">
+          <div class="sn-label">Noise</div>
+          <p>A single day&rsquo;s price move in a bond usually isn&rsquo;t worth your attention. Bond prices shift constantly on ordinary trading flow. What matters is the <em>direction</em> and <em>persistence</em> of yield moves over time.</p>
+          <p>Headlines saying falling bond prices universally bad news are only telling half the story. A price decline hurts if you already own the bond, but whoever buys it next gets a better yield. Same event, completely different outcome depending on which side of the trade you&rsquo;re on.</p>
+          <p>Rising yields don&rsquo;t automatically mean a bond has gotten riskier, either. Often it just reflects rates rising broadly across the economy, with no comment at all on that specific issuer&rsquo;s health. That distinction, a rate story versus a credit story, which we will come back to in another issue.</p>
+        </div>
+      </div>
+
+      <h2 class="found-subhead">How it all connects</h2>
+
+      <p>Rates in the broader economy shift. Newly issued bonds start offering a new, competitive coupon. Existing bonds, still carrying their old, fixed coupons, become relatively more or less attractive by comparison. Their prices adjust to compensate. That price adjustment is what yield is measuring, in real time.</p>
+
+      <p>Now multiply that single seesaw across millions of bonds, spanning every maturity from three months to thirty years, and you get something bigger than any one bond. You get the yield curve: the full lineup of yields across every length of government debt, all being repriced by the same force at once.</p>
+
+      <h2 class="found-subhead">Why this matters to you</h2>
+
+      <p>Think of the yield curve as every one of these fixed leases sorted by how long each one runs. Normally, longer leases pay more, because locking your money away for longer is a bigger commitment, and investors expect to be compensated for that. But every so often, that order flips. Short term yields rise above long term yields, backwards from how the curve is supposed to behave. When that happens, markets treat it as one of the more reliable recession warnings available, a real time read on what the collective market believes is coming, often months before that belief shows up in official data like GDP or employment reports. The version of this comparison that gets the most attention is called the 2s10s spread, the gap between the 2 year and 10 year Treasury yield.</p>
+
+      <p>This also isn&rsquo;t just limited to trading desks. Mortgage rates, the yield on your savings account or a CD, what it costs a business to borrow to expand, even what it costs a government to fund itself, all of it sits downstream of the same push and pull between price and yield.</p>
+
+      <p>When you hear that yields are rising or that the curve has inverted, it&rsquo;s the same mechanism that eventually shows up in your own borrowing costs, and in how cautious businesses and markets get about hiring and spending.</p>
+
+      <h2 class="found-subhead">Why the 2s10s specifically gets so much airtime</h2>
+
+      <p>Anyone who&rsquo;s half listened to a morning market segment has heard some version of it. The 10 year&rsquo;s up a few basis points, the 2 year&rsquo;s roughly flat, said in passing like the significance is obvious. Out of every spread that could theoretically get quoted, the 2s10s is the one that ends up on air. The 2s10s has the longest, most continuous public history of any yield curve measure, decades of data that financial media, strategists, and economists have all cited the same way for so long that it&rsquo;s become the default reference point.</p>
+
+      <p>The full yield curve technically spans dozens of maturities, and nobody has thirty seconds to explain all of them. One number you can say in a single breath does the job instead.</p>
+
+      <p>Once a measure becomes the one everyone quotes, quoting anything else requires extra explaining that most segments don&rsquo;t have time for. So the 2s10s keeps winning the airtime by default, whether or not it&rsquo;s still the sharpest tool for the job.</p>
+
+      <p>If you want to see exactly what the 2 year and 10 year yields are each pricing, how much a bond&rsquo;s price actually moves for a given change in yield, and what a real inversion has looked like when you run the numbers, that&rsquo;s what we&rsquo;re building out next in the Finance Syllabus.</p>
+
+      <div class="found-footer-link">
+        This issue continues in the Financial Syllabus &middot; Issue No. 16 &middot; <a href="financial-syllabus-fixed-income-16.html#syllabus">Continue to the Syllabus &rarr;</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <a class="footer-brand" href="index.html">
+        <img src="logo.png" alt="WSG logo">
+        <span>Wall Street for the Girls</span>
+      </a>
+      <ul class="footer-links">
+        <li><a href="start-here.html">Start Here</a></li>
+        <li><a href="archive.html">Archive</a></li>
+        <li><a href="foundation.html">Foundation</a></li>
+        <li><a href="financial-syllabus.html">Financial Syllabus</a></li>
+        <li><a href="glossary.html">Glossary</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="https://wallstreetforthegirls.substack.com" target="_blank" rel="noopener">Substack</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Wall Street for the Girls</span>
+      <em>Educational purposes only: reflects personal analysis, not financial advice.</em>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
