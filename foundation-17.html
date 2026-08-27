@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>This Issue's Foundation: Extra Credit Series: Fixed Income — Issue No. 17 — Wall Street for the Girls</title>
+<meta name="description" content="From Issue No. 17, the second Extra Credit Series Fixed Income issue: the difference between a first round price shock that fades on its own and a second round effect that feeds itself through wages and expectations.">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500;1,6..72,600&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+<style>
+
+  .page-hero{padding-bottom:0; border-bottom:none;}
+  .found-wrap{max-width:100%; margin:0; padding-top:30px; padding-bottom:20px;}
+  .found-wrap p{font-size:15.5px; line-height:1.85; color:var(--ink); margin-bottom:20px; text-align:justify; hyphens:auto;}
+  .found-quote{margin:32px 0; padding:24px 0; border-top:1px solid var(--ink); border-bottom:1px solid var(--ink); text-align:center;}
+  .found-quote p{font-family:var(--serif); font-style:italic; font-size:19px; color:var(--brand); line-height:1.55; margin:0; text-align:center;}
+  .found-keyterm{background:#fff; border:1px solid var(--line); padding:22px 24px; margin:32px 0;}
+  .found-keyterm .eb{font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; font-weight:600; color:var(--brand); margin-bottom:8px;}
+  .found-keyterm .term{font-family:var(--serif); font-size:17px; font-weight:600; color:var(--ink); margin-bottom:6px;}
+  .found-keyterm p{font-size:13.5px; color:var(--gray); margin:0; text-align:left;}
+  .found-footer-link{text-align:center; font-size:13px; color:var(--gray); padding-top:20px;}
+  .found-footer-link a{color:var(--brand); text-decoration:none; font-weight:600;}
+  .found-footer-link a:hover{text-decoration:underline;}
+
+  /* Extra Credit specific additions */
+  .ec-badge{display:inline-block; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; font-weight:700; color:var(--brand); border:1px solid var(--brand); padding:5px 12px; margin-bottom:14px;}
+  .found-note{background:color-mix(in srgb, var(--brand) 5%, #fff); border-left:3px solid var(--brand); padding:20px 24px; margin:8px 0 36px;}
+  .found-note p{font-size:14.5px; line-height:1.8; color:var(--ink); margin-bottom:14px; text-align:left; hyphens:auto;}
+  .found-note p:last-child{margin-bottom:0;}
+  .found-note p.hi{font-family:var(--serif); font-style:italic; font-size:16.5px; color:var(--brand); margin-bottom:16px;}
+  .found-subhead{font-family:var(--serif); font-weight:600; font-size:20px; color:var(--ink); margin:40px 0 16px; padding-top:24px; border-top:1px solid var(--line);}
+  .found-subhead:first-of-type{border-top:2px solid var(--brand); padding-top:26px;}
+  .found-diagram{margin:32px 0 12px; padding:28px 22px; background:color-mix(in srgb, var(--brand) 3%, #fff); border:1px solid var(--line);}
+  .found-diagram h4{font-family:var(--serif); font-size:17px; font-weight:600; color:var(--ink); margin-bottom:4px; text-align:center;}
+  .found-diagram .sub{font-size:12.5px; color:var(--gray); text-align:center; margin-bottom:22px;}
+  .found-diagram svg{display:block; width:100%; height:auto;}
+  .found-diagram .cap{text-align:center; font-size:13px; font-style:italic; color:var(--gray); margin-top:20px;}
+  .found-signoise{display:flex; gap:16px; flex-wrap:wrap; margin:40px 0 32px; padding-top:24px; border-top:1px solid var(--line);}
+  .sn-block{flex:1 1 260px; padding:20px 22px; border:1px solid var(--line); background:#fff; border-left-width:4px;}
+  .sn-block.signal{border-left-color:var(--brand);}
+  .sn-block.noise{border-left-color:var(--gray);}
+  .sn-block .sn-label{font-size:11px; letter-spacing:.16em; text-transform:uppercase; font-weight:700; margin-bottom:12px;}
+  .sn-block.signal .sn-label{color:var(--brand);}
+  .sn-block.noise .sn-label{color:var(--gray);}
+  .sn-block p{font-size:14px; line-height:1.75; color:var(--ink); margin-bottom:12px; text-align:left; hyphens:auto;}
+  .sn-block p:last-child{margin-bottom:0;}
+
+  @media (max-width:640px){
+    .found-signoise{flex-direction:column;}
+  }
+
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="nav-brand" href="index.html">
+      <img src="logo.png" alt="WSG logo">
+      <span>Wall Street <em>for the Girls</em></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="archive.html">Archive</a></li>
+      <li class="nav-dropdown">
+        <a href="financial-syllabus.html" class="active">Learn</a>
+        <ul class="dropdown-menu">
+          <li><a href="foundation.html">The Foundation</a></li>
+          <li><a href="financial-syllabus.html">Financial Syllabus</a></li>
+          <li><a href="glossary.html">Glossary</a></li>
+        </ul>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a class="nav-cta" href="https://wallstreetforthegirls.substack.com" target="_blank" rel="noopener">Subscribe</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<section class="page-hero">
+  <div class="wrap">
+    <a class="breadcrumb" href="foundation.html">&larr; The Foundation</a>
+    <p class="eyebrow">This issue&rsquo;s foundation &middot; Issue No. 17 &middot; August 23, 2026</p>
+    <span class="ec-badge">Extra Credit Series &middot; Fixed Income &middot; Part 2 of 2</span>
+    <h1>Why One Price Rising Makes Everything Else Rise Too.</h1>
+    <p class="lede">The second Fixed Income issue of the Extra Credit Series &mdash; why central banks watch inflation the way bond markets do, and what that means for how long rates stay where they are.</p>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="found-wrap" id="foundation">
+
+      <div class="found-note">
+        <p class="hi">Hi besties! Quick note before this one.</p>
+        <p>This is the second of the two Fixed Income issues in the Extra Credit Series. Issue No. 16 covered the mechanical relationship between a bond&rsquo;s price and its yield. This one is about the other half of what moves that relationship: how a central bank decides whether inflation is a passing shock or something rates need to stay high for.</p>
+      </div>
+
+      <p>Okay so picture this. Your landlord raises your rent by $200 a month. Annoying, obviously. But you make it work. You finally cancel those subscriptions you forgot you were even paying for. You start taking the bus more instead of Ubering everywhere. A few months go by and somehow your budget just&hellip; absorbs it. The rent hike happened, it sucked for a bit, and then you adjusted and moved on.</p>
+
+      <p>Now picture a different version of you. Instead of cutting back somewhere else, you go to your boss and ask for a raise to cover the extra rent. And she says yes, because honestly you&rsquo;ve earned it. Nice, right? Except now your employer is out that extra money too. So what do they do? They raise the price of whatever it is the company sells. Makes sense from their side, they have to cover the cost somehow.</p>
+
+      <p>But here&rsquo;s the thing. Everyone who buys that product or service is now paying a little more than they used to. Which means they&rsquo;re feeling the squeeze the same way you were. So they go ask for a raise. Their employer does the same thing yours did and increases prices to cover it. And now the people who buy from that company are feeling it too. Give this a year and it&rsquo;s happening everywhere, in every direction. Not because one price randomly went up, but because that first increase never actually got absorbed anywhere. It just kept getting handed off, person to person, business to business, everyone trying to protect themselves from the last guy&rsquo;s price hike.</p>
+
+      <p>Those two versions of you are the whole distinction.</p>
+
+      <div class="found-diagram">
+        <h4>First round effect vs. second round effect</h4>
+        <p class="sub">How a single price increase either settles or reproduces itself.</p>
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Inter:wght@400;500;600&display=swap');
+        .wsg-s{font-family:'Inter',sans-serif;font-size:12px;fill:#884F5C}
+        .wsg-t{font-family:'Newsreader',Georgia,serif;font-size:15px;fill:#592F3E}
+        .wsg-d{font-family:'Inter',sans-serif;font-size:11.5px;fill:#884F5C}
+        .wsg-w{font-family:'Newsreader',Georgia,serif;font-size:15px;fill:#FFFCFC}
+        .wsg-wd{font-family:'Inter',sans-serif;font-size:11.5px;fill:#E8D2D8}
+        .wsg-e{font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.14em;fill:#B76E79;font-weight:600}
+        </style>
+        <svg width="100%" viewBox="0 0 680 414" role="img" xmlns="http://www.w3.org/2000/svg">
+        <title>How one price increase splits into a first-round effect or a second-round effect</title>
+        <desc>A single price shock at the top branches into two paths. On the left, the first-round path: the cost moves downstream, households absorb it, and it fades from the data in about 12 months. On the right, the second-round path: wages chase prices, prices chase wages, and the cycle keeps running without a new shock.</desc>
+        <defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+        <rect x="250" y="20" width="180" height="54" rx="6" fill="#592F3E"/>
+        <text class="wsg-w" x="340" y="42" text-anchor="middle" dominant-baseline="central">One price rises</text>
+        <text class="wsg-wd" x="340" y="60" text-anchor="middle" dominant-baseline="central">Rent, oil, a tariff</text>
+
+        <path d="M340 74 L340 96 L180 96 L180 128" fill="none" stroke="#B76E79" stroke-width="0.5" marker-end="url(#arrow)"/>
+        <path d="M340 74 L340 96 L500 96 L500 128" fill="none" stroke="#884F5C" stroke-width="0.5" marker-end="url(#arrow)"/>
+
+        <text class="wsg-e" x="40" y="122">FIRST ROUND</text>
+        <text class="wsg-e" x="360" y="122">SECOND ROUND</text>
+
+        <rect x="40" y="136" width="280" height="58" rx="6" fill="#FAF1F3" stroke="#B76E79" stroke-width="0.5"/>
+        <text class="wsg-t" x="60" y="159" dominant-baseline="central">Cost moves downstream</text>
+        <text class="wsg-d" x="60" y="178" dominant-baseline="central">Fuel, then freight, then the shelf</text>
+
+        <rect x="360" y="136" width="280" height="58" rx="6" fill="#F3E2E6" stroke="#884F5C" stroke-width="0.5"/>
+        <text class="wsg-t" x="380" y="159" dominant-baseline="central">Wages chase prices</text>
+        <text class="wsg-d" x="380" y="178" dominant-baseline="central">Workers try to catch back up</text>
+
+        <line x1="180" y1="194" x2="180" y2="222" stroke="#B76E79" stroke-width="0.5" marker-end="url(#arrow)"/>
+        <line x1="500" y1="194" x2="500" y2="222" stroke="#884F5C" stroke-width="0.5" marker-end="url(#arrow)"/>
+
+        <rect x="40" y="230" width="280" height="58" rx="6" fill="#FAF1F3" stroke="#B76E79" stroke-width="0.5"/>
+        <text class="wsg-t" x="60" y="253" dominant-baseline="central">Households absorb it</text>
+        <text class="wsg-d" x="60" y="272" dominant-baseline="central">Budgets shift, nothing else moves</text>
+
+        <rect x="360" y="230" width="280" height="58" rx="6" fill="#F3E2E6" stroke="#884F5C" stroke-width="0.5"/>
+        <text class="wsg-t" x="380" y="253" dominant-baseline="central">Prices chase wages</text>
+        <text class="wsg-d" x="380" y="272" dominant-baseline="central">Firms pass the labor cost on</text>
+
+        <line x1="180" y1="288" x2="180" y2="316" stroke="#B76E79" stroke-width="0.5" marker-end="url(#arrow)"/>
+        <line x1="500" y1="288" x2="500" y2="316" stroke="#884F5C" stroke-width="0.5" marker-end="url(#arrow)"/>
+        <text class="wsg-s" x="516" y="306" dominant-baseline="central">&#8635; back to the top</text>
+
+        <rect x="40" y="324" width="280" height="58" rx="6" fill="none" stroke="#B76E79" stroke-width="0.5" stroke-dasharray="3 3"/>
+        <text class="wsg-t" x="60" y="347" dominant-baseline="central">Fades from the data</text>
+        <text class="wsg-d" x="60" y="366" dominant-baseline="central">Roughly 12 months</text>
+
+        <rect x="360" y="324" width="280" height="58" rx="6" fill="#592F3E"/>
+        <text class="wsg-w" x="380" y="347" dominant-baseline="central">Runs on its own</text>
+        <text class="wsg-wd" x="380" y="366" dominant-baseline="central">No new shock required</text>
+        </svg>
+      </div>
+
+      <p>Economists call the left path a <strong>first round effect</strong> and the right path a <strong>second round effect</strong>. The first is a single price finding its level and staying there. The second is a price increase that reproduces itself across the whole economy, because instead of absorbing the cost, people pass it along.</p>
+
+      <p>I&rsquo;m walking through this because it&rsquo;s not some abstract Econ 101 thing, it&rsquo;s one of the biggest forces moving markets right now. Interest rate decisions are one of the most important inputs into how stocks, bonds and currencies behave. It is also often the one that moves all three at once. Every one of those decisions comes down to whether a central bank thinks it&rsquo;s looking at the left path or the right one. If it&rsquo;s the left, patience is usually enough. If it&rsquo;s the right, a central bank generally has to slow the economy down before the loop continues. This means higher rates for longer which ripples through every asset price there is.</p>
+
+      <p>And this isn&rsquo;t hypothetical. Think back to the COVID years to the supply chain constraints and prices rose almost everywhere at once. It took a long time for central banks to be confident that shock wasn&rsquo;t turning into something self-feeding. That uncertainty is a big part of why rates stayed elevated even as inflation cooled. We&rsquo;re living through another version right now. Fighting near the Strait of Hormuz has repeatedly disrupted the flow of crude, and gas at the pump has followed it upward.</p>
+
+      <p>That&rsquo;s a textbook first round shock. The question everyone from the Fed down is actually asking is whether it stays there.</p>
+
+      <h2 class="found-subhead">Mechanics</h2>
+
+      <p>So how does a central bank tell the difference between a shock that fades and one that doesn&rsquo;t? It comes down to how each one moves.</p>
+
+      <p>A first round effect is the direct, mechanical consequence of one specific price change. Oil gets more expensive, so it costs more to transport products. That&rsquo;s the whole chain. It shows up once in the data and does its damage. It then fades out of the numbers after about 12 months even if nothing else in the economy changes. That&rsquo;s because inflation is measured by comparing prices to where they were a year earlier. Once the higher price has been sitting there for 12 months, the comparison is against a month that already had the increase priced in. That&rsquo;s called a base effect. Any month with an unusual reading distorts the comparison a year later, whether the distortion flatters the number or hurts it.</p>
+
+      <p>A second round effect is when the original shock feeds into wages and other prices in a way that keeps generating new increases independent of whatever caused the first one. Oil could fall all the way back to where it started and inflation could still be running hot, because wages and prices are now chasing each other in a loop with its own momentum. This is known is the wage price spiral. What makes this dangerous is that this is self-sustaining and those are much harder to stop than things that just needed time to fade.</p>
+
+      <p>Prices also don&rsquo;t just respond to what has already happened. They respond to what people expect to happen next. For example, if a business owner expects inflation to run at roughly 2% next year, she builds that into her pricing. It&rsquo;s a belief that, once widely held, helps make itself true.</p>
+
+      <p>This is what a central bank is watching for. Did the shock stay a one-time event, or did it start showing up in what people expect prices to do a year or two from now?</p>
+
+      <p>The 2021 to 2023 period is the clearest recent case of that exact question being asked in real time. The entire &ldquo;transitory versus persistent&rdquo; debate was, underneath the jargon, an argument about which path the economy was on. It&rsquo;s the same question being asked right now about oil and shipping costs out of Hormuz.</p>
+
+      <div class="found-signoise">
+        <div class="sn-block signal">
+          <div class="sn-label">Signal</div>
+          <p>A single month of a sharp increase in one category, like eggs or gas, is not on its own a reason to assume inflation has become permanent. First round effects are supposed to show up and then age out.</p>
+          <p>The real signal is whether wage growth and core inflation, which strips out volatile food and energy, start accelerating in the months <em>after</em> the original shock. That acceleration is the tell that the effect is spreading rather than fading.</p>
+          <p>A shift in a central bank&rsquo;s own language counts too, because it usually follows internal forecasts the public hasn&rsquo;t seen. When officials stop calling a price increase temporary, that&rsquo;s effectively an admission they believe the second round has begun.</p>
+        </div>
+
+        <div class="sn-block noise">
+          <div class="sn-label">Noise</div>
+          <p>Treating every monthly print with the same alarm, without asking whether the driver is a one time input cost or something structural. A spiral needs a mechanism to keep it running, and most price shocks never find one.</p>
+          <p>And political language that treats inflation <em>falling</em> and inflation being <em>solved</em> as the same statement. A slower rate of increase is not the same thing as expectations being back under control.</p>
+        </div>
+      </div>
+
+      <h2 class="found-subhead">How it all connects</h2>
+
+      <p>A single price rises somewhere. That increase mechanically pushes up everything downstream, which is the first round. People watching it begin to expect more of the same. Workers and businesses start building that expectation into wages and prices before it has actually happened again. The belief itself becomes part of the mechanism. The original shock eventually fades from the data the way it&rsquo;s supposed to but the cycle it triggered keeps running under its own power. At that point a central bank is no longer waiting out a number. It is trying to change what people believe and that has historically been the more expensive and difficult job.</p>
+
+      <h2 class="found-subhead">Why this matters to you</h2>
+
+      <p>This is the actual reason a central bank will hold rates high even after the headline number has started coming down. Officials aren&rsquo;t fighting last month&rsquo;s report. It also reframes something closer to home. Your raise, your rent renewal and your grocery receipt are all part of the same feedback loop. Every time you, or your employer, or your landlord adjusts a price because you expect inflation to keep going, you become one more contributor to whether it actually does. Understanding the difference between a shock and a spiral isn&rsquo;t just a tool for reading the news. It&rsquo;s a way of understanding your own place inside the mechanism.</p>
+
+      <div class="found-footer-link">
+        Ready to go deeper? The Financial Syllabus piece walks through how to actually measure whether a shock is turning into a spiral, using the real math and the real history &middot; <a href="financial-syllabus-fixed-income-17.html#syllabus">Continue to the Syllabus &rarr;</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <a class="footer-brand" href="index.html">
+        <img src="logo.png" alt="WSG logo">
+        <span>Wall Street for the Girls</span>
+      </a>
+      <ul class="footer-links">
+        <li><a href="start-here.html">Start Here</a></li>
+        <li><a href="archive.html">Archive</a></li>
+        <li><a href="foundation.html">Foundation</a></li>
+        <li><a href="financial-syllabus.html">Financial Syllabus</a></li>
+        <li><a href="glossary.html">Glossary</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="https://wallstreetforthegirls.substack.com" target="_blank" rel="noopener">Substack</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Wall Street for the Girls</span>
+      <em>Educational purposes only: reflects personal analysis, not financial advice.</em>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

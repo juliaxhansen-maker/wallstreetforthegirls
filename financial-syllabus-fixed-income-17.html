@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>This Issue's Syllabus: Extra Credit Series: Fixed Income — Issue No. 17 — Wall Street for the Girls</title>
+<meta name="description" content="From Issue No. 17's Finance Syllabus, the second Fixed Income issue: the pass through question, the wage gap question, the expectations question, and the real math behind how much of a price shock actually survives.">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500;1,6..72,600&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+
+  .page-hero{padding-bottom:0; border-bottom:none;}
+  .page-hero p.lede{text-align:justify; hyphens:auto; max-width:none;}
+  .lesson-wrap{max-width:100%; margin:0; padding-top:30px; padding-bottom:20px;} 
+  .lesson-num{font-family:var(--serif); font-size:16px; color:var(--brand); margin-right:12px; font-weight:800;}
+  .lesson-block{display:flex; gap:0; align-items:flex-start; font-size:15.5px; line-height:1.85; color:var(--ink); margin-bottom:10px;}
+  .lesson-block p{margin:0 0 12px; text-align:justify; hyphens:auto;}
+  .lesson-block p:last-child{margin-bottom:0;}
+  .lesson-flow{font-size:15.5px; line-height:1.85; color:var(--ink); margin-bottom:32px; text-align:justify; hyphens:auto;}
+  .lesson-flow p:last-child{margin-bottom:0;}
+  .lesson-flow:first-child{border-top:2px solid #7D1F42; padding-top:20px; margin-top:5px;}
+  .lesson-step-label{font-family:var(--serif); font-weight:600; font-size:16px; color:var(--brand); margin-bottom:4px; display:block;}
+  .lesson-table-eyebrow{font-size:15px; letter-spacing:.16em; text-transform:uppercase; font-weight:600; color:var(--brand); margin:36px 0 14px;}
+  table.lesson-table{width:100%; border-collapse:collapse; font-size:13.5px; margin-bottom:36px;}
+  table.lesson-table th{text-align:left; padding:10px 8px; border-bottom:1.5px solid var(--ink); color:var(--gray); font-weight:600; font-size:11px; letter-spacing:.04em; text-transform:uppercase;}
+  table.lesson-table td{padding:10px 8px; border-bottom:.5px solid var(--line); color:var(--ink);}
+  table.lesson-table td.hi{color:var(--brand); font-weight:600;}
+  .lesson-quote{font-family:var(--serif); font-size:22px; color:var(--brand); line-height:1.55; text-align:center; margin:24px auto; padding:0 12px; max-width:100%;}
+  .lesson-footer-link{text-align:center; font-size:13px; color:var(--gray); padding-top:24px; border-top:.5px solid var(--line);}
+  .lesson-footer-link a{color:var(--brand); text-decoration:none; font-weight:600;}
+  .lesson-footer-link a:hover{text-decoration:underline;}
+  @media (max-width:640px){.lesson-block{flex-direction:column;} .lesson-num{margin-bottom:4px;}}
+
+  /* Extra Credit specific additions */
+  .ec-badge{display:inline-block; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; font-weight:700; color:var(--brand); border:1px solid var(--brand); padding:5px 12px; margin-bottom:14px;}
+
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="nav-brand" href="index.html">
+      <img src="logo.png" alt="WSG logo">
+      <span>Wall Street <em>for the Girls</em></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="archive.html">Archive</a></li>
+      <li class="nav-dropdown">
+        <a href="financial-syllabus.html" class="active">Learn</a>
+        <ul class="dropdown-menu">
+          <li><a href="foundation.html">The Foundation</a></li>
+          <li><a href="financial-syllabus.html">Financial Syllabus</a></li>
+          <li><a href="glossary.html">Glossary</a></li>
+        </ul>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a class="nav-cta" href="https://wallstreetforthegirls.substack.com" target="_blank" rel="noopener">Subscribe</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<section class="page-hero">
+  <div class="wrap">
+    <a class="breadcrumb" href="fixed-income.html">&larr; Fixed Income</a>
+    <p class="eyebrow">This issue&rsquo;s syllabus &middot; Issue No. 17 &middot; August 23, 2026</p>
+    <span class="ec-badge">Extra Credit Series &middot; Fixed Income &middot; Part 2 of 2</span>
+    <h1>The Math Behind the Echo.</h1>
+    <p class="lede">How much of a price shock actually survives. You already have the core distinction from the Foundation piece &mdash; now here&rsquo;s how to actually check it against the numbers.</p>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="lesson-wrap" id="syllabus">
+
+    <div class="lesson-flow">
+      <p>You already have the core distinction. A first round effect fades on its own. A second round effect feeds itself through wages and expectations. But how would you actually tell the difference between the two? Well there are three questions worth asking.</p>
+    </div>
+
+    <div class="lesson-block"><span class="lesson-num">1.</span><div>
+      <span class="lesson-step-label">The pass through question.</span>
+      <p><em>What share of current inflation comes from the original shock itself, versus from wages and other second round prices?</em></p>
+      <p>The useful framing is what fraction of the current reading is still attributable to that shock, and whether that fraction is rising or falling from month to month. A falling share, even during a period of high headline inflation, means the shock is behaving like a first round effect. A rising share is early evidence of a second round taking hold. The cleanest proxy most people can actually follow is the gap between headline inflation and core inflation. A wide gap generally means the shock is still sitting in the volatile categories where it started. A gap that keeps closing means the increase is migrating into everything else which is an early sign of a second round.</p>
+    </div></div>
+
+    <div class="lesson-block"><span class="lesson-num">2.</span><div>
+      <span class="lesson-step-label">The wage gap question.</span>
+      <p><em>Is nominal wage growth running ahead of, in line with, or behind inflation, and has that relationship recently flipped?</em></p>
+      <p>This is the checkable version of asking whether a spiral is actually happening, rather than simply feared. A common mistake is treating falling real wages, meaning wages adjusted for inflation, as proof that no spiral is occurring. It can mean the opposite is true. Workers have not yet caught up to the prices they are facing and are still trying to close that gap. What matters is the trend in the gap between nominal wage growth and inflation over time, not the level of either line on its own.</p>
+    </div></div>
+
+    <div class="lesson-block"><span class="lesson-num">3.</span><div>
+      <span class="lesson-step-label">The expectations question.</span>
+      <p><em>Are long run expectations still anchored near target, or have they started drifting?</em></p>
+      <p>Consumer expectations are captured through surveys that ask households directly what inflation they expect over the coming year and over the next five to ten years. Market based measures exist too, most notably the gap between ordinary government bond yields and inflation protected bond yields, which reflects what investors are collectively pricing in for future inflation. When either measure drifts meaningfully away from a central bank&rsquo;s target, that is what officials mean when they say expectations have become unanchored.</p>
+    </div></div>
+
+    <span class="lesson-table-eyebrow">Working the pass through math</span>
+
+    <div class="lesson-flow">
+      <p>Let&rsquo;s start with the arithmetic question. Take a price index that is equal to one hundred. One category inside it jumps ten percent in a single month and then never moves again. Here is what the twelve month inflation rate for that category looks like along the way.</p>
+    </div>
+
+    <table class="lesson-table">
+      <tr><th>Month</th><th>Index</th><th>Vs. a year earlier</th><th>12-month rate</th></tr>
+      <tr><td>Month 0</td><td>100</td><td>&mdash;</td><td>Before the shock</td></tr>
+      <tr><td>Month 1</td><td>110</td><td>vs 100 a year earlier</td><td class="hi">Up 10 percent</td></tr>
+      <tr><td>Month 6</td><td>110</td><td>vs 100 a year earlier</td><td class="hi">Up 10 percent</td></tr>
+      <tr><td>Month 12</td><td>110</td><td>vs 100 a year earlier</td><td class="hi">Up 10 percent</td></tr>
+      <tr><td>Month 13</td><td>110</td><td>vs 110 a year earlier</td><td class="hi">Up 0 percent</td></tr>
+    </table>
+
+    <div class="lesson-flow">
+      <p>The price never came back down. The category is still ten percent more expensive than it was, permanently. But its contribution to the yearly inflation rate falls to exactly zero in month thirteen, because the comparison month now already contains the increase. That is the whole of what a first round effect does mathematically.</p>
+    </div>
+
+    <span class="lesson-table-eyebrow">Reading the current shock</span>
+
+    <div class="lesson-flow">
+      <p>Fighting near the Strait of Hormuz has repeatedly disrupted the flow of crude, and gas at the pump has followed it upward. That is a textbook first round shock, and the question worth asking is not whether it happened. It obviously did. The question is whether it stays a first round shock or starts migrating into the second round.</p>
+      <p>Run question one against it using the framework above. Watch the gap between headline and core inflation in the months ahead. If that gap holds roughly steady or widens, the shock is behaving the way a first round effect is supposed to, sitting in energy prices and waiting to age out of the twelve month comparison. If core starts climbing to meet headline while energy itself levels off, that migration is the tell.</p>
+      <p>Run question two against it by watching whether wage growth accelerates in the months following the spike or stays roughly where it was. A shock that never shows up in wage negotiations has a much harder time becoming self-sustaining because nothing is refilling the loop.</p>
+      <p>Run question three against it by watching the gap between near term and long run inflation expectations. It would be unusual for near term expectations not to move at all when people are watching gas prices rise in front of them. What actually carries information is whether the long run number moves with it or holds where it was. A near term jump paired with a steady long run number is a very different signal than both numbers moving together.</p>
+      <p>None of this requires a forecast. It requires watching three specific relationships over the months ahead rather than reacting to a single headline print, which is precisely the discipline the Foundation piece was building toward.</p>
+    </div>
+
+    <span class="lesson-table-eyebrow">What to take from this</span>
+
+    <div class="lesson-flow">
+      <p>The next time an inflation headline lands, whether it involves oil, a tariff, or something else entirely, the same three questions apply. What share of the number is pass through from the original shock, and is that share rising or falling. Is nominal wage growth gaining on inflation or losing ground to it and has that trend recently turned. And are long run expectations, whichever way you choose to track them, still sitting close to target or starting to drift.</p>
+    </div>
+
+    <div class="lesson-footer-link">
+      This is Issue No. 17, the second Extra Credit Series Fixed Income issue &middot; <a href="foundation-17.html">Start from the Foundation &rarr;</a>
+    </div>
+
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <a class="footer-brand" href="index.html">
+        <img src="logo.png" alt="WSG logo">
+        <span>Wall Street for the Girls</span>
+      </a>
+      <ul class="footer-links">
+        <li><a href="start-here.html">Start Here</a></li>
+        <li><a href="archive.html">Archive</a></li>
+        <li><a href="foundation.html">Foundation</a></li>
+        <li><a href="financial-syllabus.html">Financial Syllabus</a></li>
+        <li><a href="glossary.html">Glossary</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="https://wallstreetforthegirls.substack.com" target="_blank" rel="noopener">Substack</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Wall Street for the Girls</span>
+      <em>Educational purposes only: reflects personal analysis, not financial advice.</em>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
