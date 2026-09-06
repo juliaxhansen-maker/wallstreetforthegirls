@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>This Issue's Syllabus: Extra Credit Series: Capital Allocation — Issue No. 18 — Wall Street for the Girls</title>
+<meta name="description" content="From Issue No. 18's Finance Syllabus, an Extra Credit Series Capital Allocation issue: how much of a reported EPS gain is genuine, whether a buyback is a good decision or just an easy one, and what the tax timing is actually worth.">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500;1,6..72,600&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+
+  .page-hero{padding-bottom:0; border-bottom:none;}
+  .page-hero p.lede{text-align:justify; hyphens:auto; max-width:none;}
+  .lesson-wrap{max-width:100%; margin:0; padding-top:30px; padding-bottom:20px;} 
+  .lesson-num{font-family:var(--serif); font-size:16px; color:var(--brand); margin-right:12px; font-weight:800;}
+  .lesson-block{display:flex; gap:0; align-items:flex-start; font-size:15.5px; line-height:1.85; color:var(--ink); margin-bottom:10px;}
+  .lesson-block p{margin:0 0 12px; text-align:justify; hyphens:auto;}
+  .lesson-block p:last-child{margin-bottom:0;}
+  .lesson-flow{font-size:15.5px; line-height:1.85; color:var(--ink); margin-bottom:32px; text-align:justify; hyphens:auto;}
+  .lesson-flow p:last-child{margin-bottom:0;}
+  .lesson-flow:first-child{border-top:2px solid #7D1F42; padding-top:20px; margin-top:5px;}
+  .lesson-step-label{font-family:var(--serif); font-weight:600; font-size:16px; color:var(--brand); margin-bottom:4px; display:block;}
+  .lesson-table-eyebrow{font-size:15px; letter-spacing:.16em; text-transform:uppercase; font-weight:600; color:var(--brand); margin:36px 0 14px;}
+  table.lesson-table{width:100%; border-collapse:collapse; font-size:13.5px; margin-bottom:36px;}
+  table.lesson-table th{text-align:left; padding:10px 8px; border-bottom:1.5px solid var(--ink); color:var(--gray); font-weight:600; font-size:11px; letter-spacing:.04em; text-transform:uppercase;}
+  table.lesson-table td{padding:10px 8px; border-bottom:.5px solid var(--line); color:var(--ink);}
+  table.lesson-table td.hi{color:var(--brand); font-weight:600;}
+  .lesson-quote{font-family:var(--serif); font-size:22px; color:var(--brand); line-height:1.55; text-align:center; margin:24px auto; padding:0 12px; max-width:100%;}
+  .lesson-footer-link{text-align:center; font-size:13px; color:var(--gray); padding-top:24px; border-top:.5px solid var(--line);}
+  .lesson-footer-link a{color:var(--brand); text-decoration:none; font-weight:600;}
+  .lesson-footer-link a:hover{text-decoration:underline;}
+  @media (max-width:640px){.lesson-block{flex-direction:column;} .lesson-num{margin-bottom:4px;}}
+
+  /* Extra Credit specific additions */
+  .ec-badge{display:inline-block; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; font-weight:700; color:var(--brand); border:1px solid var(--brand); padding:5px 12px; margin-bottom:14px;}
+
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="nav-brand" href="index.html">
+      <img src="logo.png" alt="WSG logo">
+      <span>Wall Street <em>for the Girls</em></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="archive.html">Archive</a></li>
+      <li class="nav-dropdown">
+        <a href="financial-syllabus.html" class="active">Learn</a>
+        <ul class="dropdown-menu">
+          <li><a href="foundation.html">The Foundation</a></li>
+          <li><a href="financial-syllabus.html">Financial Syllabus</a></li>
+          <li><a href="glossary.html">Glossary</a></li>
+        </ul>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a class="nav-cta" href="https://wallstreetforthegirls.substack.com" target="_blank" rel="noopener">Subscribe</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<section class="page-hero">
+  <div class="wrap">
+    <a class="breadcrumb" href="equities.html">&larr; Equities</a>
+    <p class="eyebrow">This issue&rsquo;s syllabus &middot; Issue No. 18 &middot; August 30, 2026</p>
+    <span class="ec-badge">Extra Credit Series &middot; Capital Allocation</span>
+    <h1>The Math Behind the Shrinking Denominator.</h1>
+    <p class="lede">How much of a reported EPS gain is genuine, what the tax deferral is actually worth, and whether a buyback is a good decision or simply an easy one. You already have the core distinction from the Foundation piece &mdash; now here&rsquo;s how to check it against the numbers.</p>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="lesson-wrap" id="syllabus">
+
+    <div class="lesson-flow">
+      <p>You already have the core distinction from the Foundation. A dividend is direct, immediate, and taxed on arrival. A buyback is indirect, deferred, and taxed on your own terms. A falling share count can lift EPS with zero improvement in the underlying business. Now we&rsquo;re going further.</p>
+      <p>This piece is about how to actually analyze the number when you see one: how much of a reported EPS gain is genuine, what the tax deferral is actually worth, and whether a company buying back its own stock is making a good decision or simply an easy one.</p>
+    </div>
+
+    <div class="lesson-block"><span class="lesson-num">1.</span><div>
+      <span class="lesson-step-label">How much of this EPS growth is actually real?</span>
+      <p>EPS is a ratio and a ratio can move for two completely different reasons. The top of it changed, the bottom of it changed, or both can change at once. A headline that says &ldquo;EPS grew 15%&rdquo; almost never tells you which. A good habit is to check what growth would look like with a flat share count, then treat any gap from the reported number as coming from arithmetic, not actual performance.</p>
+      <p>Say a company reports EPS growth of 15% year over year &mdash; a headline number that would read as genuinely strong. Here&rsquo;s what&rsquo;s actually sitting underneath it.</p>
+
+      <table class="lesson-table">
+        <tr><th></th><th>Net Income</th><th>Shares Outstanding</th><th>EPS</th><th>EPS Growth</th></tr>
+        <tr><td>Year 1</td><td>$200M</td><td>100M</td><td>$2.00</td><td>&mdash;</td></tr>
+        <tr><td>Year 2 (actual)</td><td>$215M</td><td>93.5M</td><td>$2.30</td><td class="hi">+15%</td></tr>
+        <tr><td>Year 2 (if share count had stayed flat)</td><td>$215M</td><td>100M</td><td>$2.15</td><td class="hi">+7.5%</td></tr>
+      </table>
+
+      <p>Net income actually grew 7.5%, from $200 million to $215 million. But the company also spent cash buying back roughly 6.5 million shares over the year, and that alone accounts for the rest of the gap. If share count had stayed exactly where it started, EPS would have grown 7.5%, not 15%.</p>
+      <p>Half the headline number was the business. The other half was arithmetic.</p>
+      <p>Headlines that say &ldquo;EPS grew 15%&rdquo; and &ldquo;the business grew 15%&rdquo; are two different claims, and only one of them is actually being made by that number.</p>
+    </div></div>
+
+    <div class="lesson-block"><span class="lesson-num">2.</span><div>
+      <span class="lesson-step-label">Is the company buying back stock because it&rsquo;s cheap, or because it has nothing better to do with the cash?</span>
+      <p>A buyback is a capital allocation decision. The company is choosing to put its cash into its own stock instead of new equipment, research, an acquisition, paying down debt, or simply holding a bigger buffer. That choice is good for existing shareholders if the stock is actually undervalued at the price the company is paying for it. It&rsquo;s a much weaker decision if the company is buying simply because it has more cash sitting around than it knows what to do with.</p>
+    </div></div>
+
+    <div class="lesson-block"><span class="lesson-num">3.</span><div>
+      <span class="lesson-step-label">If you never sold a single share, which method would actually cost you more?</span>
+      <p>This is the tax timing question using real numbers instead of a general statement about &ldquo;deferral.&rdquo;</p>
+      <p>Imagine an investor puts $10,000 into two otherwise identical companies, each generating the same underlying value every year &mdash; $500 annually, a 5% return on the initial investment. One company pays that $500 out as a dividend every year. The other uses it to buy back stock instead, so the investor&rsquo;s existing shares become worth $500 more each year without anything being distributed.</p>
+      <p>Assume a flat 15% tax rate on qualified dividends:</p>
+
+      <table class="lesson-table">
+        <tr><th></th><th>Annual Value Delivered</th><th>Tax Owed Per Year</th><th>Tax Owed Over 10 Years</th></tr>
+        <tr><td>Dividend company</td><td>$500</td><td>$75</td><td class="hi">$750</td></tr>
+        <tr><td>Buyback company</td><td>$500 (unrealized)</td><td>$0</td><td class="hi">$0</td></tr>
+      </table>
+
+      <p>One investor owes $750 in tax by the end of ten years, having paid on money they may not have even wanted that particular year. The other owes nothing, for as long as they simply don&rsquo;t sell. That gap is the dollar-denominated version of &ldquo;you choose when a buyback gets taxed.&rdquo; Under the right circumstances, that choice can extend all the way to never.</p>
+    </div></div>
+
+    <span class="lesson-table-eyebrow">Whose decision is it, really?</span>
+
+    <div class="lesson-flow">
+      <p>Question two is less about arithmetic and more about judgment, specifically whether the company doing the buying is actually being disciplined about it.</p>
+      <p>The uncomfortable pattern is that companies have tended to buy back the most stock exactly when they have the lots of extra cash sitting around. That tends to follow periods of strong performance, when the stock is often expensive, not cheap. And companies have tended to pull back sharply on buybacks once a downturn actually arrives and the stock is genuinely on sale, because that&rsquo;s precisely when cash gets tight and companies get cautious.</p>
+      <p>That&rsquo;s close to the opposite of a disciplined &lsquo;buy low&rsquo; strategy. Worth checking: do buybacks actually line up with periods when the stock looked cheap relative to its own history? Or do they just track how much free cash happened to be on hand that quarter?</p>
+      <p>Some investors treat a dividend as a &ldquo;harder&rdquo; signal of financial health than earnings growth since a cash dividend requires an actual board decision and actual money leaving the company&rsquo;s account. Reported earnings &mdash; and therefore EPS, along with any EPS growth driven by a buyback &mdash; are more exposed to the judgment calls behind how a company reports its numbers.</p>
+      <p>Which brings up the real conflict of interest underneath a lot of buyback decisions. When a company ties executive bonuses or stock awards to a specific EPS target, buybacks become a direct, mechanical way to hit that number. It doesn&rsquo;t matter whether the underlying business actually grew. It doesn&rsquo;t matter whether the stock is a good buy at the current price. The company doesn&rsquo;t need to earn its way there. It can simply shrink the denominator instead.</p>
+      <p>That&rsquo;s not the whole story, in fairness. The counterargument is a reasonable one. Buybacks genuinely are an efficient way to return cash to shareholders when a company has no better use for it. And the incentive problem above is really a flaw in how the executive is being paid, not a flaw in buybacks as a tool. A company with a well-designed compensation structure and a disciplined buyback policy can use both perfectly well. The debate isn&rsquo;t really &lsquo;dividends good, buybacks bad.&rsquo; It&rsquo;s whether the decision-makers doing the buying have good reasons for doing it, and whether you, as the person reading the announcement, have any way of checking.</p>
+    </div>
+
+    <span class="lesson-table-eyebrow">What to take from this</span>
+
+    <div class="lesson-flow">
+      <p>A reported EPS number, a buyback announcement, and a dividend check are three different claims that use the same headline. One is a statement about the business. One is a statement about arithmetic. One is a statement about cash that already left the building.</p>
+      <p>Before you decide what any of them means for a company you&rsquo;re watching, or holding, ask how much of the growth is real, whether the company doing the buying actually has a good reason to, and what the timing of the tax bill is actually costing or saving you.</p>
+    </div>
+
+    <div class="lesson-footer-link">
+      This is Issue No. 18, an Extra Credit Series Equities issue &middot; <a href="foundation-18.html">Start from the Foundation &rarr;</a>
+    </div>
+
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <a class="footer-brand" href="index.html">
+        <img src="logo.png" alt="WSG logo">
+        <span>Wall Street for the Girls</span>
+      </a>
+      <ul class="footer-links">
+        <li><a href="start-here.html">Start Here</a></li>
+        <li><a href="archive.html">Archive</a></li>
+        <li><a href="foundation.html">Foundation</a></li>
+        <li><a href="financial-syllabus.html">Financial Syllabus</a></li>
+        <li><a href="glossary.html">Glossary</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="https://wallstreetforthegirls.substack.com" target="_blank" rel="noopener">Substack</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Wall Street for the Girls</span>
+      <em>Educational purposes only: reflects personal analysis, not financial advice.</em>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

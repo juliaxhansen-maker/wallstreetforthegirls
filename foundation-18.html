@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>This Issue's Foundation: Extra Credit Series: Equities — Issue No. 18 — Wall Street for the Girls</title>
+<meta name="description" content="From Issue No. 18, an Extra Credit Series Equities issue: the difference between a dividend and a buyback, and why the same dollar of company cash looks completely different by the time it reaches a shareholder.">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500;1,6..72,600&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+<style>
+
+  .page-hero{padding-bottom:0; border-bottom:none;}
+  .found-wrap{max-width:100%; margin:0; padding-top:30px; padding-bottom:20px;}
+  .found-wrap p{font-size:15.5px; line-height:1.85; color:var(--ink); margin-bottom:20px; text-align:justify; hyphens:auto;}
+  .found-wrap ol{margin:0 0 20px; padding-left:22px;}
+  .found-wrap ol li{font-size:15.5px; line-height:1.85; color:var(--ink); margin-bottom:8px; text-align:justify; hyphens:auto;}
+  .found-quote{margin:32px 0; padding:24px 0; border-top:1px solid var(--ink); border-bottom:1px solid var(--ink); text-align:center;}
+  .found-quote p{font-family:var(--serif); font-style:italic; font-size:19px; color:var(--brand); line-height:1.55; margin:0; text-align:center;}
+  .found-keyterm{background:#fff; border:1px solid var(--line); padding:22px 24px; margin:32px 0;}
+  .found-keyterm .eb{font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; font-weight:600; color:var(--brand); margin-bottom:8px;}
+  .found-keyterm .term{font-family:var(--serif); font-size:17px; font-weight:600; color:var(--ink); margin-bottom:6px;}
+  .found-keyterm p{font-size:13.5px; color:var(--gray); margin:0; text-align:left;}
+  .found-footer-link{text-align:center; font-size:13px; color:var(--gray); padding-top:20px;}
+  .found-footer-link a{color:var(--brand); text-decoration:none; font-weight:600;}
+  .found-footer-link a:hover{text-decoration:underline;}
+  .found-eq{text-align:center; font-family:var(--serif); font-style:italic; font-size:17px; color:var(--brand); margin:8px auto 24px; line-height:1.6;}
+
+  /* Extra Credit specific additions */
+  .ec-badge{display:inline-block; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; font-weight:700; color:var(--brand); border:1px solid var(--brand); padding:5px 12px; margin-bottom:14px;}
+  .found-note{background:color-mix(in srgb, var(--brand) 5%, #fff); border-left:3px solid var(--brand); padding:20px 24px; margin:8px 0 36px;}
+  .found-note p{font-size:14.5px; line-height:1.8; color:var(--ink); margin-bottom:14px; text-align:left; hyphens:auto;}
+  .found-note p:last-child{margin-bottom:0;}
+  .found-note p.hi{font-family:var(--serif); font-style:italic; font-size:16.5px; color:var(--brand); margin-bottom:16px;}
+  .found-subhead{font-family:var(--serif); font-weight:600; font-size:20px; color:var(--ink); margin:40px 0 16px; padding-top:24px; border-top:1px solid var(--line);}
+  .found-subhead:first-of-type{border-top:2px solid var(--brand); padding-top:26px;}
+  .found-diagram{margin:32px 0 12px; padding:28px 22px; background:color-mix(in srgb, var(--brand) 3%, #fff); border:1px solid var(--line);}
+  .found-diagram h4{font-family:var(--serif); font-size:17px; font-weight:600; color:var(--ink); margin-bottom:4px; text-align:center;}
+  .found-diagram .sub{font-size:12.5px; color:var(--gray); text-align:center; margin-bottom:22px;}
+  .found-diagram svg{display:block; width:100%; height:auto;}
+  .found-diagram .cap{text-align:center; font-size:13px; font-style:italic; color:var(--gray); margin-top:20px;}
+  .found-signoise{display:flex; gap:16px; flex-wrap:wrap; margin:40px 0 32px; padding-top:24px; border-top:1px solid var(--line);}
+  .sn-block{flex:1 1 260px; padding:20px 22px; border:1px solid var(--line); background:#fff; border-left-width:4px;}
+  .sn-block.signal{border-left-color:var(--brand);}
+  .sn-block.noise{border-left-color:var(--gray);}
+  .sn-block .sn-label{font-size:11px; letter-spacing:.16em; text-transform:uppercase; font-weight:700; margin-bottom:12px;}
+  .sn-block.signal .sn-label{color:var(--brand);}
+  .sn-block.noise .sn-label{color:var(--gray);}
+  .sn-block p{font-size:14px; line-height:1.75; color:var(--ink); margin-bottom:12px; text-align:left; hyphens:auto;}
+  .sn-block p:last-child{margin-bottom:0;}
+
+  @media (max-width:640px){
+    .found-signoise{flex-direction:column;}
+  }
+
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="nav-brand" href="index.html">
+      <img src="logo.png" alt="WSG logo">
+      <span>Wall Street <em>for the Girls</em></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="archive.html">Archive</a></li>
+      <li class="nav-dropdown">
+        <a href="financial-syllabus.html" class="active">Learn</a>
+        <ul class="dropdown-menu">
+          <li><a href="foundation.html">The Foundation</a></li>
+          <li><a href="financial-syllabus.html">Financial Syllabus</a></li>
+          <li><a href="glossary.html">Glossary</a></li>
+        </ul>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a class="nav-cta" href="https://wallstreetforthegirls.substack.com" target="_blank" rel="noopener">Subscribe</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<section class="page-hero">
+  <div class="wrap">
+    <a class="breadcrumb" href="foundation.html">&larr; The Foundation</a>
+    <p class="eyebrow">This issue&rsquo;s foundation &middot; Issue No. 18 &middot; August 30, 2026</p>
+    <span class="ec-badge">Extra Credit Series &middot; Equities</span>
+    <h1>The Company That Gives You a Raise vs. The One That Buys You a Gift Card.</h1>
+    <p class="lede">A dividend and a buyback are the same dollar of company cash, handed to you in two completely different ways &mdash; and the difference matters more once you follow the tax math and the EPS math sitting underneath each one.</p>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="found-wrap" id="foundation">
+
+      <div class="found-note">
+        <p class="hi">Hi besties! Quick note before this one.</p>
+        <p>This is the newest entry in the Extra Credit Series, filed under Equities. It&rsquo;s about the two ways a company hands its leftover cash back to shareholders, and why one shows up on your tax bill immediately while the other lets you decide when, or whether, it ever does.</p>
+      </div>
+
+      <p>It&rsquo;s that time of year again. It&rsquo;s time for your annual review. You sit down with your manager, and she says you are getting more money this year, but you have to choose between Option A or Option B.</p>
+
+      <p>Option A: This is the more straightforward option. Your salary goes up $1,000 a month, starting with your next paycheck. It just shows up in your account, and you can do whatever you want with it. The one thing you can&rsquo;t do is opt out of it becoming income. The second that $1,000 hits your payslip and lands in your account, it&rsquo;s taxable. Doesn&rsquo;t matter if you were planning to spend it that month, if you&rsquo;d rather it had come later, if you wanted the cash now or not.</p>
+
+      <p>Option B: Instead of a raise, you get the option to receive a $12,000 credit toward the goods/services of the company you work for. Let&rsquo;s say the company is a major clothing company with lots of sister brands as well. The money is real, and it does belong to you but nothing happens with it unless you decide to cash it in and buy some new clothes. No one will force you to use it this year, or ever, if you don&rsquo;t want to. It&rsquo;ll just sit in your account as a $12,000 credit until you decide when to use it.</p>
+
+      <p>But there&rsquo;s a catch. It&rsquo;s not about the money now. It&rsquo;s about what happens later, when one of them goes away.</p>
+
+      <p>A raise becomes your baseline almost immediately. You stop thinking of it as &ldquo;extra&rdquo; and start thinking of it as yours. Which means if it ever got cut, you&rsquo;d notice immediately, and so would anyone who saw your paycheck shrink. A pay cut is public, the kind of thing no one wants to announce on LinkedIn or anywhere else.</p>
+
+      <p>The credit, on the other hand, doesn&rsquo;t work that way. There&rsquo;s no baseline to lose, because there was never a promise attached to it in the first place. If for some reason you weren&rsquo;t able to use it, you might not even register it as a loss. You&rsquo;d just have less to spend on clothes. Your payslip looks exactly the same.</p>
+
+      <p>One is a commitment the company has to keep making out loud. The other is a courtesy that can quietly stop.</p>
+
+      <p>Now swap your manager for a CFO, and it&rsquo;s the same decision. Every quarter, a company pays its operating expenses, invests in its own growth, and makes its debt payments. What&rsquo;s sometimes left over doesn&rsquo;t need to stay inside the business. There are two ways to get that money back to shareholders:</p>
+
+      <ol>
+        <li>Send cash directly to shareholders &mdash; a dividend.</li>
+        <li>Use that cash to buy back its own stock &mdash; a buyback.</li>
+      </ol>
+
+      <p>The raise and the credit. Same company, same amount of money, two completely different experiences for the shareholder depending on which one the company chooses.</p>
+
+      <div class="found-diagram">
+        <h4>Dividend vs. buyback</h4>
+        <p class="sub">Same extra cash, two different roads to the shareholder.</p>
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Inter:wght@400;500;600&display=swap');
+        .wsg-s{font-family:'Inter',sans-serif;font-size:12px;fill:#884F5C}
+        .wsg-t{font-family:'Newsreader',Georgia,serif;font-size:15px;fill:#592F3E}
+        .wsg-d{font-family:'Inter',sans-serif;font-size:11.5px;fill:#884F5C}
+        .wsg-w{font-family:'Newsreader',Georgia,serif;font-size:15px;fill:#FFFCFC}
+        .wsg-wd{font-family:'Inter',sans-serif;font-size:11.5px;fill:#E8D2D8}
+        .wsg-e{font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.14em;fill:#B76E79;font-weight:600}
+        </style>
+        <svg width="100%" viewBox="0 0 680 300" role="img" xmlns="http://www.w3.org/2000/svg">
+        <title>How extra company cash splits into a dividend or a buyback</title>
+        <desc>A box at the top representing extra cash left over branches into two paths. On the left, the dividend path: cash is sent to shareholders and taxed as income right away. On the right, the buyback path: the company buys its own shares, shrinking the share count, and the shareholder is only taxed if and when they sell.</desc>
+        <defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+
+        <rect x="250" y="20" width="180" height="54" rx="6" fill="#592F3E"/>
+        <text class="wsg-w" x="340" y="42" text-anchor="middle" dominant-baseline="central">Extra cash left over</text>
+        <text class="wsg-wd" x="340" y="60" text-anchor="middle" dominant-baseline="central">After expenses, growth, debt</text>
+
+        <path d="M340 74 L340 96 L180 96 L180 128" fill="none" stroke="#B76E79" stroke-width="0.5" marker-end="url(#arrow)"/>
+        <path d="M340 74 L340 96 L500 96 L500 128" fill="none" stroke="#884F5C" stroke-width="0.5" marker-end="url(#arrow)"/>
+
+        <text class="wsg-e" x="70" y="122">DIVIDEND</text>
+        <text class="wsg-e" x="390" y="122">BUYBACK</text>
+
+        <rect x="40" y="136" width="280" height="58" rx="6" fill="#FAF1F3" stroke="#B76E79" stroke-width="0.5"/>
+        <text class="wsg-t" x="60" y="159" dominant-baseline="central">Sent to shareholders</text>
+        <text class="wsg-d" x="60" y="178" dominant-baseline="central">A set amount per share, on the record date</text>
+
+        <rect x="360" y="136" width="280" height="58" rx="6" fill="#F3E2E6" stroke="#884F5C" stroke-width="0.5"/>
+        <text class="wsg-t" x="380" y="159" dominant-baseline="central">Company buys its own shares</text>
+        <text class="wsg-d" x="380" y="178" dominant-baseline="central">Shares outstanding go down</text>
+
+        <line x1="180" y1="194" x2="180" y2="222" stroke="#B76E79" stroke-width="0.5" marker-end="url(#arrow)"/>
+        <line x1="500" y1="194" x2="500" y2="222" stroke="#884F5C" stroke-width="0.5" marker-end="url(#arrow)"/>
+
+        <rect x="40" y="230" width="280" height="58" rx="6" fill="none" stroke="#B76E79" stroke-width="0.5" stroke-dasharray="3 3"/>
+        <text class="wsg-t" x="60" y="253" dominant-baseline="central">Taxed as income</text>
+        <text class="wsg-d" x="60" y="272" dominant-baseline="central">The year it lands in your account</text>
+
+        <rect x="360" y="230" width="280" height="58" rx="6" fill="#592F3E"/>
+        <text class="wsg-w" x="380" y="253" dominant-baseline="central">Taxed only if you sell</text>
+        <text class="wsg-wd" x="380" y="272" dominant-baseline="central">EPS rises without new profit</text>
+        </svg>
+      </div>
+
+      <h2 class="found-subhead">Mechanics</h2>
+
+      <p>A dividend is a fixed amount of cash that is paid per share on a set schedule, usually quarterly in the US. Let&rsquo;s say you own 100 shares of a company and they just announced a $0.50 dividend per share to whoever owned the stock as of a specific date known as the record date. This means that $50 leaves the company&rsquo;s bank account and gets deposited into yours.</p>
+
+      <p>A buyback is when the company takes the same amount of extra cash and uses it to purchase its own shares on the open market from whoever happens to be selling that day. Once the company owns those shares again, the total number of shares outstanding decreases. Although nothing gets handed to you directly, your existing shares now represent a slightly bigger slice of a slightly smaller company.</p>
+
+      <p>You might be wondering how that benefits you, since no money hit your account and the number of shares you own hasn&rsquo;t changed. But you&rsquo;re still better off, and you&rsquo;ll understand why once you see the numbers.</p>
+
+      <p>Let&rsquo;s say Company ABC earns $100 million in net income and has 100 million shares outstanding. Earnings per share (EPS) is the net income divided by the amount of shares outstanding.</p>
+
+      <p class="found-eq">EPS = Net Income &divide; Shares Outstanding = $100M &divide; 100M = $1</p>
+
+      <p>But now instead they decide to spend $50 million to buy back 5 million of its own shares at $10 per share. The company&rsquo;s net income doesn&rsquo;t change, but the shares outstanding falls to 95 million.</p>
+
+      <p class="found-eq">EPS<sub>new</sub> = Net Income &divide; Shares Outstanding = $100M &divide; 95M = $1.05</p>
+
+      <p>Same $100 million in profit, but each share is now worth a little more on paper. That&rsquo;s the core mechanic of a buyback, and why a rise in EPS doesn&rsquo;t always mean the business is doing better.</p>
+
+      <p>Back to the raise and the credit, because the tax side works almost the same way. A dividend is taxed as income the year you receive it. A buyback, on the other hand, doesn&rsquo;t create any personal tax event as long as you keep your shares. The only time it becomes taxable is when you personally decide to sell, and even then, you&rsquo;re only taxed on your gain.</p>
+
+      <p>That&rsquo;s the raise and the credit, translated into financial mechanics.</p>
+
+      <div class="found-signoise">
+        <div class="sn-block signal">
+          <div class="sn-label">Signal</div>
+          <p>A company announcing a dividend for the first time, or raising one it already pays, is a meaningful signal. Cutting a dividend later gets punished by the market since investors interpret it as the company is struggling. So companies don&rsquo;t start or raise one unless they are pretty confident the cash flow behind it will last. A rising, well-covered dividend is one of the harder signals to fake.</p>
+          <p>Buyback announcements may deserve a bit more criticism than what they usually get. The number that makes the headline &mdash; &ldquo;company authorizes $2 billion buyback&rdquo; &mdash; is often just a ceiling the board approved, not a promise of what actually gets spent. What matters is whether the company follows through, and whether shares outstanding are actually shrinking as a result. Watch the share count itself over time, not just the size of the authorization.</p>
+        </div>
+
+        <div class="sn-block noise">
+          <div class="sn-label">Noise</div>
+          <p>Don&rsquo;t read any buyback headline as automatically bullish. A lot of companies use buybacks mainly to offset the new shares they hand out every year as employee compensation, especially at companies where stock-based pay is a big part of how people get paid. If new shares are being issued about as fast as old ones are being retired, the share count barely moves and neither does the EPS benefit that&rsquo;s supposed to come with it.</p>
+          <p>Don&rsquo;t treat a flat, unchanged dividend as boring, or as a sign a company has stopped growing. For a mature, cash-generative business, steady and predictable is often exactly the point. It&rsquo;s not every company&rsquo;s job to be exciting.</p>
+          <p>Don&rsquo;t assume a dividend cut always means something&rsquo;s gone wrong. Sometimes it does. But occasionally it&rsquo;s a deliberate choice to redirect cash toward growth investment instead &mdash; a different strategy, not automatically a worse one.</p>
+          <p>As you can tell, none of this is one-size-fits-all. Before making any decisions, it&rsquo;s worth actually digging into what&rsquo;s behind the headline.</p>
+        </div>
+      </div>
+
+      <h2 class="found-subhead">How it all connects</h2>
+
+      <p>A company generates more cash than the business currently needs and has to decide what to do with what&rsquo;s left over. A dividend is direct, recurring, immediate, taxed the moment it lands, and a public commitment. A buyback is indirect, discretionary, deferred, taxed entirely on the shareholder&rsquo;s own schedule, and reversible for management if circumstances change. Which one a company chooses says something about who it&rsquo;s implicitly built for. Income focused holders who want to see cash or total return holders who are comfortable letting value sit inside the stock price instead. It also says something about how much flexibility management wants to hold onto for itself.</p>
+
+      <h2 class="found-subhead">Why this matters to you</h2>
+
+      <p>The useful thing to take from all of this is that dividends and buybacks are the same dollar of company cash that looks different by the time it reaches you. A dividend hands you visible, spendable proof that you&rsquo;re being paid. A buyback hands you invisible, compounding proof of the same thing. If you hold shares in companies that pay dividends, that cash counts as taxable income every single year it&rsquo;s paid, unless it happens to be sitting inside a tax advantaged account. If you hold shares in companies that mostly buy back stock instead, your return is largely invisible day to day, and it only becomes real the moment you decide to sell. Neither approach is inherently the better one. It depends on what you actually need the money to do, and how comfortable you are with a return that doesn&rsquo;t show up until you go looking for it.</p>
+
+      <p>If you want to learn a bit more with numbers then head over to the <a href="financial-syllabus-equities-18.html#syllabus">Financial Syllabus</a>.</p>
+
+      <div class="found-footer-link">
+        This is Issue No. 18, an Extra Credit Series Equities issue &middot; <a href="financial-syllabus-equities-18.html#syllabus">Continue to the Financial Syllabus &rarr;</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <a class="footer-brand" href="index.html">
+        <img src="logo.png" alt="WSG logo">
+        <span>Wall Street for the Girls</span>
+      </a>
+      <ul class="footer-links">
+        <li><a href="start-here.html">Start Here</a></li>
+        <li><a href="archive.html">Archive</a></li>
+        <li><a href="foundation.html">Foundation</a></li>
+        <li><a href="financial-syllabus.html">Financial Syllabus</a></li>
+        <li><a href="glossary.html">Glossary</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="https://wallstreetforthegirls.substack.com" target="_blank" rel="noopener">Substack</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Wall Street for the Girls</span>
+      <em>Educational purposes only: reflects personal analysis, not financial advice.</em>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
