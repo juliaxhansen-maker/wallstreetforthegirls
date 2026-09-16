@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>This Issue's Syllabus: Extra Credit Series: Bank Capital — Issue No. 19 — Wall Street for the Girls</title>
+<meta name="description" content="From Issue No. 19's Finance Syllabus, an Extra Credit Series Bank Capital issue: how a capital ratio is actually built, why solvency and liquidity are different failures with different rules, and who loses money first when a bank runs out of room.">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500;1,6..72,600&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+
+  .page-hero{padding-bottom:0; border-bottom:none;}
+  .page-hero p.lede{text-align:justify; hyphens:auto; max-width:none;}
+  .lesson-wrap{max-width:100%; margin:0; padding-top:30px; padding-bottom:20px;} 
+  .lesson-num{font-family:var(--serif); font-size:16px; color:var(--brand); margin-right:12px; font-weight:800;}
+  .lesson-block{display:flex; gap:0; align-items:flex-start; font-size:15.5px; line-height:1.85; color:var(--ink); margin-bottom:10px;}
+  .lesson-block p{margin:0 0 12px; text-align:justify; hyphens:auto;}
+  .lesson-block p:last-child{margin-bottom:0;}
+  .lesson-flow{font-size:15.5px; line-height:1.85; color:var(--ink); margin-bottom:32px; text-align:justify; hyphens:auto;}
+  .lesson-flow p:last-child{margin-bottom:0;}
+  .lesson-flow:first-child{border-top:2px solid #7D1F42; padding-top:20px; margin-top:5px;}
+  .lesson-step-label{font-family:var(--serif); font-weight:600; font-size:16px; color:var(--brand); margin-bottom:4px; display:block;}
+  .lesson-table-eyebrow{font-size:15px; letter-spacing:.16em; text-transform:uppercase; font-weight:600; color:var(--brand); margin:36px 0 14px;}
+  table.lesson-table{width:100%; border-collapse:collapse; font-size:13.5px; margin-bottom:36px;}
+  table.lesson-table th{text-align:left; padding:10px 8px; border-bottom:1.5px solid var(--ink); color:var(--gray); font-weight:600; font-size:11px; letter-spacing:.04em; text-transform:uppercase;}
+  table.lesson-table td{padding:10px 8px; border-bottom:.5px solid var(--line); color:var(--ink);}
+  table.lesson-table td.hi{color:var(--brand); font-weight:600;}
+  .table-scroll{overflow-x:auto; margin-bottom:36px;}
+  .table-scroll table.lesson-table{margin-bottom:0; min-width:640px;}
+  .lesson-wrap ol{margin:0 0 20px; padding-left:22px;}
+  .lesson-wrap ol li{font-size:15.5px; line-height:1.85; color:var(--ink); margin-bottom:16px; text-align:justify; hyphens:auto;}
+  .lesson-wrap ol li strong{color:var(--brand); font-family:var(--serif); font-weight:600;}
+  .lesson-quote{font-family:var(--serif); font-size:22px; color:var(--brand); line-height:1.55; text-align:center; margin:24px auto; padding:0 12px; max-width:100%;}
+  .lesson-footer-link{text-align:center; font-size:13px; color:var(--gray); padding-top:24px; border-top:.5px solid var(--line);}
+  .lesson-footer-link a{color:var(--brand); text-decoration:none; font-weight:600;}
+  .lesson-footer-link a:hover{text-decoration:underline;}
+  @media (max-width:640px){.lesson-block{flex-direction:column;} .lesson-num{margin-bottom:4px;}}
+
+  /* Extra Credit specific additions */
+  .ec-badge{display:inline-block; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; font-weight:700; color:var(--brand); border:1px solid var(--brand); padding:5px 12px; margin-bottom:14px;}
+
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="nav-brand" href="index.html">
+      <img src="logo.png" alt="WSG logo">
+      <span>Wall Street <em>for the Girls</em></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="archive.html">Archive</a></li>
+      <li class="nav-dropdown">
+        <a href="financial-syllabus.html" class="active">Learn</a>
+        <ul class="dropdown-menu">
+          <li><a href="foundation.html">The Foundation</a></li>
+          <li><a href="financial-syllabus.html">Financial Syllabus</a></li>
+          <li><a href="glossary.html">Glossary</a></li>
+        </ul>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a class="nav-cta" href="https://wallstreetforthegirls.substack.com" target="_blank" rel="noopener">Subscribe</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<section class="page-hero">
+  <div class="wrap">
+    <a class="breadcrumb" href="equities.html">&larr; Equities</a>
+    <p class="eyebrow">This issue&rsquo;s syllabus &middot; Issue No. 19 &middot; September 6, 2026</p>
+    <span class="ec-badge">Extra Credit Series &middot; Bank Capital</span>
+    <h1>The Math Behind the Thin Cushion.</h1>
+    <p class="lede">How a capital ratio is actually built, why solvency and liquidity are different failures with different rules, and who loses money first when a bank runs out of room. You already have the two promises from the Foundation piece &mdash; now here&rsquo;s how to check them against the numbers.</p>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="lesson-wrap" id="syllabus">
+
+    <div class="lesson-flow">
+      <p>A bank makes two promises on two completely different timelines. It borrows money that can be asked for back almost immediately, and it lends that same money out for years. And because those are two separate vulnerabilities rather than one, regulators built two separate sets of rules to sit on top of them.</p>
+      <p>What we&rsquo;re doing now is opening up the actual numbers. How a capital ratio is really constructed, and why two banks holding the exact same amount of money can post ratios that look nothing alike. Which ratio catches which kind of failure, why passing one tells you almost nothing about the other, and who actually loses money first when a bank runs out of room.</p>
+      <p>There are three questions worth asking before you react to anything you read about a bank&rsquo;s financial health.</p>
+    </div>
+
+    <div class="lesson-block"><span class="lesson-num">1.</span><div>
+      <span class="lesson-step-label">Which capital ratio is being quoted? How much room does the bank have above its own requirement?</span>
+      <p>The number supervisors care most about is the CET1 ratio. CET1 stands for Common Equity Tier 1, the strictest definition of capital there is: ordinary shares and retained earnings, the money that belongs to shareholders and absorbs losses first and without argument.</p>
+      <p>That capital is measured against risk-weighted assets, usually shortened to RWA. Not every euro a bank lends carries the same risk. A loan to a highly rated government is not the same bet as an unsecured loan to a mid-sized company. A rule that treated them identically would push banks toward the riskier one. This is why each asset gets assigned a risk weight and the balance sheet is re-measured through that lens before the ratio is calculated.</p>
+      <p>Put numbers on it. Take a bank with $1,000M of assets and $80M of CET1 capital, and say the weights work out at 20% for highly rated government bonds and 100% for unsecured corporate loans. Held as government bonds, its risk-weighted assets are $200M and its CET1 ratio is 40%. Held as corporate loans, that same $80M produces a ratio of 8%.</p>
+      <p>Same bank, same capital, both correctly calculated. Which is why a ratio quoted with no reference to what the bank actually holds tells you very little. It&rsquo;s a statement about the assets as much as the capital. It also means the useful follow-up, whenever a bank&rsquo;s CET1 ratio improves, is whether capital went up or risk-weighted assets went down. Those are different events wearing the same number.</p>
+      <p>Basel III sets a CET1 minimum, and once you add the capital conservation buffer on top, the familiar headline figure is a little higher.</p>
+      <p>In the eurozone, the ECB reviews each bank it supervises through a process called the SREP, the Supervisory Review and Evaluation Process. It looks at that bank&rsquo;s business model, governance, and risks, then sets a bank-specific add-on on top of the Basel minimum, known as the Pillar 2 Requirement. Other buffers can be layered on depending on the bank&rsquo;s size and the state of the economy.</p>
+      <p>The requirement is personalised. Two eurozone banks reading the same rulebook can be working to different numbers and a ratio comfortable at one could be uncomfortably tight at the other.</p>
+      <p>What matters is the distance between the reported ratio and the number that bank has actually been told to hold. A bank sitting 40 basis points above its requirement and one sitting 400 basis points above it are in completely different situations, and both technically pass.</p>
+      <p>That distance has a direct consequence for anyone holding the shares. When a bank drops into its combined buffer, restrictions kick in on how much cash it&rsquo;s allowed to lend. Dividends, share buybacks, and coupon payments on certain capital instruments all get capped. It&rsquo;s called the Maximum Distributable Amount, the mechanism that links a bank&rsquo;s capital position to whether shareholders get paid at all.</p>
+    </div></div>
+
+    <p class="lesson-quote">A dividend from a bank isn&rsquo;t only a statement about profit. It&rsquo;s a statement about headroom.</p>
+
+    <div class="lesson-block"><span class="lesson-num">2.</span><div>
+      <span class="lesson-step-label">Is this a solvency problem or a liquidity problem, and which ratio would actually catch it?</span>
+      <p>These get discussed as though they&rsquo;re the same but they aren&rsquo;t and separating them is crucial. Each has its own set of rules, because each fails differently.</p>
+      <p>A solvency problem is when the assets turn out to be worth less than everyone believed. Loans don&rsquo;t get repaid, or securities lose value, and the losses absorb that thin equity cushion. The bank isn&rsquo;t short of time. It&rsquo;s short of value.</p>
+      <p>Solvency is policed by the capital ratios: CET1 against risk-weighted assets. Alongside it sits the leverage ratio, which measures capital against total exposure with no risk weighting at all. It exists precisely because risk weights depend partly on models, and models involve judgement, and judgement can be optimistic. The leverage ratio is the blunt instrument that doesn&rsquo;t care how clever the modelling was.</p>
+      <p>A liquidity problem is when the assets are fine and the money still isn&rsquo;t there. Depositors want their money faster than the loans mature, and the bank can&rsquo;t turn a thirty-year mortgage into cash by Thursday afternoon. Nothing about the underlying value is wrong. The timing is.</p>
+      <p>Liquidity is policed by two others. The Liquidity Coverage Ratio, or LCR, asks whether a bank holds enough high-quality liquid assets to survive thirty days of a modelled stress scenario, with a minimum of 100%. The Net Stable Funding Ratio, or NSFR, asks a slower version of the same question over a full year: whether the long-dated assets on this balance sheet are backed by funding that&rsquo;s actually stable enough to support them. Also a 100% minimum.</p>
+      <p>A capital ratio is a point-in-time photograph of value but says nothing about speed. It cannot tell you how quickly money can leave, how concentrated the depositors are, or whether the people funding this bank all know each other and read the same group chat.</p>
+    </div></div>
+
+    <p class="lesson-quote">A bank can be solvent and still fail. It happens when the exit is faster than the assets.</p>
+
+    <div class="lesson-block"><span class="lesson-num">3.</span><div>
+      <span class="lesson-step-label">If losses arrive, whose money absorbs them, and in what order?</span>
+      <p>Bank capital is deliberately built as a stack, and the order is the entire point. Everyone in it has agreed, at least in theory, to a position in the queue.</p>
+
+      <div class="table-scroll">
+      <table class="lesson-table">
+        <tr><th>Order</th><th>Who it is</th><th>What happens to them</th></tr>
+        <tr><td class="hi">First</td><td>CET1 &ndash; Common shareholders</td><td>Absorbs losses immediately and without any trigger being pulled</td></tr>
+        <tr><td>Second</td><td>AT1 &ndash; Additional Tier 1</td><td>Written down or converted into equity once the bank&rsquo;s CET1 ratio falls through a set trigger</td></tr>
+        <tr><td>Third</td><td>Tier 2 &ndash; Subordinated debt</td><td>Absorbs losses if the bank reaches the point of failure</td></tr>
+        <tr><td>Fourth</td><td>Senior creditors and uninsured deposits</td><td>Exposed only once everything above is exhausted</td></tr>
+        <tr><td class="hi">Last</td><td>Covered deposits</td><td>Protected up to $100,000 per depositor per bank under the EU guarantee</td></tr>
+      </table>
+      </div>
+
+      <p>The instrument most people have never heard of is AT1. These are bonds that stop behaving like bonds the moment a bank&rsquo;s capital falls below a pre-agreed level, at which point they can be written down or turned into shares. They pay a noticeably higher yield than ordinary bank debt, and the yield is not generosity. It&rsquo;s the price of sitting that close to the front of the queue.</p>
+      <p>One thing worth noting is that this queue isn&rsquo;t fixed by nature. It&rsquo;s a legal arrangement, defined by each instrument&rsquo;s documentation and by the rescuing country&rsquo;s rules. And in some real cases, a troubled bank hasn&rsquo;t actually paid out in the order investors expected.</p>
+    </div></div>
+
+    <span class="lesson-table-eyebrow">Working the numbers</span>
+
+    <div class="lesson-flow">
+      <p>Let&rsquo;s say Rosewood Bank holds $200M of high-quality liquid assets against $900M of deposits.</p>
+      <p>The LCR assigns each type of funding an assumed outflow rate over thirty days of stress. Insured retail money is presumed sticky. Large uninsured corporate money is presumed to leave. The left side is roughly how the regulation treats it. The right side is those same depositors moving faster than the model assumed.</p>
+    </div>
+
+    <div class="table-scroll">
+    <table class="lesson-table">
+      <tr><th>Funding type</th><th>Balance</th><th>Assumed outflow rate</th><th>Assumed outflow</th><th>Observed rate under real panic</th><th>Actual outflow</th></tr>
+      <tr><td>Insured retail deposits</td><td>$400M</td><td>5%</td><td>$20M</td><td>15%</td><td>$60M</td></tr>
+      <tr><td>Uninsured retail deposits</td><td>$100M</td><td>10%</td><td>$10M</td><td>30%</td><td>$30M</td></tr>
+      <tr><td>Operational corporate deposits</td><td>$200M</td><td>25%</td><td>$50M</td><td>50%</td><td>$100M</td></tr>
+      <tr><td>Uninsured corporate deposits</td><td>$200M</td><td>40%</td><td>$80M</td><td>100%</td><td>$200M</td></tr>
+      <tr><td class="hi">Total</td><td class="hi">$900M</td><td></td><td class="hi">$160M</td><td></td><td class="hi">$390M</td></tr>
+    </table>
+    </div>
+
+    <div class="lesson-flow">
+      <p>As modelled, $200M &divide; $160M gives an LCR of 125%, comfortably above the 100% minimum. As it actually behaved, $200M &divide; $390M gives 51%.</p>
+      <p>Rosewood Bank lost nothing between those two numbers. The only thing that changed is the assumption about how the people funding this bank behave when they get frightened.</p>
+      <p>Which is the real lesson of the LCR. It doesn&rsquo;t measure what a bank has, it measures what it has against a forecast of how other people will behave. And some banks are much easier to forecast than others. If your depositors are all in one industry, mostly above the insured limit, and able to move their money from a phone, the forecast may not describe you at all.</p>
+    </div>
+
+    <span class="lesson-table-eyebrow">The ratio that looked fine</span>
+
+    <div class="lesson-flow">
+      <p>Silicon Valley Bank, in March 2023, is the clearest recent example of the gap between the two failure modes. A large share of its deposits had gone into long-dated bonds bought when yields were near zero. When rates rose sharply, the market value of those bonds fell, because a bond&rsquo;s coupon is fixed at issue and the price is the only thing left that can adjust. The losses sitting in that portfolio were substantial relative to the bank&rsquo;s own capital. The headline capital ratio still looked acceptable, largely because of how those holdings were accounted for. The loss was real, but it wasn&rsquo;t showing up in the number everyone was watching.</p>
+      <p>The other half was who the money belonged to. SVB&rsquo;s depositors were concentrated in a single industry, largely above the insured limit, and closely connected to one another. Once doubt appeared, a significant share of the deposit base was requested within days, and the bank was closed before the week was out.</p>
+    </div>
+
+    <p class="lesson-quote">The capital ratio was answering a question about value. What closed the bank was a question about speed.</p>
+
+    <span class="lesson-table-eyebrow">What to take from this</span>
+
+    <div class="lesson-flow">
+      <p>A bank&rsquo;s health gets reported as a single number, but that number doesn&rsquo;t show everything. Before you take a headline at face value, ask three questions.</p>
+      <ol>
+        <li><strong>Which ratio is being quoted, and how much room does this bank have above the requirement it was assigned?</strong><br>The Basel minimum is the floor for everyone. The number that matters is the one the regulators set for that bank, and the distance between them is where dividends and buybacks live.</li>
+        <li><strong>Is this a solvency story or a liquidity story?</strong><br>Value and time are separate failures with separate rules, and a bank can pass every capital test in the book and still not survive a Friday.</li>
+        <li><strong>If losses arrive, who is standing where in the queue?</strong><br>The stack runs from common equity downward, with protected deposits last. It&rsquo;s also a legal construction rather than a guarantee.</li>
+      </ol>
+    </div>
+
+    <div class="lesson-footer-link">
+      This is Issue No. 19, an Extra Credit Series Equities issue &middot; <a href="foundation-19.html">Start from the Foundation &rarr;</a>
+    </div>
+
+
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <a class="footer-brand" href="index.html">
+        <img src="logo.png" alt="WSG logo">
+        <span>Wall Street for the Girls</span>
+      </a>
+      <ul class="footer-links">
+        <li><a href="start-here.html">Start Here</a></li>
+        <li><a href="archive.html">Archive</a></li>
+        <li><a href="foundation.html">Foundation</a></li>
+        <li><a href="financial-syllabus.html">Financial Syllabus</a></li>
+        <li><a href="glossary.html">Glossary</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="https://wallstreetforthegirls.substack.com" target="_blank" rel="noopener">Substack</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Wall Street for the Girls</span>
+      <em>Educational purposes only: reflects personal analysis, not financial advice.</em>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

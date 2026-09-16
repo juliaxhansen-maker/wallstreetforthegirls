@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>This Issue's Foundation: Extra Credit Series: Equities — Issue No. 19 — Wall Street for the Girls</title>
+<meta name="description" content="From Issue No. 19, an Extra Credit Series Equities issue: why a bank can borrow money that's due back tomorrow and lend it out for thirty years, and what that structural mismatch means for solvency and liquidity.">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500;1,6..72,600&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+<style>
+
+  .page-hero{padding-bottom:0; border-bottom:none;}
+  .found-wrap{max-width:100%; margin:0; padding-top:30px; padding-bottom:20px;}
+  .found-wrap p{font-size:15.5px; line-height:1.85; color:var(--ink); margin-bottom:20px; text-align:justify; hyphens:auto;}
+  .found-wrap ol{margin:0 0 20px; padding-left:22px;}
+  .found-wrap ol li{font-size:15.5px; line-height:1.85; color:var(--ink); margin-bottom:8px; text-align:justify; hyphens:auto;}
+  .found-quote{margin:32px 0; padding:24px 0; border-top:1px solid var(--ink); border-bottom:1px solid var(--ink); text-align:center;}
+  .found-quote p{font-family:var(--serif); font-style:italic; font-size:19px; color:var(--brand); line-height:1.55; margin:0; text-align:center;}
+  .found-keyterm{background:#fff; border:1px solid var(--line); padding:22px 24px; margin:32px 0;}
+  .found-keyterm .eb{font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; font-weight:600; color:var(--brand); margin-bottom:8px;}
+  .found-keyterm .term{font-family:var(--serif); font-size:17px; font-weight:600; color:var(--ink); margin-bottom:6px;}
+  .found-keyterm p{font-size:13.5px; color:var(--gray); margin:0; text-align:left;}
+  .found-footer-link{text-align:center; font-size:13px; color:var(--gray); padding-top:20px;}
+  .found-footer-link a{color:var(--brand); text-decoration:none; font-weight:600;}
+  .found-footer-link a:hover{text-decoration:underline;}
+  .found-eq{text-align:center; font-family:var(--serif); font-style:italic; font-size:17px; color:var(--brand); margin:8px auto 24px; line-height:1.6;}
+
+  /* Extra Credit specific additions */
+  .ec-badge{display:inline-block; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; font-weight:700; color:var(--brand); border:1px solid var(--brand); padding:5px 12px; margin-bottom:14px;}
+  .found-note{background:color-mix(in srgb, var(--brand) 5%, #fff); border-left:3px solid var(--brand); padding:20px 24px; margin:8px 0 36px;}
+  .found-note p{font-size:14.5px; line-height:1.8; color:var(--ink); margin-bottom:14px; text-align:left; hyphens:auto;}
+  .found-note p:last-child{margin-bottom:0;}
+  .found-note p.hi{font-family:var(--serif); font-style:italic; font-size:16.5px; color:var(--brand); margin-bottom:16px;}
+  .found-subhead{font-family:var(--serif); font-weight:600; font-size:20px; color:var(--ink); margin:40px 0 16px; padding-top:24px; border-top:1px solid var(--line);}
+  .found-subhead:first-of-type{border-top:2px solid var(--brand); padding-top:26px;}
+  .found-diagram{margin:32px 0 12px; padding:28px 22px; background:color-mix(in srgb, var(--brand) 3%, #fff); border:1px solid var(--line);}
+  .found-diagram h4{font-family:var(--serif); font-size:17px; font-weight:600; color:var(--ink); margin-bottom:4px; text-align:center;}
+  .found-diagram .sub{font-size:12.5px; color:var(--gray); text-align:center; margin-bottom:22px;}
+  .found-diagram svg{display:block; width:100%; height:auto;}
+  .found-diagram .cap{text-align:center; font-size:13px; font-style:italic; color:var(--gray); margin-top:20px;}
+  .found-h3{font-family:var(--serif); font-weight:600; font-size:16.5px; color:var(--brand); margin:30px 0 14px; display:block;}
+  .found-wrap ul{margin:0 0 20px; padding-left:22px;}
+  .found-wrap ul li{font-size:15.5px; line-height:1.85; color:var(--ink); margin-bottom:10px; text-align:justify; hyphens:auto;}
+  .found-table-wrap{overflow-x:auto; margin:24px 0 32px;}
+  table.found-table{width:100%; border-collapse:collapse; font-size:13.5px;}
+  table.found-table th{text-align:left; padding:10px 8px; border-bottom:1.5px solid var(--ink); color:var(--gray); font-weight:600; font-size:11px; letter-spacing:.04em; text-transform:uppercase;}
+  table.found-table td{padding:10px 8px; border-bottom:.5px solid var(--line); color:var(--ink); vertical-align:top;}
+  table.found-table td.hi{color:var(--brand); font-weight:600;}
+  table.found-table ul{margin:0; padding-left:18px;}
+  table.found-table ul li{font-size:13.5px; line-height:1.7; margin-bottom:6px; text-align:left; hyphens:none;}
+  .found-signoise{display:flex; gap:16px; flex-wrap:wrap; margin:40px 0 32px; padding-top:24px; border-top:1px solid var(--line);}
+  .sn-block{flex:1 1 260px; padding:20px 22px; border:1px solid var(--line); background:#fff; border-left-width:4px;}
+  .sn-block.signal{border-left-color:var(--brand);}
+  .sn-block.noise{border-left-color:var(--gray);}
+  .sn-block .sn-label{font-size:11px; letter-spacing:.16em; text-transform:uppercase; font-weight:700; margin-bottom:12px;}
+  .sn-block.signal .sn-label{color:var(--brand);}
+  .sn-block.noise .sn-label{color:var(--gray);}
+  .sn-block p{font-size:14px; line-height:1.75; color:var(--ink); margin-bottom:12px; text-align:left; hyphens:auto;}
+  .sn-block p:last-child{margin-bottom:0;}
+
+  @media (max-width:640px){
+    .found-signoise{flex-direction:column;}
+  }
+
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="nav-brand" href="index.html">
+      <img src="logo.png" alt="WSG logo">
+      <span>Wall Street <em>for the Girls</em></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="archive.html">Archive</a></li>
+      <li class="nav-dropdown">
+        <a href="financial-syllabus.html" class="active">Learn</a>
+        <ul class="dropdown-menu">
+          <li><a href="foundation.html">The Foundation</a></li>
+          <li><a href="financial-syllabus.html">Financial Syllabus</a></li>
+          <li><a href="glossary.html">Glossary</a></li>
+        </ul>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a class="nav-cta" href="https://wallstreetforthegirls.substack.com" target="_blank" rel="noopener">Subscribe</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<section class="page-hero">
+  <div class="wrap">
+    <a class="breadcrumb" href="foundation.html">&larr; The Foundation</a>
+    <p class="eyebrow">This issue&rsquo;s foundation &middot; Issue No. 19 &middot; September 6, 2026</p>
+    <span class="ec-badge">Extra Credit Series &middot; Equities</span>
+    <h1>The Business That Borrows the Thing It Lends.</h1>
+    <p class="lede">A bank makes two completely reasonable promises at once &mdash; instant access to the people it borrows from, decades of certainty to the people it lends to &mdash; and the entire business exists in the gap between them.</p>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="found-wrap" id="foundation">
+
+      <div class="found-note">
+        <p class="hi">Hi besties! Quick note before this one.</p>
+        <p>This is the newest entry in the Extra Credit Series, filed under Equities. It&rsquo;s about the two promises every bank makes at once &mdash; instant access to your money, and decades to pay back what it&rsquo;s lent out &mdash; and why that mismatch isn&rsquo;t a flaw in the system. It&rsquo;s the business model.</p>
+      </div>
+
+      <p>You are a business owner. You recently opened a small bridal boutique, and business has been going well. But there&rsquo;s something that tends to get overlooked, since it&rsquo;s so normal in the industry that no one bats an eye. You don&rsquo;t actually own most of what&rsquo;s hanging on your clothing racks. The dresses are on loan from a design house&rsquo;s central archive, and the arrangement is simple. They can recall any piece at any time, with 48 hours&rsquo; notice.</p>
+
+      <p>Now imagine a bride walks in five months before her wedding and finds the one, the dress she&rsquo;s been dreaming of since she was a little girl. She puts down the deposit, and from that moment, the dress is hers. It gets pinned, fitted, altered, and held in your back room until the big day.</p>
+
+      <p>Certainty is the entire product. Nobody puts down a deposit on a wedding dress on a maybe. And usually this works perfectly, because the design house almost never asks for the specific dress a bride put a deposit on. But one morning you open the store and read through the emails you received overnight, and out of nowhere, the design house needs the dress back for a press feature. The dress that&rsquo;s been half-altered on a mannequin in your back room, three weeks out from the wedding.</p>
+
+      <p>You start to panic, but it&rsquo;s not really your fault. You didn&rsquo;t do anything wrong. You made two completely reasonable promises. Flexibility to the design house, and certainty to the bride. Both were fair and standard. You just never noticed they were promises about the same object, on two entirely different schedules, and that the whole arrangement only held together because nobody had ever pulled on both ends at once.</p>
+
+      <p>Now swap the dress for money. Swap the design house archive for everyone who has money sitting in a bank account, able to ask for it back today. And swap the bride&rsquo;s five-month hold for somebody&rsquo;s thirty-year mortgage.</p>
+
+      <p class="found-quote">That gap, between what a bank can be asked to hand back and what it&rsquo;s already lent out on a completely different timeline, isn&rsquo;t a flaw in the system. It&rsquo;s the business model.</p>
+
+      <h2 class="found-subhead">Mechanics</h2>
+
+      <h3 class="found-h3">The first thing that makes a bank different: the money comes in fast and goes out slow.</h3>
+
+      <p>Every deposit, loan, and bond has something called a maturity, which is just the length of time until the money has to be handed back. Money sitting in a current account has a maturity of roughly zero, because you can ask for it this afternoon and you&rsquo;re entitled to have it. A thirty-year mortgage has a maturity of thirty years.</p>
+
+      <p>You will see this described as a bank borrowing short and lending long. Short means the money comes due almost immediately. Long means it comes due in the future. So a bank borrows money it could be asked to return today and lends it out in a form that won&rsquo;t come back for years. The proper name for this is maturity transformation, and it exists because two groups of people want opposite things.</p>
+
+      <p>Savers want safety and instant access. They want to know the money is there and that they can have it on a Saturday. Borrowers want the opposite. No one can buy a house with money that might be recalled next month. They need funding that is stable for years, at a rate they can plan around.</p>
+
+      <p>A bank sits in the middle of that mismatch and gets paid for absorbing it. It takes money that can leave at any moment, lends it out for years, and earns the difference between what it pays savers and what it charges borrowers. That difference is essentially the whole business.</p>
+
+      <p>There is also something a bit counterintuitive.</p>
+
+      <p class="found-quote">Your deposit is not the bank&rsquo;s money. It&rsquo;s the bank&rsquo;s debt.</p>
+
+      <p>When you put $5,000 into an account, that money becomes a liability on the bank&rsquo;s balance sheet, because it&rsquo;s money the bank owes you and has to be ready to return. Meanwhile, the mortgage it wrote with that money is an asset, because it&rsquo;s money owed to the bank.</p>
+
+      <p>So a bank&rsquo;s balance sheet is the reverse of how most of us picture it. The deposits are what it owes, and the loans are what it owns. Laid out simply, it looks like this.</p>
+
+      <div class="found-table-wrap">
+      <table class="found-table">
+        <tr><th>Assets (what the bank owns)</th><th>Liabilities (what the bank owes), and Equity (what&rsquo;s left over)</th></tr>
+        <tr>
+          <td>
+            <ul>
+              <li>Cash and reserves held at the central bank</li>
+              <li>Government bonds and other securities</li>
+              <li>Mortgages, business loans, credit card balances</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>Customer deposits</li>
+              <li>Money borrowed from other banks and from markets</li>
+              <li>Equity</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+      </div>
+
+      <p>Something interesting happens when you focus on the timelines instead of the categories. Almost everything on the left pays back slowly, over years. Almost everything on the right can be asked for quickly. The two sides always balance because every balance sheet rests on the same equation.</p>
+
+      <p class="found-eq">Assets = Liabilities + Equity</p>
+
+      <p>It&rsquo;s worth noting that equity is not a reserve of cash. It&rsquo;s whatever remains once you subtract what&rsquo;s owed from what&rsquo;s owned. That means it can shrink without anybody spending it. If the assets are revalued downward and the liabilities stay exactly where they are, equity absorbs the entire difference by arithmetic alone.</p>
+
+      <h3 class="found-h3">The second thing that makes a bank different: Almost none of it is actually theirs</h3>
+
+      <p>Every business is funded by some mix of its owners&rsquo; money, called equity, and borrowed money. An ordinary company might run with something like 40 or 50% equity which acts as the cushion. It&rsquo;s what absorbs losses before anyone the company owes money to is affected. A bank typically operates on somewhere around 8 to 10% equity relative to its total assets.</p>
+
+      <div class="found-diagram">
+        <h4>The equity cushion, side by side</h4>
+        <p class="sub">The same basic structure, on radically different proportions.</p>
+        <svg width="100%" viewBox="0 0 680 330" role="img" xmlns="http://www.w3.org/2000/svg">
+        <title>Equity cushion compared: a typical company vs a typical bank</title>
+        <desc>Two stacked bar charts. A typical company funds its balance sheet with roughly 45% equity and 55% borrowed money. A typical bank funds its balance sheet with roughly 8% equity and 92% borrowed money, shown as a thin sliver at the top of an otherwise tall bar of borrowed funding.</desc>
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Inter:wght@400;500;600&display=swap');
+        .wsg-d{font-family:'Inter',sans-serif;font-size:11.5px;fill:#884F5C}
+        .wsg-w{font-family:'Newsreader',Georgia,serif;font-size:15px;fill:#FFFCFC;font-weight:600}
+        .wsg-cat{font-family:'Inter',sans-serif;font-size:13px;fill:#592F3E;font-weight:600}
+        .wsg-pct{font-family:'Newsreader',Georgia,serif;font-size:16px;fill:#592F3E;font-weight:600}
+        </style>
+
+        <rect x="150" y="10" width="14" height="14" rx="2" fill="#592F3E"/>
+        <text class="wsg-d" x="170" y="17" dominant-baseline="central">Equity (the owners&#8217; cushion)</text>
+        <rect x="400" y="10" width="14" height="14" rx="2" fill="#FAF1F3" stroke="#B76E79" stroke-width="0.75"/>
+        <text class="wsg-d" x="420" y="17" dominant-baseline="central">Borrowed (deposits &amp; debt)</text>
+
+        <line x1="80" y1="280" x2="600" y2="280" stroke="#DCC7CC" stroke-width="1"/>
+
+        <rect x="130" y="148" width="140" height="132" fill="#FAF1F3" stroke="#B76E79" stroke-width="0.75"/>
+        <rect x="130" y="40" width="140" height="108" fill="#592F3E"/>
+        <text class="wsg-w" x="200" y="94" text-anchor="middle" dominant-baseline="central">45%</text>
+        <text class="wsg-d" x="200" y="214" text-anchor="middle" dominant-baseline="central">55%</text>
+        <text class="wsg-cat" x="200" y="303" text-anchor="middle">A typical company</text>
+
+        <rect x="410" y="59" width="140" height="221" fill="#FAF1F3" stroke="#B76E79" stroke-width="0.75"/>
+        <rect x="410" y="40" width="140" height="19" fill="#592F3E"/>
+        <line x1="550" y1="49" x2="588" y2="49" stroke="#884F5C" stroke-width="0.75"/>
+        <text class="wsg-pct" x="594" y="49" dominant-baseline="central">8%</text>
+        <text class="wsg-d" x="480" y="170" text-anchor="middle" dominant-baseline="central">92%</text>
+        <text class="wsg-cat" x="480" y="303" text-anchor="middle">A typical bank</text>
+        </svg>
+      </div>
+
+      <p>Imagine a bank with $100 of assets, funded by $92 of deposits and other borrowing, and $8 of its own equity. Now suppose the loans turn out to be worth 4% less than everyone thought. The assets fall to $96 and the $92 owed to depositors doesn&rsquo;t change, because debts don&rsquo;t shrink when your assets do. The equity absorbs the whole loss and drops from $8 to $4. That relationship has a name and number attached to it when you divide the assets by the equity. It is known as the leverage multiple.</p>
+
+      <p class="found-eq">$100 &divide; $8 = 12.5 times</p>
+
+      <p>That tells you the conversion rate between the two sides. Every 1% move in the value of the assets moves the equity by roughly 12.5%. The bank isn&rsquo;t taking a 4% loss in that example. The shareholders are taking a 50% one, on the same event.</p>
+
+      <p>So why would a bank choose to run this way?</p>
+
+      <p>Because the thin cushion is the reason the business is worth owning at all and is the part that&rsquo;s almost always left out.</p>
+
+      <p>Let&rsquo;s go back to the $100 bank. Say it pays savers 1.5% on their deposits and charges borrowers 3.5% on their loans. The difference between those two rates is called the net interest margin, and here it&rsquo;s 2%.</p>
+
+      <p>Two percent on $100 of assets is $2 of profit. That&rsquo;s a thin-looking margin and on its own it would be a fairly unexciting business. But the shareholders didn&rsquo;t put in $100. They put in $8.</p>
+
+      <div class="found-table-wrap">
+      <table class="found-table">
+        <tr><th></th><th>Funded with $8 equity</th><th>Funded with $50 equity</th></tr>
+        <tr><td>Total Assets</td><td>$100</td><td>$100</td></tr>
+        <tr><td>Net Interest Margin</td><td>2%</td><td>2%</td></tr>
+        <tr><td>Profit</td><td>$2</td><td>$2</td></tr>
+        <tr><td class="hi">ROE</td><td class="hi">25%</td><td class="hi">4%</td></tr>
+      </table>
+      </div>
+
+      <p>Identical bank. Identical loans, identical customers, identical margin. The only thing that changed is how much of it the shareholders funded themselves and the return on equity moved from 4% to 25%.</p>
+
+      <p>That&rsquo;s the trade at the center of banking. Leverage is what turns a 2% margin into a 25% return, and it is also what turns a 4% loss into a 50% one. It is the same mechanism producing both outcomes, and you cannot keep one without the other.</p>
+
+      <p>That&rsquo;s why regulators keep such a close eye on banks, and why they&rsquo;re the ones who decide how thick that cushion has to be, not the shareholders who&rsquo;d rather it stayed thin.</p>
+
+      <h3 class="found-h3">What happens when you put those two together</h3>
+
+      <p>A balance sheet that borrows short and lends long has one weakness built into it. A cushion this thin has another. Most of the time, neither one is a problem. But it means a bank can fail in two genuinely different ways, and people tend to talk about both as if they were the same thing.</p>
+
+      <p>It can run out of value. Borrowers stop repaying, or the assets turn out to be worth less than recorded, and losses eat through that thin equity. That&rsquo;s a solvency problem. Or it can run out of time. The assets are completely fine, and the money still isn&rsquo;t there, because depositors want it back faster than thirty-year mortgages can possibly turn into cash. Economists call that a liquidity problem.</p>
+
+      <p>Those two ideas get used almost interchangeably in ordinary conversation, and they describe different events. A solvent bank can fail. An insolvent one can keep trading for a surprisingly long time if nobody asks for their money at once. Keeping them apart is most of the skill in reading anything written about a bank.</p>
+
+      <p>Which is why banks are among the most heavily regulated businesses in the world, and why that regulation comes in two distinct halves rather than one. There are rules about how much of a bank&rsquo;s own money has to sit underneath everything, and there are separate rules about how much has to be available quickly. The global rulebook is called Basel III. In the eurozone, the institution that supervises the banks and checks both cushions is the European Central Bank.</p>
+
+      <p>Two failure modes, two sets of rules. That is not bureaucratic duplication. It&rsquo;s the direct consequence of everything above.</p>
+
+      <p class="found-quote">That&rsquo;s the boutique and its borrowed dresses, translated into financial mechanics.</p>
+
+      <div class="found-signoise">
+        <div class="sn-block signal">
+          <div class="sn-label">Signal</div>
+          <p>A capital position moving meaningfully over time, in a consistent direction, across several quarters rather than one.</p>
+          <p>A supervisor requiring a bank to hold more capital than its peers or flagging it in a review.</p>
+          <p>Deposits leaving faster than they used to, especially deposits above a national protection limit, which have the strongest reason to move first.</p>
+          <p>A credit rating action tied specifically to the quality of a bank&rsquo;s loan book, rather than to the mood of the sector generally.</p>
+        </div>
+
+        <div class="sn-block noise">
+          <div class="sn-label">Noise</div>
+          <p>A single quarter&rsquo;s earnings beat or miss that leaves the bank&rsquo;s capital position essentially unchanged. Profit is the engine. Capital is the cushion. They are not the same statement.</p>
+          <p>Ordinary seasonal movement in deposits. Money moves around at tax deadlines and year-ends, and it always has.</p>
+          <p>A bank&rsquo;s share price falling in line with every other bank&rsquo;s. That&rsquo;s a story about interest rates or the economy, and it says almost nothing about the specific institution.</p>
+          <p>The word &ldquo;crisis&rdquo; attached to any bank anywhere. Plenty of banks have bad quarters. Very few have bad weeks in the sense that phrase implies.</p>
+        </div>
+      </div>
+
+      <h2 class="found-subhead">How It All Connects</h2>
+
+      <p>A bank takes in money that can be withdrawn almost immediately and lends it out for years, earning the gap between the two. To do that at any scale, it operates with a very small slice of its own money underneath a very large balance sheet. Those two features generate two different vulnerabilities. Losses can eat the thin cushion, and withdrawals can outrun the assets.</p>
+
+      <p>Regulators respond with two separate requirements, because no single one can watch both. And every bank, on every ordinary day, is running the same arrangement the boutique was running. Two reasonable promises, on two different clocks, held together by the fact that nobody usually pulls on both at once.</p>
+
+      <h2 class="found-subhead">Why This Matters For You</h2>
+
+      <ul>
+        <li><strong>If you have money in a bank,</strong> this is the reason deposit protection schemes exist at all. They&rsquo;re not a general statement that banks are safe. They&rsquo;re a specific answer to a specific structural risk, designed so that most people never have a reason to join a queue, because a queue is the thing that turns a timing problem into a real one.</li>
+        <li><strong>If you own bank shares,</strong> whether directly or through a fund that holds them, the leverage is the thing to understand. A bank&rsquo;s equity reacts far more sharply to a modest change in the quality of its loan book than an ordinary company&rsquo;s equity does to a modest change in its business. A bank that screens as cheap on simple measures may be carrying risk that those measures were never built to show. Because leverage amplifies both directions, a bank that screens as cheap on simple measures may be carrying risk that those measures were never built to show.</li>
+        <li><strong>If you borrow,</strong> these requirements shape what&rsquo;s available to you and at what price. When capital is under pressure, banks lend less and more expensively, and that shows up in mortgage availability and business credit long before it shows up in a headline.</li>
+      </ul>
+
+      <p>If you want to learn a bit more with numbers then head over to the <a href="financial-syllabus-equities-19.html#syllabus">Financial Syllabus</a>.</p>
+
+      <div class="found-footer-link">
+        This is Issue No. 19, an Extra Credit Series Equities issue &middot; <a href="financial-syllabus-equities-19.html#syllabus">Continue to the Financial Syllabus &rarr;</a>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <a class="footer-brand" href="index.html">
+        <img src="logo.png" alt="WSG logo">
+        <span>Wall Street for the Girls</span>
+      </a>
+      <ul class="footer-links">
+        <li><a href="start-here.html">Start Here</a></li>
+        <li><a href="archive.html">Archive</a></li>
+        <li><a href="foundation.html">Foundation</a></li>
+        <li><a href="financial-syllabus.html">Financial Syllabus</a></li>
+        <li><a href="glossary.html">Glossary</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="https://wallstreetforthegirls.substack.com" target="_blank" rel="noopener">Substack</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Wall Street for the Girls</span>
+      <em>Educational purposes only: reflects personal analysis, not financial advice.</em>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
