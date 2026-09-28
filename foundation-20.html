@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Issue No. 20 Foundation — Wall Street for the Girls</title>
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500;1,6..72,600&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#faf7f1; --ink:#22201d; --burgundy:#7d1f42; --muted:#5c574e;
+    --hint:#a39c8c; --line:#ddd7cb; --line-soft:#ece7dc; --body:#3a3733;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; background:var(--cream); color:var(--ink); font-family:'Inter',sans-serif;}
+  a{color:inherit;}
+  .wrap{max-width:1160px; margin:0 auto; padding:0 28px;}
+
+  .folio-line{border-bottom:0.5px solid var(--line); font-size:11px; letter-spacing:0.03em; color:var(--hint); padding:10px 0;}
+  .folio-line .wrap{display:flex; justify-content:flex-start;}
+
+  .site-header{border-bottom:0.5px solid var(--line); position:relative;}
+  .nav{display:flex; justify-content:space-between; align-items:center; padding-top:16px; padding-bottom:16px;}
+  .nav-brand{display:flex; align-items:center; gap:8px; text-decoration:none; color:var(--ink); font-family:'Newsreader',serif; font-weight:600; font-size:16px;}
+  .nav-brand img{height:28px; width:28px; border-radius:50%;}
+  .nav-brand em{font-style:italic; color:var(--burgundy);}
+  .nav-links{list-style:none; display:flex; gap:24px; margin:0; padding:0; align-items:center;}
+  .nav-links a{text-decoration:none; color:var(--muted); font-size:12px; letter-spacing:0.04em;}
+  .nav-links a.active{color:var(--burgundy); border-bottom:1.5px solid var(--burgundy); padding-bottom:2px;}
+  .nav-links a.nav-cta{background:var(--ink); color:var(--cream); padding:9px 18px; border-radius:2px;}
+  .nav-dropdown{position:relative;}
+  .dropdown-menu{
+    display:none; position:absolute; top:100%; left:50%; transform:translateX(-50%);
+    margin-top:14px; padding:10px 0; min-width:210px; list-style:none;
+    background:var(--cream); border:0.5px solid var(--line);
+  }
+  .nav-dropdown:hover .dropdown-menu,
+  .nav-dropdown:focus-within .dropdown-menu{display:block;}
+  .dropdown-menu li{padding:0;}
+  .dropdown-menu a{
+    display:block; padding:10px 20px; font-size:11.5px; letter-spacing:.08em;
+    color:var(--ink); text-decoration:none; white-space:nowrap;
+  }
+  .dropdown-menu a:hover{color:var(--burgundy); background:#faf1f4;}
+  .nav-toggle{display:none; background:none; border:none; cursor:pointer; padding:8px;}
+  .nav-toggle span{display:block; width:22px; height:2px; background:var(--burgundy); margin:5px 0; transition:.3s;}
+
+  .issue-page{padding:48px 0 80px;}
+  .issue-layout{display:grid; grid-template-columns:minmax(0,2fr) minmax(0,1fr); gap:32px; align-items:start; justify-content:start;}
+
+  .issue-dateline{font-size:11.5px; letter-spacing:0.03em; color:var(--burgundy); margin:0 0 10px;}
+  .issue-main h1{font-family:'Newsreader',serif; font-weight:600; font-size:30px; line-height:1.3; margin:0 0 20px;}
+  .issue-main p{font-size:14px; line-height:1.75; color:var(--body); margin:0 0 16px; text-align:justify; hyphens:auto;}
+
+  .eb{font-size:10.5px; letter-spacing:0.08em; color:var(--burgundy); text-transform:uppercase; margin:28px 0 8px;}
+  .rail-title{font-weight:700; font-size:12px;}
+  .section-label{font-family:'Newsreader',serif; font-size:17px; font-weight:600; margin:30px 0 12px; color:var(--burgundy);}
+  .term-link{color:var(--burgundy); text-decoration:none; border-bottom:1.5px dotted var(--burgundy);}
+
+  .issue-copy{max-width:100%;}
+  .signal-noise{display:grid; grid-template-columns:1fr 1fr; gap:0; margin:28px 0 16px; padding-top:24px; border-top:0.5px solid var(--line);}
+  .signal-noise .eb{margin-top:0;}
+  .signal-noise p:last-child{margin-bottom:0;}
+  .signal-noise > div:first-child{padding-right:28px;}
+  .signal-noise > div:last-child{padding-left:28px; border-left:0.5px solid var(--line);}
+
+  .key-question{margin:32px 0 0; padding-top:18px; border-top:1px solid var(--ink);}
+  .key-question .key-question-text{font-family:'Newsreader',serif; font-style:italic; font-weight:700; font-size:20px; color:#7d1f42; line-height:1.6; margin:0 0 14px; text-align:center;}
+
+  p.connects-chain{margin:26px 0; padding:20px 24px; border-top:1px solid var(--ink); border-bottom:1px solid var(--ink); font-family:'Newsreader',serif; font-style:italic; font-size:15px; line-height:1.85; color:var(--body); text-align:center;}
+
+  .references-section{grid-column:1 / -1; border-top:0.5px solid var(--line); padding:36px 0 4px;}
+  .references-section .section-label{margin:0 0 14px;}
+  .references-list{list-style:none; margin:0; padding:0; max-width:100%;}
+  .references-list li{font-size:11.5px; line-height:1.7; color:var(--muted); margin-bottom:14px; text-align:justify; hyphens:auto;}
+  .references-list li a{color:var(--burgundy); text-decoration:none; word-break:break-all;}
+  .references-list li a:hover{text-decoration:underline;}
+
+  .issue-rail{border-left:0.5px solid var(--line); padding-left:28px; align-self:start;}
+  .rail-block{border-bottom:0.5px solid var(--line-soft); padding-bottom:20px; margin-bottom:20px;}
+  .rail-block:last-child{border-bottom:none; margin-bottom:0;}
+
+  .rail-stat{margin-bottom:22px;}
+  .rail-stat:last-child{margin-bottom:0;}
+  .rail-label{display:block; font-size:9.5px; letter-spacing:0.08em; color:var(--hint); margin-bottom:5px;}
+  .rail-value{display:block; font-family:'Newsreader',serif; font-style:italic; font-weight:500; font-size:14.5px; color:var(--ink); line-height:1.4;}
+
+  .rail-table{width:100%; border-collapse:collapse; font-size:12px;}
+  .rail-table td{padding:7px 0; border-bottom:0.5px solid var(--line-soft); color:var(--body);}
+  .rail-table tr:last-child td{border-bottom:none;}
+  .rail-table td.dir{text-align:right; color:var(--muted); white-space:nowrap;}
+  .rail-table td.dir.down, .rail-table td.dir.up{color:var(--burgundy);}
+
+  .rail-teaser-text{font-size:12px; color:var(--muted); line-height:1.6; margin:0 0 10px;}
+  .rail-link{font-size:10.5px; color:var(--burgundy); text-decoration:none;}
+  .rail-link:hover{text-decoration:underline;}
+
+  .rail-block-featured{background:#faf1f4; border-radius:8px; padding:16px 18px 18px; border-bottom:none;}
+  .rail-block-featured .eb{margin-top:0; margin-bottom:8px;}
+  .rail-link-btn{display:inline-block; font-size:10px; letter-spacing:0.05em; color:var(--burgundy); border:0.5px solid var(--burgundy); border-radius:2px; padding:7px 12px; text-decoration:none;}
+  .rail-link-btn:hover{background:var(--burgundy); color:var(--cream);}
+
+  .rail-term{font-family:'Newsreader',serif; font-size:14px; font-weight:600; margin:0 0 5px;}
+  .rail-def{font-size:11.5px; color:var(--muted); line-height:1.6; margin:0;}
+
+  .term-grid{display:grid; grid-template-columns:1fr 1fr; gap:8px; margin:10px 0 14px;}
+  .term-box{background:#fff; border:0.5px solid var(--line); border-radius:6px; padding:10px 12px;}
+  .term-box span{font-family:'Newsreader',serif; font-size:11.5px; font-weight:400; color:var(--ink);}
+
+  .site-footer{border-top:0.5px solid var(--line); padding:44px 0 30px;}
+  .footer-top{display:flex; justify-content:space-between; align-items:center; margin-bottom:22px; flex-wrap:wrap; gap:16px;}
+  .footer-brand{display:flex; align-items:center; gap:8px; text-decoration:none; color:var(--ink); font-weight:600; font-family:'Newsreader',serif; font-size:14px;}
+  .footer-brand img{height:24px; width:24px; border-radius:50%;}
+  .footer-links{list-style:none; display:flex; gap:18px; margin:0; padding:0; flex-wrap:wrap;}
+  .footer-links a{color:var(--muted); text-decoration:none; font-size:12px;}
+  .footer-bottom{display:flex; justify-content:space-between; font-size:11px; color:var(--hint); border-top:0.5px solid var(--line); padding-top:16px; flex-wrap:wrap; gap:8px;}
+
+  a:focus-visible, .nav-cta:focus-visible{outline:2px solid var(--burgundy); outline-offset:2px;}
+
+  @media (max-width:600px){
+    .signal-noise{grid-template-columns:1fr;}
+    .signal-noise > div:first-child{padding-right:0;}
+    .signal-noise > div:last-child{padding-left:0; border-left:none; margin-top:20px;}
+  }
+
+  @media (max-width:960px){
+    .nav-links{
+      display:none; position:absolute; top:100%; left:0; right:0;
+      background:var(--cream); flex-direction:column; padding:24px; gap:20px;
+      border-bottom:0.5px solid var(--line); align-items:flex-start;
+    }
+    .nav-links.open{display:flex;}
+    .nav-toggle{display:block;}
+    .dropdown-menu{position:static; display:block; transform:none; border:none; margin-top:6px; padding:0 0 0 14px; background:none;}
+  }
+
+  @media (max-width:860px){
+    .issue-layout{grid-template-columns:1fr;}
+    .issue-rail{border-left:none; padding-left:0; border-top:0.5px solid var(--line); padding-top:28px; margin-top:8px;}
+  }
+
+  /* placeholder page */
+  .placeholder{max-width:640px; padding:72px 0 96px;}
+  .placeholder h1{font-family:'Newsreader',serif; font-weight:600; font-size:30px; line-height:1.3; margin:0 0 16px;}
+  .placeholder p{font-size:14px; line-height:1.75; color:var(--body); margin:0 0 24px;}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="nav-brand" href="index.html">
+      <img src="logo.png" alt="WSG logo">
+      <span>Wall Street <em>for the Girls</em></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="archive.html">Archive</a></li>
+      <li class="nav-dropdown">
+        <a href="financial-syllabus.html">Learn</a>
+        <ul class="dropdown-menu">
+          <li><a href="foundation.html">The Foundation</a></li>
+          <li><a href="financial-syllabus.html">Financial Syllabus</a></li>
+          <li><a href="glossary.html">Glossary</a></li>
+        </ul>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a class="nav-cta" href="https://wallstreetforthegirls.substack.com" target="_blank" rel="noopener">Subscribe</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<!-- PLACEHOLDER: replace this whole <main> block (and remove the noindex meta above) once the real page is ready. -->
+<section class="issue-page">
+  <div class="wrap">
+    <div class="placeholder">
+      <p class="issue-dateline">&mdash; Issue No. 20 &middot; The Foundation</p>
+      <h1>The Foundation</h1>
+      <p>Coming soon.</p>
+      <a class="rail-link-btn" href="issue-20.html">&larr; Back to Issue No. 20</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <a class="footer-brand" href="index.html">
+        <img src="logo.png" alt="WSG logo">
+        <span>Wall Street for the Girls</span>
+      </a>
+      <ul class="footer-links">
+        <li><a href="archive.html">Archive</a></li>
+        <li><a href="financial-syllabus.html">Financial Syllabus</a></li>
+        <li><a href="glossary.html">Glossary</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="https://wallstreetforthegirls.substack.com" target="_blank" rel="noopener">Substack</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Wall Street for the Girls</span>
+      <em>Educational purposes only: reflects personal analysis, not financial advice.</em>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('navToggle').addEventListener('click', function(){
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+</script>
+</body>
+</html>
