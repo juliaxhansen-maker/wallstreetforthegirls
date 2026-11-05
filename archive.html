@@ -9,33 +9,32 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500;1,6..72,600&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="resource-pages.css">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="resource-page">
 
-<header class="site-header">
-  <div class="wrap nav">
-    <a class="nav-brand" href="index.html">
-      <img src="logo.png" alt="WSG logo">
-      <span>Wall Street <em>for the Girls</em></span>
-    </a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="archive.html" class="active">Archive</a></li>
-      <li class="nav-dropdown">
-        <a href="financial-syllabus.html">Learn</a>
-        <ul class="dropdown-menu">
-          <li><a href="foundation.html">The Foundation</a></li>
-          <li><a href="financial-syllabus.html">Financial Syllabus</a></li>
-          <li><a href="glossary.html">Glossary</a></li>
-        </ul>
-      </li>
-      <li><a href="about.html">About</a></li>
-      <li><a class="nav-cta" href="https://wallstreetforthegirls.substack.com" target="_blank" rel="noopener">Subscribe</a></li>
-    </ul>
-  </div>
-</header>
+<header class="masthead">
+    <div class="folio">
+      <img src="logo.png" alt="" width="112" height="112">
+    </div>
+    <div class="wordmark">Wall Street for the Girls</div>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="archive.html" aria-current="page">Archive</a>
+      <a href="glossary.html">Glossary</a>
+      <a href="about.html">About</a>
+      <a class="subscribe" href="https://wallstreetforthegirls.substack.com/subscribe">Subscribe</a>
+    </nav>
+    <div class="ticker animated">
+      <div class="ticker-window">
+        <div class="ticker-track">
+          <div class="ticker-group"><strong>SIGNAL OVER NOISE</strong><b aria-hidden="true">✦</b><span>A WARDROBE IS NEVER JUST A WARDROBE, IT'S A PORTFOLIO</span><b aria-hidden="true">✦</b><span>NO JARGON</span><b aria-hidden="true">✦</b><span>SHE WHO DIVERSIFIES, THRIVES</span><b aria-hidden="true">✦</b></div>
+          <div class="ticker-group" aria-hidden="true"><strong>SIGNAL OVER NOISE</strong><b>✦</b><span>A WARDROBE IS NEVER JUST A WARDROBE, IT'S A PORTFOLIO</span><b>✦</b><span>NO JARGON</span><b>✦</b><span>SHE WHO DIVERSIFIES, THRIVES</span><b>✦</b></div>
+        </div>
+      </div>
+    </div>
+  </header>
 
 <main>
 <section class="page-hero">
@@ -57,16 +56,10 @@
     </div>
 
     <div class="issue-grid" id="issueGrid">
-
-      <a class="issue-card reveal in" href="issue-21.html" data-search="the doubt premium when france's borrowing costs rise gap with germany tells bigger story confidence politics risk france germany spread bund oat italy spain moody's fitch s&amp;p ecb lagarde 2027 budget euro stoxx issue 21 november 4 2026 rates fixed income cautious">
-        <div class="card-body">
-          <p class="eyebrow">Issue No. 21 &middot; November 4, 2026</p>
-        <h3>The Doubt Premium: Why France Now Pays More to Borrow Than Italy</h3>
-        <div class="tags"><span class="tag">Cautious</span><span class="tag">Rates &amp; Fixed Income</span></div>
-        <p>When France's borrowing costs rise, the gap with Germany tells a bigger story about confidence, politics, and risk.</p>
-        <span class="read">Read the full issue</span>
-        </div>
-      </a>
+<a class="issue-card reveal in" href="issue-21.html" data-search="issue 21 the doubt premium france germany bonds yields spread confidence politics risk fixed income">
+  <div class="card-body"><p class="eyebrow">Issue No. 21</p><h3>The Doubt Premium</h3>
+  <p>When France’s borrowing costs rise, the gap with Germany tells a bigger story about confidence, politics, and risk.</p>
+  <span class="read">Read the full issue</span></div></a>
 
       <a class="issue-card reveal in" href="issue-20.html" data-search="the price of borrowing just hit a level our parents remember treasury yield 10-year 30-year mortgage rates federal reserve rate hike forward guidance kevin warsh michael barr purchasing managers index pmi treasury auction five-year indirect bidders cme fedwatch tool durable goods orders brent wti cyclical stocks term premium bear steepening yield curve basis point issue 20 september 27 2026 rates fixed income cautious">
         <div class="card-body">
@@ -178,7 +171,7 @@
         </div>
       </a>
 
-      <a class="issue-card reveal in" href="issue-9.html" data-search="never keep all your trust in one currency even the dollar reserve currency dollar gold central banks omfif issue 9 july 1 2026 fx reserves risk-off">
+      <a class="issue-card reveal in" href="issue-09.html" data-search="never keep all your trust in one currency even the dollar reserve currency dollar gold central banks omfif issue 9 july 1 2026 fx reserves risk-off">
         <div class="card-body">
           <p class="eyebrow">Issue No. 09 · July 1, 2026</p>
         <h3>Never Keep All Your Trust in One Currency, Even the Dollar</h3>
@@ -188,7 +181,7 @@
         </div>
       </a>
 
-      <a class="issue-card reveal in" href="issue-8.html" data-search="volkswagen sold half of its wardrobe but kept the investment piece bain capital everllence leveraged buyout private equity issue 8 june 28 2026 alternatives credit risk-on">
+      <a class="issue-card reveal in" href="issue-08.html" data-search="volkswagen sold half of its wardrobe but kept the investment piece bain capital everllence leveraged buyout private equity issue 8 june 28 2026 alternatives credit risk-on">
         <div class="card-body">
           <p class="eyebrow">Issue No. 08 · June 28, 2026</p>
         <h3>Volkswagen Sold Half of Its Wardrobe but Kept the Investment Piece</h3>
@@ -198,7 +191,7 @@
         </div>
       </a>
 
-      <a class="issue-card reveal in" href="issue-7.html" data-search="inflation is like glitter easy to spread impossible to clean up ecb philip lane core inflation second-round effects issue 7 june 24 2026 rates inflation risk-off fixed income">
+      <a class="issue-card reveal in" href="issue-07.html" data-search="inflation is like glitter easy to spread impossible to clean up ecb philip lane core inflation second-round effects issue 7 june 24 2026 rates inflation risk-off fixed income">
         <div class="card-body">
           <p class="eyebrow">Issue No. 07 · June 24, 2026</p>
         <h3>Inflation Is Like Glitter: Easy to Spread, Impossible to Clean Up</h3>
@@ -208,7 +201,7 @@
         </div>
       </a>
 
-      <a class="issue-card reveal in" href="issue-6.html" data-search="japan tried retail therapy on the yen and it didn't help boj carry trade usd/jpy intervention issue 6 june 21 2026 fx rates risk-on">
+      <a class="issue-card reveal in" href="issue-06.html" data-search="japan tried retail therapy on the yen and it didn't help boj carry trade usd/jpy intervention issue 6 june 21 2026 fx rates risk-on">
         <div class="card-body">
           <p class="eyebrow">Issue No. 06 · June 21, 2026</p>
         <h3>Japan Tried Retail Therapy on the Yen, and It Didn't Help</h3>
@@ -218,7 +211,7 @@
         </div>
       </a>
 
-      <a class="issue-card reveal in" href="issue-5.html" data-search="the oil market is having a situationship with peace trump iran ceasefire brent crude iea 2027 forecast issue 5 june 17 2026 commodities risk-off">
+      <a class="issue-card reveal in" href="issue-05.html" data-search="the oil market is having a situationship with peace trump iran ceasefire brent crude iea 2027 forecast issue 5 june 17 2026 commodities risk-off">
         <div class="card-body">
           <p class="eyebrow">Issue No. 05 · June 17, 2026</p>
         <h3>The Oil Market Is Having a Situationship with Peace</h3>
@@ -228,7 +221,7 @@
         </div>
       </a>
 
-      <a class="issue-card reveal in" href="issue-4.html" data-search="spacex is the first bombshell to enter the wall street villa at 2.1 trillion elon musk trillionaire ipo debut issue 4 june 14 2026 equities risk-on">
+      <a class="issue-card reveal in" href="issue-04.html" data-search="spacex is the first bombshell to enter the wall street villa at 2.1 trillion elon musk trillionaire ipo debut issue 4 june 14 2026 equities risk-on">
         <div class="card-body">
           <p class="eyebrow">Issue No. 04 · June 14, 2026</p>
         <h3>SpaceX Is the First Bombshell to Enter the Wall Street Villa at $2.1 Trillion</h3>
@@ -238,7 +231,7 @@
         </div>
       </a>
 
-      <a class="issue-card reveal in" href="issue-3.html" data-search="openai anthropic and spacex three hot new bombshells have entered the wall street villa ipo filing valuation issue 3 june 10 2026 equities risk-on">
+      <a class="issue-card reveal in" href="issue-03.html" data-search="openai anthropic and spacex three hot new bombshells have entered the wall street villa ipo filing valuation issue 3 june 10 2026 equities risk-on">
         <div class="card-body">
           <p class="eyebrow">Issue No. 03 · June 10, 2026</p>
         <h3>OpenAI, Anthropic, and SpaceX: Three Hot New Bombshells Have Entered the Wall Street Villa</h3>
@@ -248,7 +241,7 @@
         </div>
       </a>
 
-      <a class="issue-card reveal in" href="issue-2.html" data-search="bitcoin is so last season meet hype the crypto product wall street can finally understand hyperliquid etf issue 2 june 7 2026 crypto digital assets risk-off">
+      <a class="issue-card reveal in" href="issue-02.html" data-search="bitcoin is so last season meet hype the crypto product wall street can finally understand hyperliquid etf issue 2 june 7 2026 crypto digital assets risk-off">
         <div class="card-body">
           <p class="eyebrow">Issue No. 02 · June 7, 2026</p>
         <h3>Bitcoin Is So Last Season. Meet HYPE: the Crypto Product Wall Street Can Finally Understand</h3>
@@ -258,7 +251,7 @@
         </div>
       </a>
 
-      <a class="issue-card reveal in" href="issue-1.html" data-search="oecd warns of global slowdown how the iran war is hitting the world economy strait of hormuz stagflation issue 1 june 3 2026 rates commodities risk-off">
+      <a class="issue-card reveal in" href="issue-01.html" data-search="oecd warns of global slowdown how the iran war is hitting the world economy strait of hormuz stagflation issue 1 june 3 2026 rates commodities risk-off">
         <div class="card-body">
           <p class="eyebrow">Issue No. 01 · June 3, 2026</p>
         <h3>OECD Warns of Global Slowdown: How the Iran War Is Hitting the World Economy</h3>
@@ -275,30 +268,19 @@
 </section>
 </main>
 
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-top">
-      <a class="footer-brand" href="index.html">
-        <img src="logo-white.png" alt="WSG logo">
-        <span>Wall Street for the Girls</span>
-      </a>
-      <ul class="footer-links">
-        <li><a href="archive.html">Archive</a></li>
-        <li><a href="foundation.html">Foundation</a></li>
-        <li><a href="financial-syllabus.html">Financial Syllabus</a></li>
-        <li><a href="glossary.html">Glossary</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="https://wallstreetforthegirls.substack.com" target="_blank" rel="noopener">Substack</a></li>
-      </ul>
+<footer class="home-footer">
+    <div>
+      <strong>Wall Street for the Girls</strong>
+      <p>A weekly finance newsletter that explains what’s happening in markets in plain language.</p>
     </div>
-    <div class="footer-bottom">
-      <span>© 2026 Wall Street for the Girls</span>
-      <em>Educational purposes only: reflects personal analysis, not financial advice.</em>
+    <div class="footer-links" aria-label="Footer links" role="navigation">
+      <a href="archive.html">Archive</a>
+      <a href="about.html">About</a>
+      <a href="https://wallstreetforthegirls.substack.com">Substack</a>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<script src="main.js"></script>
+
 <script>
   const grid = document.getElementById('issueGrid');
   const archiveSearch = document.getElementById('archiveSearch');

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -8,35 +8,33 @@
 <link rel="icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500;1,6..72,600&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500;1,6..72,600&amp;family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="resource-pages.css">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="resource-page">
 
-<header class="site-header">
-  <div class="wrap nav">
-    <a class="nav-brand" href="index.html">
-      <img src="logo.png" alt="WSG logo">
-      <span>Wall Street <em>for the Girls</em></span>
-    </a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="start-here.html">Start Here</a></li>
-      <li><a href="archive.html">Archive</a></li>
-      <li class="nav-dropdown">
-        <a href="financial-syllabus.html" class="active">Learn ▾</a>
-        <ul class="dropdown-menu">
-          <li><a href="foundation.html">The Foundation</a></li>
-          <li><a href="financial-syllabus.html">Financial Syllabus</a></li>
-          <li><a href="glossary.html">Glossary</a></li>
-        </ul>
-      </li>
-      <li><a href="about.html">About</a></li>
-      <li><a class="nav-cta" href="https://wallstreetforthegirls.substack.com" target="_blank" rel="noopener">Subscribe</a></li>
-    </ul>
-  </div>
-</header>
+<header class="masthead">
+    <div class="folio">
+      <img src="logo.png" alt="" width="112" height="112">
+    </div>
+    <div class="wordmark">Wall Street for the Girls</div>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="archive.html">Archive</a>
+      <a href="glossary.html" aria-current="page">Glossary</a>
+      <a href="about.html">About</a>
+      <a class="subscribe" href="https://wallstreetforthegirls.substack.com/subscribe">Subscribe</a>
+    </nav>
+    <div class="ticker animated">
+      <div class="ticker-window">
+        <div class="ticker-track">
+          <div class="ticker-group"><strong>SIGNAL OVER NOISE</strong><b aria-hidden="true">✦</b><span>A WARDROBE IS NEVER JUST A WARDROBE, IT'S A PORTFOLIO</span><b aria-hidden="true">✦</b><span>NO JARGON</span><b aria-hidden="true">✦</b><span>SHE WHO DIVERSIFIES, THRIVES</span><b aria-hidden="true">✦</b></div>
+          <div class="ticker-group" aria-hidden="true"><strong>SIGNAL OVER NOISE</strong><b>✦</b><span>A WARDROBE IS NEVER JUST A WARDROBE, IT'S A PORTFOLIO</span><b>✦</b><span>NO JARGON</span><b>✦</b><span>SHE WHO DIVERSIFIES, THRIVES</span><b>✦</b></div>
+        </div>
+      </div>
+    </div>
+  </header>
 
 <main>
 <section class="page-hero">
@@ -51,7 +49,7 @@
   <div class="wrap">
     <div class="archive-tools reveal in">
       <label class="search">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <svg width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg>
         <input id="glossarySearch" type="text" placeholder="Search a term… e.g. 'carry trade', 'IPO', 'yield'">
       </label>
       <span class="count-note" id="glossaryCount">All terms</span>
@@ -89,7 +87,8 @@
 
     <div class="term-list" id="termList">
 
-      <div class="term" id="annualize" data-letter="a" data-search="annualize scale return cost full year compare figures different lengths time issue 15">
+      <div class="no-results" id="glossaryEmpty"><em>No terms match that search.</em> Try a different word or letter.</div>
+  <div class="term" id="10y" data-letter="1" data-search="10y short for 10-year, referring to the maturity of a bond. issue 21"><dl><dt>10Y</dt><dd>Short for 10-year, referring to the maturity of a bond.</dd></dl><a class="term-source" href="issue-21.html">Issue No. 21 →</a></div><div class="term" id="annualize" data-letter="a" data-search="annualize scale return cost full year compare figures different lengths time issue 15">
         <dl>
           <dt>Annualize</dt>
           <dd>To scale a return or a cost up to what it would be over a full year, so figures covering different lengths of time can be compared.</dd>
@@ -137,15 +136,7 @@
         <a class="term-source" href="issue-20.html">Issue No. 20 →</a>
       </div>
 
-      <div class="term" id="bond-investors" data-letter="b" data-search="bond investors people institutions lend money governments companies buying bonds issue 21">
-        <dl>
-          <dt>Bond investors</dt>
-          <dd>People or institutions that lend money to governments or companies by buying their bonds.</dd>
-        </dl>
-        <a class="term-source" href="issue-21.html">Issue No. 21 →</a>
-      </div>
-
-      <div class="term" id="book-value" data-letter="b" data-search="book value asset recorded worth company's accounts differ enormously buyer issue 8">
+      <div class="term" id="bond-investors" data-letter="b" data-search="bond investors people or institutions that lend money to governments or companies by buying their bonds. issue 21"><dl><dt>Bond investors</dt><dd>People or institutions that lend money to governments or companies by buying their bonds.</dd></dl><a class="term-source" href="issue-21.html">Issue No. 21 →</a></div><div class="term" id="book-value" data-letter="b" data-search="book value asset recorded worth company's accounts differ enormously buyer issue 8">
         <dl>
           <dt>Book value</dt>
           <dd>What an asset is recorded as being worth in a company's accounts. It can differ enormously from what a buyer will actually pay.</dd>
@@ -169,7 +160,7 @@
         <a class="term-source" href="issue-11.html">Issue No. 11 →</a>
       </div>
 
-      <div class="term" id="brent-crude" data-letter="b" data-search="brent crude international benchmark price oil quoted dollars per barrel issue 5">
+      <div class="term" id="brent-wti" data-letter="b" data-search="brent / wti the international and american benchmark prices for oil. issue 20"><dl><dt>Brent / WTI</dt><dd>The international and American benchmark prices for oil.</dd></dl><a class="term-source" href="issue-20.html">Issue No. 20 →</a></div><div class="term" id="brent-crude" data-letter="b" data-search="brent crude international benchmark price oil quoted dollars per barrel issue 5">
         <dl>
           <dt>Brent crude</dt>
           <dd>The international benchmark price for oil, quoted in US dollars per barrel. It is used to price most of the world's traded oil.</dd>
@@ -177,15 +168,7 @@
         <a class="term-source" href="issue-5.html">Issue No. 5 →</a>
       </div>
 
-      <div class="term" id="bund" data-letter="b" data-search="bund german government bond 10-year yield benchmark euro area issue 21">
-        <dl>
-          <dt>Bund</dt>
-          <dd>A German government bond. Its 10-year yield is a key benchmark in the euro area.</dd>
-        </dl>
-        <a class="term-source" href="issue-21.html">Issue No. 21 →</a>
-      </div>
-
-      <div class="term" id="carry-trade" data-letter="c" data-search="carry trade borrowing low-interest currency such yen investing money earns issue 6">
+      <div class="term" id="bund" data-letter="b" data-search="bund a german government bond. its 10-year yield is a key benchmark in the euro area. issue 21"><dl><dt>Bund</dt><dd>A German government bond. Its 10-year yield is a key benchmark in the euro area.</dd></dl><a class="term-source" href="issue-21.html">Issue No. 21 →</a></div><div class="term" id="carry-trade" data-letter="c" data-search="carry trade borrowing low-interest currency such yen investing money earns issue 6">
         <dl>
           <dt>Carry trade</dt>
           <dd>Borrowing in a low-interest currency, such as the yen, and investing the money where it earns more, then keeping the difference.</dd>
@@ -297,15 +280,7 @@
         <a class="term-source" href="issue-13.html">Issue No. 13 →</a>
       </div>
 
-      <div class="term" id="credit-rating" data-letter="c" data-search="credit rating grade agency moody's s&amp;p fitch assess borrower creditworthiness issue 21">
-        <dl>
-          <dt>Credit rating</dt>
-          <dd>A grade given by agencies like Moody's, S&amp;P and Fitch to assess a borrower's creditworthiness.</dd>
-        </dl>
-        <a class="term-source" href="issue-21.html">Issue No. 21 →</a>
-      </div>
-
-      <div class="term" id="currency-intervention" data-letter="c" data-search="currency intervention government central bank steps directly market push value issue 6">
+      <div class="term" id="credit-rating" data-letter="c" data-search="credit rating a grade given by agencies like moody's, s&amp;p and fitch to assess a borrower's creditworthiness. issue 21"><dl><dt>Credit rating</dt><dd>A grade given by agencies like Moody's, S&amp;P and Fitch to assess a borrower's creditworthiness.</dd></dl><a class="term-source" href="issue-21.html">Issue No. 21 →</a></div><div class="term" id="currency-intervention" data-letter="c" data-search="currency intervention government central bank steps directly market push value issue 6">
         <dl>
           <dt>Currency intervention</dt>
           <dd>When a government or central bank steps directly into the market to push the value of its own currency up or down.</dd>
@@ -353,15 +328,7 @@
         <a class="term-source" href="issue-2.html">Issue No. 2 →</a>
       </div>
 
-      <div class="term" id="deficit" data-letter="d" data-search="deficit government spends more money collects revenue issue 21">
-        <dl>
-          <dt>Deficit</dt>
-          <dd>When a government spends more money than it collects in revenue.</dd>
-        </dl>
-        <a class="term-source" href="issue-21.html">Issue No. 21 →</a>
-      </div>
-
-      <div class="term" id="delaware-court-of-chancery" data-letter="d" data-search="delaware court chancery specialist judges juries major corporate disputes issue 11">
+      <div class="term" id="deficit" data-letter="d" data-search="deficit when a government spends more money than it collects in revenue. issue 21"><dl><dt>deficit</dt><dd>When a government spends more money than it collects in revenue.</dd></dl><a class="term-source" href="issue-21.html">Issue No. 21 →</a></div><div class="term" id="delaware-court-of-chancery" data-letter="d" data-search="delaware court chancery specialist judges juries major corporate disputes issue 11">
         <dl>
           <dt>Delaware Court of Chancery</dt>
           <dd>The specialist US court, with judges and no juries, where most major corporate disputes are decided, because most large US companies are legally incorporated in Delaware.</dd>
@@ -441,15 +408,7 @@
         <a class="term-source" href="issue-10.html">Issue No. 10 →</a>
       </div>
 
-      <div class="term" id="ecb" data-letter="e" data-search="ecb european central bank monetary policy euro area lagarde issue 21">
-        <dl>
-          <dt>ECB</dt>
-          <dd>The European Central Bank, which sets monetary policy for the euro area.</dd>
-        </dl>
-        <a class="term-source" href="issue-21.html">Issue No. 21 →</a>
-      </div>
-
-      <div class="term" id="effective-tariff-rate" data-letter="e" data-search="effective tariff rate average blended imports issue 13">
+      <div class="term" id="ecb" data-letter="e" data-search="ecb the european central bank, which sets monetary policy for the euro area. issue 21"><dl><dt>ECB</dt><dd>The European Central Bank, which sets monetary policy for the euro area.</dd></dl><a class="term-source" href="issue-21.html">Issue No. 21 →</a></div><div class="term" id="effective-tariff-rate" data-letter="e" data-search="effective tariff rate average blended imports issue 13">
         <dl>
           <dt>Effective tariff rate</dt>
           <dd>The average tariff actually carried across everything the US imports, blended into one number, as opposed to any single headline rate.</dd>
@@ -537,7 +496,7 @@
         <a class="term-source" href="issue-11.html">Issue No. 11 →</a>
       </div>
 
-      <div class="term" id="foreign-exchange-reserves" data-letter="f" data-search="foreign exchange reserves currencies assets country holds pay imports issue 9">
+      <div class="term" id="fiscal-agent" data-letter="f" data-search="fiscal agent an institution that carries out transactions on somebody else's behalf. issue 14"><dl><dt>Fiscal agent</dt><dd>An institution that carries out transactions on somebody else's behalf.</dd></dl><a class="term-source" href="issue-14.html">Issue No. 14 →</a></div><div class="term" id="foreign-exchange-reserves" data-letter="f" data-search="foreign exchange reserves currencies assets country holds pay imports issue 9">
         <dl>
           <dt>Foreign exchange reserves</dt>
           <dd>The foreign currencies and assets a country holds to pay for imports and stabilize its own currency in a crisis.</dd>
@@ -561,15 +520,7 @@
         <a class="term-source" href="issue-12.html">Issue No. 12 →</a>
       </div>
 
-      <div class="term" id="gdp" data-letter="g" data-search="gdp gross domestic product total value goods services produced country issue 21">
-        <dl>
-          <dt>GDP</dt>
-          <dd>Gross domestic product, the total value of goods and services produced in a country over a given period.</dd>
-        </dl>
-        <a class="term-source" href="issue-21.html">Issue No. 21 →</a>
-      </div>
-
-      <div class="term" id="geopolitical-risk-premium" data-letter="g" data-search="geopolitical risk premium extra price markets add asset like oil issue 5">
+      <div class="term" id="gdp" data-letter="g" data-search="gdp gross domestic product, the total value of goods and services produced in a country over a given period. issue 21"><dl><dt>GDP</dt><dd>Gross domestic product, the total value of goods and services produced in a country over a given period.</dd></dl><a class="term-source" href="issue-21.html">Issue No. 21 →</a></div><div class="term" id="geopolitical-risk-premium" data-letter="g" data-search="geopolitical risk premium extra price markets add asset like oil issue 5">
         <dl>
           <dt>Geopolitical risk premium</dt>
           <dd>The extra price markets add to an asset, like oil, because of conflict or political uncertainty. It falls when tensions cool and rises when they flare.</dd>
@@ -761,20 +712,12 @@
         <a class="term-source" href="issue-9.html">Issue No. 9 →</a>
       </div>
 
-      <div class="term" id="negative-outlook" data-letter="n" data-search="negative outlook warning credit rating agency borrower downgraded issue 21">
+      <div class="term" id="negative-outlook" data-letter="n" data-search="negative outlook a warning from a credit rating agency that a borrower's rating could be downgraded. issue 21"><dl><dt>negative outlook</dt><dd>A warning from a credit rating agency that a borrower's rating could be downgraded.</dd></dl><a class="term-source" href="issue-21.html">Issue No. 21 →</a></div><div class="term" id="non-yielding-asset" data-letter="n" data-search="non-yielding asset pays no interest dividend gold entire return price rising issue 15">
         <dl>
-          <dt>Negative outlook</dt>
-          <dd>A warning from a credit rating agency that a borrower's rating could be downgraded.</dd>
+          <dt>Non-yielding asset</dt>
+          <dd>Something that pays no interest or dividend while you hold it, such as gold. Its entire return has to come from the price rising.</dd>
         </dl>
-        <a class="term-source" href="issue-21.html">Issue No. 21 →</a>
-      </div>
-
-      <div class="term" id="net-interest-income" data-letter="n" data-search="net interest income nii bank earns loans investments pays deposits borrowing issue 21">
-        <dl>
-          <dt>Net interest income (NII)</dt>
-          <dd>The difference between the interest a bank earns from loans and investments and the interest it pays on deposits and other borrowing.</dd>
-        </dl>
-        <a class="term-source" href="issue-21.html">Issue No. 21 →</a>
+        <a class="term-source" href="issue-15.html">Issue No. 15 →</a>
       </div>
 
       <div class="term" id="nonfarm-payrolls" data-letter="n" data-search="nonfarm payrolls monthly count jobs us economy added lost excluding farm work closely watched issue 15">
@@ -785,23 +728,7 @@
         <a class="term-source" href="issue-15.html">Issue No. 15 →</a>
       </div>
 
-      <div class="term" id="non-yielding-asset" data-letter="n" data-search="non-yielding asset pays no interest dividend gold entire return price rising issue 15">
-        <dl>
-          <dt>Non-yielding asset</dt>
-          <dd>Something that pays no interest or dividend while you hold it, such as gold. Its entire return has to come from the price rising.</dd>
-        </dl>
-        <a class="term-source" href="issue-15.html">Issue No. 15 →</a>
-      </div>
-
-      <div class="term" id="oat" data-letter="o" data-search="oat french government bond issue 21">
-        <dl>
-          <dt>OAT</dt>
-          <dd>A French government bond.</dd>
-        </dl>
-        <a class="term-source" href="issue-21.html">Issue No. 21 →</a>
-      </div>
-
-      <div class="term" id="omfif" data-letter="o" data-search="omfif official monetary financial institutions forum london based institution works issue 9">
+      <div class="term" id="oat" data-letter="o" data-search="oat a french government bond. issue 21"><dl><dt>OAT</dt><dd>A French government bond.</dd></dl><a class="term-source" href="issue-21.html">Issue No. 21 →</a></div><div class="term" id="omfif" data-letter="o" data-search="omfif official monetary financial institutions forum london based institution works issue 9">
         <dl>
           <dt>OMFIF</dt>
           <dd>The Official Monetary and Financial Institutions Forum, a London based institution that works directly with the world's central banks and public funds and publishes an annual survey of their intentions.</dd>
@@ -881,7 +808,9 @@
         <a class="term-source" href="issue-7.html">Issue No. 7 →</a>
       </div>
 
-      <div class="term" id="quality-of-earnings" data-letter="q" data-search="quality earnings profit comes actual business versus one-off boosts high issue 10">
+      <div class="term" id="purchasing-managers-index" data-letter="p" data-search="purchasing managers’ index a monthly survey asking businesses how busy they are. higher readings mean the economy is running hotter. a reading above 50 means activity is growing. issue 20"><dl><dt>Purchasing managers’ index</dt><dd>A monthly survey asking businesses how busy they are. Higher
+readings mean the economy is running hotter. A reading above 50 means
+activity is growing.</dd></dl><a class="term-source" href="issue-20.html">Issue No. 20 →</a></div><div class="term" id="quality-of-earnings" data-letter="q" data-search="quality earnings profit comes actual business versus one-off boosts high issue 10">
         <dl>
           <dt>Quality of earnings</dt>
           <dd>How much of a profit comes from the actual business versus one-off boosts. High quality is durable and low quality flatters.</dd>
@@ -905,7 +834,7 @@
         <a class="term-source" href="issue-6.html">Issue No. 6 →</a>
       </div>
 
-      <div class="term" id="reported-vs-adjusted-earnings" data-letter="r" data-search="reported adjusted earnings include everything underlying issue 10">
+      <div class="term" id="repo" data-letter="r" data-search="repo a short term loan where a bond is handed over as collateral, with an agreement to buy it back. issue 14"><dl><dt>Repo</dt><dd>A  short term loan where a bond is handed over as collateral, with an agreement to buy it back.</dd></dl><a class="term-source" href="issue-14.html">Issue No. 14 →</a></div><div class="term" id="reported-vs-adjusted-earnings" data-letter="r" data-search="reported adjusted earnings include everything underlying issue 10">
         <dl>
           <dt>Reported vs adjusted earnings</dt>
           <dd>Reported earnings include everything. Adjusted, or underlying, earnings remove the one-off items.</dd>
@@ -1017,15 +946,7 @@
         <a class="term-source" href="issue-7.html">Issue No. 7 →</a>
       </div>
 
-      <div class="term" id="sovereign-spread" data-letter="s" data-search="sovereign spread difference yields two countries government bonds similar maturity france germany issue 21">
-        <dl>
-          <dt>Sovereign spread</dt>
-          <dd>The difference in yields between two countries' government bonds of similar maturity.</dd>
-        </dl>
-        <a class="term-source" href="issue-21.html">Issue No. 21 →</a>
-      </div>
-
-      <div class="term" id="sovereign-wealth-fund" data-letter="s" data-search="sovereign wealth fund state-owned investment invests country's surplus money issue 8">
+      <div class="term" id="sovereign-spread" data-letter="s" data-search="sovereign spread the difference in yields between two countries' government bonds of similar maturity. issue 21"><dl><dt>Sovereign spread</dt><dd>The difference in yields between two countries' government bonds of similar maturity.</dd></dl><a class="term-source" href="issue-21.html">Issue No. 21 →</a></div><div class="term" id="sovereign-wealth-fund" data-letter="s" data-search="sovereign wealth fund state-owned investment invests country's surplus money issue 8">
         <dl>
           <dt>Sovereign wealth fund</dt>
           <dd>A state-owned investment fund that invests a country's surplus money around the world.</dd>
@@ -1097,7 +1018,7 @@
         <a class="term-source" href="issue-11.html">Issue No. 11 →</a>
       </div>
 
-      <div class="term" id="tariff" data-letter="t" data-search="tariff tax imported goods importer not exporting country issue 13">
+      <div class="term" id="target-range" data-letter="t" data-search="target range some central banks set a band rather than a single number. issue 14"><dl><dt>Target range</dt><dd>Some central banks set a band rather than a single number.</dd></dl><a class="term-source" href="issue-14.html">Issue No. 14 →</a></div><div class="term" id="tariff" data-letter="t" data-search="tariff tax imported goods importer not exporting country issue 13">
         <dl>
           <dt>Tariff</dt>
           <dd>A tax a country charges on goods coming in from abroad. Paid by the company importing them, not by the exporting country.</dd>
@@ -1119,14 +1040,6 @@
           <dd>When a price finally moves past a level it has repeatedly failed to clear. A description of past behavior, not a guarantee of future behavior.</dd>
         </dl>
         <a class="term-source" href="issue-15.html">Issue No. 15 →</a>
-      </div>
-
-      <div class="term" id="ten-year-10y" data-letter="t" data-search="10y 10-year ten year maturity bond issue 21">
-        <dl>
-          <dt>10-year (10Y)</dt>
-          <dd>Short for 10-year, referring to the maturity of a bond.</dd>
-        </dl>
-        <a class="term-source" href="issue-21.html">Issue No. 21 →</a>
       </div>
 
       <div class="term" id="tender-offer" data-letter="t" data-search="tender offer company allows employees early investors sell shares private issue 3">
@@ -1177,7 +1090,7 @@
         <a class="term-source" href="issue-20.html">Issue No. 20 →</a>
       </div>
 
-      <div class="term" id="usmca" data-letter="u" data-search="usmca united states mexico canada agreement regional trade deal exempt issue 13">
+      <div class="term" id="us-treasuries" data-letter="u" data-search="us treasuries american government debt, and the form in which most countries hold their dollar reserves. issue 14"><dl><dt>US treasuries</dt><dd>American government debt, and the form in which most countries hold their dollar reserves.</dd></dl><a class="term-source" href="issue-14.html">Issue No. 14 →</a></div><div class="term" id="usmca" data-letter="u" data-search="usmca united states mexico canada agreement regional trade deal exempt issue 13">
         <dl>
           <dt>USMCA</dt>
           <dd>The United States-Mexico-Canada Agreement, a regional trade deal. Goods it covers are largely exempt from these new tariffs.</dd>
@@ -1193,7 +1106,7 @@
         <a class="term-source" href="issue-3.html">Issue No. 3 →</a>
       </div>
 
-      <div class="term" id="voting-rights-vs-economic-stake" data-letter="v" data-search="voting rights economic stake decide controls company's decisions issue 8">
+      <div class="term" id="verbal-intervention" data-letter="v" data-search="verbal intervention trying to move a currency using warnings and statements rather than actual trades issue 14"><dl><dt>Verbal intervention</dt><dd>Trying to move a currency using warnings and statements rather than actual trades</dd></dl><a class="term-source" href="issue-14.html">Issue No. 14 →</a></div><div class="term" id="voting-rights-vs-economic-stake" data-letter="v" data-search="voting rights economic stake decide controls company's decisions issue 8">
         <dl>
           <dt>Voting rights vs economic stake</dt>
           <dd>Voting rights decide who controls a company's decisions. An economic stake is how much of its profits and value you own.</dd>
@@ -1265,36 +1178,23 @@
         <a class="term-source" href="issue-5.html">Issue No. 5 →</a>
       </div>
 
-    <div class="no-results" id="glossaryEmpty"><em>No terms match that search.</em> Try a different word or letter.</div>
-  </div>
-</section>
-</main>
-
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-top">
-      <a class="footer-brand" href="index.html">
-        <img src="logo.png" alt="WSG logo">
-        <span>Wall Street for the Girls</span>
-      </a>
-      <ul class="footer-links">
-        <li><a href="start-here.html">Start Here</a></li>
-        <li><a href="archive.html">Archive</a></li>
-        <li><a href="foundation.html">Foundation</a></li>
-        <li><a href="financial-syllabus.html">Financial Syllabus</a></li>
-        <li><a href="glossary.html">Glossary</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="https://wallstreetforthegirls.substack.com" target="_blank" rel="noopener">Substack</a></li>
-      </ul>
     </div>
-    <div class="footer-bottom">
-      <span>&copy; 2026 Wall Street for the Girls</span>
-      <em>Educational purposes only: reflects personal analysis, not financial advice.</em>
-    </div>
-  </div>
-</footer>
 
-<script src="main.js"></script>
+
+
+<footer class="home-footer">
+    <div>
+      <strong>Wall Street for the Girls</strong>
+      <p>A weekly finance newsletter that explains what’s happening in markets in plain language.</p>
+    </div>
+    <div class="footer-links" aria-label="Footer links" role="navigation">
+      <a href="archive.html">Archive</a>
+      <a href="about.html">About</a>
+      <a href="https://wallstreetforthegirls.substack.com">Substack</a>
+    </div>
+  </footer>
+
+
 <script>
   const termList = document.getElementById('termList');
   const glossarySearch = document.getElementById('glossarySearch');
@@ -1332,5 +1232,5 @@
 
   filterGlossary();
 </script>
-</body>
+</div></section></main></body>
 </html>
